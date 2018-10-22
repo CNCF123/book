@@ -5,7 +5,5 @@
 * [docker](docker.md)
 * [kubernetes](kubernetes.md)
 * [harbor](harbor.md)
-* CI/CD
-
-
+* [CI/CD](cicd.md)
 
