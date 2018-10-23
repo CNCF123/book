@@ -204,7 +204,7 @@ For more examples and ideas, visit:
 
 {
 
-"registry-mirrors": \["https://registry.docker-cn.com"\]
+"registry-mirrors": \["[https://registry.docker-cn.com"](https://registry.docker-cn.com"\)\]
 
 }
 
