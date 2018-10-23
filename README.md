@@ -6,9 +6,9 @@
 
 本书既适用于具备基础 Linux 知识的 Docker 初学者，也希望可供理解原理和实现的高级用户参考。同时，书中给出的实践案例，可供在进行实际部署时借鉴。前六章为基础内容，供用户理解 Docker 的基本概念和操作；7 ~ 9 章介绍包括数据管理、网络等高级操作；第 10 ~ 13 章介绍了容器生态中的几个核心项目；最后，还展示了使用容器技术的典型的应用场景和实践案例。
 
-\[Kubernetes\]\(https://kubernetes.io/\)
+\[Kubernetes\]\([https://kubernetes.io](https://kubernetes.io/\)\)
 
-* 在线阅读：\[dockerk8s.com\]\([https://dockerk8s.com](https://dockerk8s.com\)\)
+* 在线阅读：\[dockerk8s.com\]\([https://dockerk8s.com](https://dockerk8s.com%29\)
 
 
 
