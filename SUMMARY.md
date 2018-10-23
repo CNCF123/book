@@ -2,6 +2,7 @@
 
 * [简介](README.md)
   * [关于我](about.md)
+  * [联系我](guan-yu-wo.md)
 * [docker](docker.md)
 * [kubernetes](kubernetes.md)
 * [harbor](harbor.md)
