@@ -28,9 +28,7 @@ $ sudo yum remove docker \
 执行以下命令安装依赖包：
 
 ```
-$ sudo yum install -y yum-utils \
-           device-mapper-persistent-data \
-           lvm2
+$ sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 ```
 
 鉴于国内网络问题，强烈建议使用国内源，这里使用阿里云的yum源。
@@ -38,29 +36,18 @@ $ sudo yum install -y yum-utils \
 执行下面的命令添加`yum`软件源：
 
 ```
-$ sudo yum-config-manager \
-    --add-repo \
-    http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+$ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 ```
 
-如果需要测试版本的 Docker CE 请使用以下命令：
+更新 yum 缓存：
 
 ```
-$ sudo yum-config-manager --enable docker-ce-test
-```
-
-如果需要每日构建版本的 Docker CE 请使用以下命令：
-
-```
-$ sudo yum-config-manager --enable docker-ce-nightly
+sudo yum makecache fast
 ```
 
 #### 安装 Docker CE {#安装-docker-ce}
 
-更新`yum`软件源缓存，并安装`docker-ce`。
-
 ```
-$ sudo yum makecache fast
 $ sudo yum install docker-ce
 ```
 
@@ -78,9 +65,7 @@ $ sudo sh get-docker.sh --mirror Aliyun
 ### 启动 Docker CE {#启动-docker-ce}
 
 ```
-$ sudo systemctl 
-enable
- docker
+$ sudo systemctl enable docker
 $ sudo systemctl start docker
 ```
 
@@ -97,10 +82,7 @@ $ sudo groupadd docker
 将当前用户加入`docker`组：
 
 ```
-$ sudo usermod 
--a
-G docker 
-$USER
+$ sudo usermod -a G docker $USER
 ```
 
 退出当前终端并重新登录，进行如下测试。
