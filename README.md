@@ -34,11 +34,11 @@ Kubernetes 特点
 
 在线阅读
 
-* [dockerk8s.com](/www.dockerk8s.com)
+* [dockerk8s.com](http://www.dockerk8s.com)
 
 github仓库
 
-* [dockerk8s-book](https://github.com/xsdxn/dockerk8s-book)
+* dockerk8s
 
 
 
