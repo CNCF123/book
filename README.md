@@ -12,6 +12,8 @@
 
 [Kubernetes](https://kubernetes.io/) 是容器集群管理系统，是一个开源的平台，可以实现容器集群的自动化部署、自动扩缩容、维护等功能。
 
+Kubernetes是Google 2014年创建管理的，是Google 10多年大规模容器管理技术Borg的开源版本。
+
 通过Kubernetes你可以：
 
 * 快速部署应用
@@ -30,7 +32,7 @@ Kubernetes 特点
 * **自动化**
   : 自动部署，自动重启，自动复制，自动伸缩/扩展 
 
-Kubernetes是Google 2014年创建管理的，是Google 10多年大规模容器管理技术Borg的开源版本。
+
 
 * 在线阅读：[dockerk8s.com](/www.dockerk8s.com)
 
