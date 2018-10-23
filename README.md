@@ -38,7 +38,7 @@ Kubernetes 特点
 
 github仓库
 
-* dockerk8s
+* [dockerk8s](https://github.com/xsdxn/dockerk8s)
 
 
 
