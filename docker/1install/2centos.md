@@ -21,7 +21,6 @@ $ sudo yum remove docker \
                   docker-selinux \
                   docker-engine-selinux \
                   docker-engine
-
 ```
 
 ### 使用 yum 安装 {#使用-yum-安装}
@@ -32,7 +31,6 @@ $ sudo yum remove docker \
 $ sudo yum install -y yum-utils \
            device-mapper-persistent-data \
            lvm2
-
 ```
 
 鉴于国内网络问题，强烈建议使用国内源，这里使用阿里云的yum源。
@@ -42,23 +40,19 @@ $ sudo yum install -y yum-utils \
 ```
 $ sudo yum-config-manager \
     --add-repo \
-    https://mirrors.ustc.edu.cn/docker-ce/linux/centos/docker-ce.repo
-
-
+    http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 ```
 
 如果需要测试版本的 Docker CE 请使用以下命令：
 
 ```
 $ sudo yum-config-manager --enable docker-ce-test
-
 ```
 
 如果需要每日构建版本的 Docker CE 请使用以下命令：
 
 ```
 $ sudo yum-config-manager --enable docker-ce-nightly
-
 ```
 
 #### 安装 Docker CE {#安装-docker-ce}
@@ -68,7 +62,6 @@ $ sudo yum-config-manager --enable docker-ce-nightly
 ```
 $ sudo yum makecache fast
 $ sudo yum install docker-ce
-
 ```
 
 ### 使用脚本自动安装 {#使用脚本自动安装}
@@ -78,7 +71,6 @@ $ sudo yum install docker-ce
 ```
 $ curl -fsSL get.docker.com -o get-docker.sh
 $ sudo sh get-docker.sh --mirror Aliyun
-
 ```
 
 执行这个命令后，脚本就会自动的将一切准备工作做好，并且把 Docker CE 的 Edge 版本安装在系统中。
@@ -90,7 +82,6 @@ $ sudo systemctl
 enable
  docker
 $ sudo systemctl start docker
-
 ```
 
 ### 建立 docker 用户组 {#建立-docker-用户组}
@@ -101,7 +92,6 @@ $ sudo systemctl start docker
 
 ```
 $ sudo groupadd docker
-
 ```
 
 将当前用户加入`docker`组：
@@ -156,7 +146,6 @@ Share images, automate workflows, and more with a free Docker ID:
 
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
-
 ```
 
 若能正常输出以上信息，则说明安装成功。
@@ -172,7 +161,6 @@ For more examples and ideas, visit:
 ```
 WARNING: bridge-nf-call-iptables is disabled
 WARNING: bridge-nf-call-ip6tables is disabled
-
 ```
 
 请添加内核配置参数以启用这些功能。
@@ -187,14 +175,12 @@ $ sudo tee
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 EOF
-
 ```
 
 然后重新加载`sysctl.conf`即可
 
 ```
 $ sudo sysctl -p
-
 ```
 
 ### 参考文档 {#参考文档}
