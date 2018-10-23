@@ -6,3 +6,7 @@
 
 在17年开始接触容器，docker，之后有了kubernetes\(k8s\)。
 
+欢迎以后和大家多多交流。
+
+联系我：chenkaidi1992@qq.com。
+
