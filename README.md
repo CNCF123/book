@@ -14,6 +14,8 @@
 
 Kubernetes是Google 2014年创建管理的，是Google 10多年大规模容器管理技术Borg的开源版本。
 
+* 在线阅读：[dockerk8s.com](/www.dockerk8s.com)
+
 通过Kubernetes你可以：
 
 * 快速部署应用
@@ -31,8 +33,6 @@ Kubernetes 特点
   : 模块化, 插件化, 可挂载, 可组合
 * **自动化**  
   : 自动部署，自动重启，自动复制，自动伸缩/扩展
-
-* 在线阅读：[dockerk8s.com](/www.dockerk8s.com)
 
 
 
