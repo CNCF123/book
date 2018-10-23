@@ -32,8 +32,6 @@ Kubernetes 特点
 * **自动化**
   : 自动部署，自动重启，自动复制，自动伸缩/扩展 
 
-
-
 * 在线阅读：[dockerk8s.com](/www.dockerk8s.com)
 
 
