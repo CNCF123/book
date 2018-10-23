@@ -20,7 +20,6 @@ Docker CE 可以安装在 64 位的 x86 平台或 ARM 平台上。Ubuntu 发行�
 $ sudo apt-get remove docker \
                docker-engine \
                docker.io
-
 ```
 
 #### Ubuntu 14.04 可选内核模块 {#ubuntu-1404-可选内核模块}
@@ -35,7 +34,6 @@ $ sudo apt-get update
 $ sudo apt-get install \
     linux-image-extra-$(uname -r) \
     linux-image-extra-virtual
-
 ```
 
 #### Ubuntu 16.04 + {#ubuntu-1604-}
@@ -54,7 +52,6 @@ $ sudo apt-get install \
     ca-certificates \
     curl \
     software-properties-common
-
 ```
 
 鉴于国内网络问题，强烈建议使用国内源，官方源请在注释中查看。
@@ -74,9 +71,9 @@ $ curl -fsSL https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu/gpg | sudo apt-k
 
 ```
 $ sudo add-apt-repository \
-    
+
 "deb [arch=amd64] https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu \
-    
+
 $(lsb_release -cs)
  \
     stable"
@@ -97,7 +94,6 @@ $(lsb_release -cs)
 $ sudo apt-get update
 
 $ sudo apt-get install docker-ce
-
 ```
 
 ### 使用脚本自动安装 {#使用脚本自动安装}
@@ -107,7 +103,6 @@ $ sudo apt-get install docker-ce
 ```
 $ curl -fsSL get.docker.com -o get-docker.sh
 $ sudo sh get-docker.sh --mirror Aliyun
-
 ```
 
 执行这个命令后，脚本就会自动的将一切准备工作做好，并且把 Docker CE 的 Edge 版本安装在系统中。
@@ -119,14 +114,12 @@ $ sudo systemctl
 enable
  docker
 $ sudo systemctl start docker
-
 ```
 
 Ubuntu 14.04 请使用以下命令启动：
 
 ```
 $ sudo service docker start
-
 ```
 
 ### 建立 docker 用户组 {#建立-docker-用户组}
@@ -137,7 +130,6 @@ $ sudo service docker start
 
 ```
 $ sudo groupadd docker
-
 ```
 
 将当前用户加入`docker`组：
@@ -192,14 +184,37 @@ Share images, automate workflows, and more with a free Docker ID:
 
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
-
 ```
 
 若能正常输出以上信息，则说明安装成功。
 
 ### 镜像加速 {#镜像加速}
 
-鉴于国内网络问题，后续拉取 Docker 镜像十分缓慢，强烈建议安装 Docker 之后配置[国内镜像加速](https://yeasy.gitbooks.io/docker_practice/content/install/mirror.html)。
+鉴于国内网络问题，后续拉取 Docker 镜像十分缓慢，强烈建议安装 Docker 之后配置国内镜像加速。
+
+建议使用阿里云镜像加速，本人镜像加速地址：
+
+使用 --registry-mirror 配置 Docker 守护进程
+
+您可以配置 Docker 守护进程默认使用 Docker 官方镜像加速。这样您可以默认通过官方镜像加速拉取镜像，而无需在每次拉取时指定 registry.docker-cn.com。
+
+
+
+您可以在 Docker 守护进程启动时传入 --registry-mirror 参数：
+
+
+
+\# docker --registry-mirror=https://registry.docker-cn.com daemon
+
+为了永久性保留更改，您可以修改 /etc/docker/daemon.json 文件并添加上 registry-mirrors 键值。
+
+
+
+{
+
+  "registry-mirrors": \["https://registry.docker-cn.com"\]
+
+}
 
 ### 参考文档 {#参考文档}
 
