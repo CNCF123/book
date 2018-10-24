@@ -179,7 +179,6 @@ $ sudo sysctl -p
 ### 参考文档 {#参考文档}
 
 * [Docker 官方 CentOS 安装文档](https://docs.docker.com/install/linux/docker-ce/centos/)
-  。
 
 
 
