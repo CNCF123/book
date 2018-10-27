@@ -13,7 +13,7 @@
     * [2.CentOS](docker/1install/2centos.md)
     * [3.MacOS](docker/1install/3macos.md)
   * [2.镜像](docker/2image.md)
-    * [1.获取镜像](docker/2image/1getimage.md)
+    * [1.镜像获取](docker/2image/1getimage.md)
     * [2.镜像列表](docker/2image/2imagelist.md)
     * [3.删除镜像](docker/2image/3deleteimage.md)
     * [4.commit创建镜像](docker/2image/4commit.md)
@@ -23,6 +23,4 @@
 * [kubernetes](kubernetes.md)
 * [harbor](harbor.md)
 * [CI/CD](cicd.md)
-
-
 
