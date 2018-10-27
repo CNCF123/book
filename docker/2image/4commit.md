@@ -27,21 +27,9 @@ $ docker
 exec
  -it webserver bash
 root@3729b97e8226:/
-# echo '
-<
-h1
->
-Hello, Docker!
-<
-/h1
->
-' 
->
- /usr/share
-ginx/html/index.html
+# echo '<h1> Hello, Docker!</h1>' > /usr/share/nginx/html/index.html
 
-root@3729b97e8226:/
-# exit
+root@3729b97e8226:/# exit
 exit
 ```
 
@@ -75,7 +63,6 @@ A /var/cache/nginx/fastcgi_temp
 A /var/cache/nginx/proxy_temp
 A /var/cache/nginx/scgi_temp
 A /var/cache/nginx/uwsgi_temp
-
 ```
 
 现在我们定制好了变化，我们希望能将其保存下来形成镜像。
@@ -85,40 +72,18 @@ A /var/cache/nginx/uwsgi_temp
 `docker commit`的语法格式为：
 
 ```
-docker commit [选项] 
-<
-容器ID或容器名
->
- [
-<
-仓库名
->
-[:
-<
-标签
->
-]]
-
+docker commit [选项] <容器ID或容器名> [<仓库名>[:<标签>]]
 ```
 
 我们可以用下面的命令将容器保存为镜像：
 
 ```
 $ docker commit \
-    --author 
-"Tao Wang 
-<
-twang2218@gmail.com
->
-"
- \
-    --message 
-"修改了默认网页"
- \
+    --author "Tao Wang <twang2218@gmail.com>" \
+    --message "修改了默认网页" \
     webserver \
     nginx:v2
 sha256:07e33465974800ce65751acc279adc6ed2dc5ed4e0838f8b86f0c87aa1795214
-
 ```
 
 其中`--author`是指定修改的作者，而`--message`则是记录本次修改的内容。这点和`git`版本控制相似，不过这里这些信息可以省略留空。
@@ -131,7 +96,6 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 nginx               v2                  07e334659748        9 seconds ago       181.5 MB
 nginx               1.11                05a60462f8ba        12 days ago         181.5 MB
 nginx               latest              e43d811ce2f4        4 weeks ago         181.5 MB
-
 ```
 
 我们还可以用`docker history`具体查看镜像内的历史记录，如果比较`nginx:latest`的历史记录，我们会发现新增了我们刚刚提交的这一层。
@@ -189,7 +153,6 @@ missing
 docker run --name web2 
 -d
  -p 81:80 nginx:v2
-
 ```
 
 这里我们命名为新的服务为`web2`，并且映射到`81`端口。如果是 Docker for Mac/Windows 或 Linux 桌面的话，我们就可以直接访问[http://localhost:81](http://localhost:81/)看到结果，其内容应该和之前修改后的`webserver`一样。
