@@ -8,18 +8,10 @@ REPOSITORY           TAG                 IMAGE ID            CREATED            
 redis                latest              5f515359c7f8        5 days ago          183 MB
 nginx                latest              05a60462f8ba        5 days ago          181 MB
 mongo                3.2                 fe9198c04d62        5 days ago          342 MB
-
-<
-none
->
-<
-none
->
-              00285df0df87        5 days ago          342 MB
+<none>               <none>              00285df0df87        5 days ago          342 MB
 ubuntu               16.04               f753707788c5        4 weeks ago         127 MB
 ubuntu               latest              f753707788c5        4 weeks ago         127 MB
 ubuntu               14.04               1e0c3dd64ccd        4 weeks ago         188 MB
-
 ```
 
 列表包含了`仓库名`、`标签`、`镜像 ID`、`创建时间`以及`所占用的空间`。
@@ -42,43 +34,30 @@ Images              24                  0                   1.992GB             
 Containers          1                   0                   62.82MB             62.82MB (100%)
 Local Volumes       9                   0                   652.2MB             652.2MB (100%)
 Build Cache                                                 0B                  0B
-
 ```
 
 ### 虚悬镜像 {#虚悬镜像}
 
-上面的镜像列表中，还可以看到一个特殊的镜像，这个镜像既没有仓库名，也没有标签，均为`<none>`。：
+上面的镜像列表中，还可以看到一个特殊的镜像，这个镜像既**没有仓库名，也没有标签**，均为`<none>`。：
 
 ```
-<none> <none> 00285df0df87        5 days ago          342 MB
-
+<none>           <none>                  00285df0df87        5 days ago          342 MB
 ```
 
 这个镜像原本是有镜像名和标签的，原来为`mongo:3.2`，随着官方镜像维护，发布了新版本后，重新`docker pull mongo:3.2`时，`mongo:3.2`这个镜像名被转移到了新下载的镜像身上，而旧的镜像上的这个名称则被取消，从而成为了`<none>`。除了`docker pull`可能导致这种情况，`docker build`也同样可以导致这种现象。由于新旧镜像同名，旧镜像名称被取消，从而出现仓库名、标签均为`<none>`的镜像。这类无标签镜像也被称为**虚悬镜像\(dangling image\)**，可以用下面的命令专门显示这类镜像：
 
 ```
-$ docker image ls 
--f
- dangling=
-true
+$ docker image ls -f dangling=true
 
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 
-<
-none
->
-<
-none
->
-              00285df0df87        5 days ago          342 MB
-
+<none>             <none>               00285df0df87        5 days ago          342 MB
 ```
 
 一般来说，虚悬镜像已经失去了存在的价值，是可以随意删除的，可以用下面的命令删除。
 
 ```
 $ docker image prune
-
 ```
 
 ### 中间层镜像 {#中间层镜像}
@@ -104,7 +83,6 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 ubuntu              16.04               f753707788c5        4 weeks ago         127 MB
 ubuntu              latest              f753707788c5        4 weeks ago         127 MB
 ubuntu              14.04               1e0c3dd64ccd        4 weeks ago         188 MB
-
 ```
 
 列出特定的某个镜像，也就是说指定仓库名和标签
@@ -113,7 +91,6 @@ ubuntu              14.04               1e0c3dd64ccd        4 weeks ago         
 $ docker image ls ubuntu:16.04
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 ubuntu              16.04               f753707788c5        4 weeks ago         127 MB
-
 ```
 
 除此以外，`docker image ls`还支持强大的过滤器参数`--filter`，或者简写`-f`。之前我们已经看到了使用过滤器来列出虚悬镜像的用法，它还有更多的用法。比如，我们希望看到在`mongo:3.2`之后建立的镜像，可以用下面的命令：
@@ -125,7 +102,6 @@ $ docker image ls
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 redis               latest              5f515359c7f8        5 days ago          183 MB
 nginx               latest              05a60462f8ba        5 days ago          181 MB
-
 ```
 
 想查看某个位置之前的镜像也可以，只需要把`since`换成`before`即可。
@@ -137,7 +113,6 @@ $ docker image ls
 -f
  label=com.example.version=0.1
 ...
-
 ```
 
 ### 以特定格式显示 {#以特定格式显示}
@@ -153,7 +128,6 @@ fe9198c04d62
 f753707788c5
 f753707788c5
 1e0c3dd64ccd
-
 ```
 
 `--filter`配合`-q`产生出指定范围的 ID 列表，然后送给另一个`docker`命令作为参数，从而针对这组实体成批的进行某种操作的做法在 Docker 命令行使用过程中非常常见，不仅仅是镜像，将来我们会在各个命令中看到这类搭配以完成很强大的功能。因此每次在文档看到过滤器后，可以多注意一下它们的用法。
@@ -177,7 +151,6 @@ none
 f753707788c5: ubuntu
 f753707788c5: ubuntu
 1e0c3dd64ccd: ubuntu
-
 ```
 
 或者打算以表格等距显示，并且有标题行，和默认一样，不过自己定义列：
