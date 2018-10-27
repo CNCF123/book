@@ -79,7 +79,7 @@ docker commit [选项] <容器ID或容器名> [<仓库名>[:<标签>]]
 
 ```
 $ docker commit \
-    --author "Tao Wang <twang2218@gmail.com>" \
+    --author "tom <123456@qq.com>" \
     --message "修改了默认网页" \
     webserver \
     nginx:v2
