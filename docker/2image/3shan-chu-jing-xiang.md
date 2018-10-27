@@ -1,10 +1,9 @@
 ## 删除本地镜像 {#删除本地镜像}
 
-如果要删除本地的镜像，可以使用`docker image rm`命令，其格式为：
+如果要删除本地的镜像，可以使用`docker image rm / docker rmi`命令，其格式为：
 
 ```
 $ docker image rm [选项] <镜像1> [<镜像2> ...]
-
 ```
 
 ### 用 ID、镜像名、摘要删除镜像 {#用-id、镜像名、摘要删除镜像}
@@ -20,7 +19,6 @@ centos                      latest              0584b3d2cf6d        3 weeks ago 
 redis                       alpine              501ad78535f0        3 weeks ago         21.03 MB
 docker                      latest              cf693ec9b5c7        3 weeks ago         105.1 MB
 nginx                       latest              e43d811ce2f4        5 weeks ago         181.5 MB
-
 ```
 
 我们可以用镜像的完整 ID，也称为`长 ID`，来删除镜像。使用脚本的时候可能会用长 ID，但是人工输入就太累了，所以更多的时候是用`短 ID`来删除镜像。`docker image ls`默认列出的就已经是短 ID 了，一般取前3个字符以上，只要足够区分于别的镜像就可以了。
@@ -39,7 +37,6 @@ Deleted: sha256:1333ecc582459bac54e1437335c0816bc17634e131ea0cc48daa27d32c75eab3
 Deleted: sha256:4
 fc
 455b921edf9c4aea207c51ab39b10b06540c8b4825ba57b3feed1668fa7c7
-
 ```
 
 我们也可以用`镜像名`，也就是`<仓库名>:<标签>`，来删除镜像。
@@ -52,7 +49,6 @@ Deleted: sha256:0584b3d2cf6d235ee310cf14b54667d889887b838d3f3d3033acd70
 fc
 3c48b8a
 Deleted: sha256:97ca462ad9eeae25941546209454496e1d66749d53dfa2ee32bf1faabd239d38
-
 ```
 
 当然，更精确的是使用`镜像摘要`删除镜像。
@@ -64,7 +60,6 @@ node                        slim                sha256:b4f0e0bdeb578043c1ea6862f
 
 $ docker image rm node@sha256:b4f0e0bdeb578043c1ea6862f0d40cc4afe32a4a582f3be235a3b164422be228
 Untagged: node@sha256:b4f0e0bdeb578043c1ea6862f0d40cc4afe32a4a582f3be235a3b164422be228
-
 ```
 
 ### Untagged 和 Deleted {#untagged-和-deleted}
@@ -85,7 +80,6 @@ Untagged: node@sha256:b4f0e0bdeb578043c1ea6862f0d40cc4afe32a4a582f3be235a3b16442
 
 ```
 $ docker image rm $(docker image ls -q redis)
-
 ```
 
 或者删除所有在`mongo:3.2`之前的镜像：
@@ -94,7 +88,6 @@ $ docker image rm $(docker image ls -q redis)
 $ docker image rm $(docker image ls -q 
 -f
  before=mongo:3.2)
-
 ```
 
 充分利用你的想象力和 Linux 命令行的强大，你可以完成很多非常赞的功能。
@@ -107,5 +100,5 @@ $ docker image rm $(docker image ls -q
 
 所以对于 CentOS/RHEL 的用户来说，在没有办法使用`UnionFS`的情况下，一定要配置`direct-lvm`给`devicemapper`，无论是为了性能、稳定性还是空间利用率。
 
-_或许有人注意到了 CentOS 7 中存在被 backports 回来的`overlay`驱动，不过 CentOS 里的这个驱动达不到生产环境使用的稳定程度，所以不推荐使用。_
+_或许有人注意到了 CentOS 7 中存在被 backports 回来的_`overlay`_驱动，不过 CentOS 里的这个驱动达不到生产环境使用的稳定程度，所以不推荐使用。_
 
