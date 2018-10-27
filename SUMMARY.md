@@ -16,7 +16,8 @@
     * [1.获取镜像](docker/2image/1getimage.md)
     * [2.镜像列表](docker/2image/2imagelist.md)
     * [3.删除镜像](docker/2image/3deleteimage.md)
-    * [4.commit创建](docker/2image/4commit.md)
+    * [4.commit创建镜像](docker/2image/4commit.md)
+    * 5.Dockerfile创建镜像
 * [kubernetes](kubernetes.md)
 * [harbor](harbor.md)
 * [CI/CD](cicd.md)
