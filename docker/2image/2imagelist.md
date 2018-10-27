@@ -95,9 +95,7 @@ ubuntu              16.04               f753707788c5        4 weeks ago         
 除此以外，`docker image ls`还支持强大的过滤器参数`--filter`，或者简写`-f`。之前我们已经看到了使用过滤器来列出虚悬镜像的用法，它还有更多的用法。比如，我们希望看到在`mongo:3.2`之后建立的镜像，可以用下面的命令：
 
 ```
-$ docker image ls 
--f
- since=mongo:3.2
+$ docker image ls -f since=mongo:3.2
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 redis               latest              5f515359c7f8        5 days ago          183 MB
 nginx               latest              05a60462f8ba        5 days ago          181 MB
