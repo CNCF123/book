@@ -106,10 +106,7 @@ nginx               latest              05a60462f8ba        5 days ago          
 此外，如果镜像构建时，定义了`LABEL`，还可以通过`LABEL`来过滤。
 
 ```
-$ docker image ls 
--f
- label=com.example.version=0.1
-...
+
 ```
 
 ### 以特定格式显示 {#以特定格式显示}
