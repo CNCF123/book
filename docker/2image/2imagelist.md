@@ -124,40 +124,5 @@ f753707788c5
 1e0c3dd64ccd
 ```
 
-`--filter`配合`-q`产生出指定范围的 ID 列表，然后送给另一个`docker`命令作为参数，从而针对这组实体成批的进行某种操作的做法在 Docker 命令行使用过程中非常常见，不仅仅是镜像，将来我们会在各个命令中看到这类搭配以完成很强大的功能。因此每次在文档看到过滤器后，可以多注意一下它们的用法。
-
-另外一些时候，我们可能只是对表格的结构不满意，希望自己组织列；或者不希望有标题，这样方便其它程序解析结果等，这就用到了[Go 的模板语法](https://gohugo.io/templates/go-templates/)。
-
-比如，下面的命令会直接列出镜像结果，并且只包含镜像ID和仓库名：
-
-```
-$ docker image ls --format "{{.ID}}: {{.Repository}}"
-
-5f515359c7f8: redis
-05a60462f8ba: nginx
-fe9198c04d62: mongo
-00285df0df87: 
-<none>
-f753707788c5: ubuntu
-f753707788c5: ubuntu
-1e0c3dd64ccd: ubuntu
-```
-
-或者打算以表格等距显示，并且有标题行，和默认一样，不过自己定义列：
-
-```
-$ docker image ls --format "table {{.ID}}\t{{.Repository}}\t{{.Tag}}"
-
-IMAGE ID            REPOSITORY          TAG
-5f515359c7f8        redis               latest
-05a60462f8ba        nginx               latest
-fe9198c04d62        mongo               3.2
-00285df0df87        
-<none>              <none>
-f753707788c5        ubuntu              16.04
-f753707788c5        ubuntu              latest
-1e0c3dd64ccd        ubuntu              14.04
-```
-
 
 
