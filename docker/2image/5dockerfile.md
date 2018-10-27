@@ -109,30 +109,10 @@ RUN buildDeps='gcc libc6-dev make' \
 $ docker build -t nginx:v3 .
 Sending build context to Docker daemon 2.048 kB
 Step 1 : FROM nginx
- ---
->
- e43d811ce2f4
-Step 2 : RUN 
-echo
-'
-<
-h1
->
-Hello, Docker!
-<
-/h1
->
-'
->
- /usr/share/nginx/html/index.html
- ---
->
- Running 
-in
- 9cdc27646c7b
- ---
->
- 44aa4490ce2c
+ ---> e43d811ce2f4
+Step 2 : RUN echo '<h1>Hello, Docker!</h1>' > /usr/share/nginx/html/index.html
+ ---> Running in 9cdc27646c7b
+ ---> 44aa4490ce2c
 Removing intermediate container 9cdc27646c7b
 Successfully built 44aa4490ce2c
 ```
@@ -142,10 +122,7 @@ Successfully built 44aa4490ce2c
 这里我们使用了`docker build`命令进行镜像构建。其格式为：
 
 ```
-docker build [选项] 
-<
-上下文路径/URL/-
->
+docker build [选项] <上下文路径/URL/->
 ```
 
 在这里我们指定了最终镜像的名称`-t nginx:v3`，构建成功后，我们可以像之前运行`nginx:v2`那样来运行这个镜像，其结果会和`nginx:v2`一样。
