@@ -11,6 +11,7 @@
   * [1.安装](docker/1install.md)
     * [1.ubuntu](docker/1install/1ubuntu.md)
     * [2.CentOS](docker/1install/2centos.md)
+    * [3.MacOS](docker/1install/3macos.md)
 * [kubernetes](kubernetes.md)
 * [harbor](harbor.md)
 * [CI/CD](cicd.md)

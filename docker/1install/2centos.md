@@ -148,7 +148,9 @@ For more examples and ideas, visit:
 
 {
 
-    \#这里添加镜像的加速地址
+```
+\#这里添加镜像的加速地址
+```
 
 }
 
