@@ -131,17 +131,13 @@ f753707788c5
 比如，下面的命令会直接列出镜像结果，并且只包含镜像ID和仓库名：
 
 ```
-$ docker image ls --format 
-"{{.ID}}: {{.Repository}}"
+$ docker image ls --format "{{.ID}}: {{.Repository}}"
 
 5f515359c7f8: redis
 05a60462f8ba: nginx
 fe9198c04d62: mongo
 00285df0df87: 
-<
-none
->
-
+<none>
 f753707788c5: ubuntu
 f753707788c5: ubuntu
 1e0c3dd64ccd: ubuntu
@@ -150,21 +146,14 @@ f753707788c5: ubuntu
 或者打算以表格等距显示，并且有标题行，和默认一样，不过自己定义列：
 
 ```
-$ docker image ls --format 
-"table {{.ID}}\t{{.Repository}}\t{{.Tag}}"
+$ docker image ls --format "table {{.ID}}\t{{.Repository}}\t{{.Tag}}"
 
 IMAGE ID            REPOSITORY          TAG
 5f515359c7f8        redis               latest
 05a60462f8ba        nginx               latest
 fe9198c04d62        mongo               3.2
 00285df0df87        
-<
-none
->
-<
-none
->
-
+<none>              <none>
 f753707788c5        ubuntu              16.04
 f753707788c5        ubuntu              latest
 1e0c3dd64ccd        ubuntu              14.04
