@@ -53,7 +53,7 @@ fc
 Deleted: sha256:97ca462ad9eeae25941546209454496e1d66749d53dfa2ee32bf1faabd239d38
 ```
 
-当然，更精确的是使用`镜像摘要`删除镜像。
+当然，更精确的是使用`镜像摘要`docker image ls --digests，删除镜像。
 
 ```
 $ docker image ls --digests
