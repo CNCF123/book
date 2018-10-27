@@ -39,5 +39,3 @@ for
 
 _如果从 Docker Hub 下载镜像非常缓慢，可以参照_[_镜像加速器_](https://yeasy.gitbooks.io/docker_practice/content/install/mirror.html)_一节配置加速器。_
 
-
-
