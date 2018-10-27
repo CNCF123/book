@@ -18,6 +18,8 @@
     * [3.删除镜像](docker/2image/3deleteimage.md)
     * [4.commit创建镜像](docker/2image/4commit.md)
     * [5.Dockerfile创建镜像](docker/2image/5dockerfile.md)
+    * [6.Dockerfile指令](docker/2image/6dockerfileInstruction.md)
+      * [1.FROM](docker/2image/6dockerfileInstruction/1from.md)
 * [kubernetes](kubernetes.md)
 * [harbor](harbor.md)
 * [CI/CD](cicd.md)
