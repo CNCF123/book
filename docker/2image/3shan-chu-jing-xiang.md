@@ -76,7 +76,7 @@ Untagged: node@sha256:b4f0e0bdeb578043c1ea6862f0d40cc4afe32a4a582f3be235a3b16442
 
 ### 用 docker image ls 命令来配合 {#用-docker-image-ls-命令来配合}
 
-像其它可以承接多个实体的命令一样，可以使用`docker image ls -q`来配合使用`docker image rm`，这样可以成批的删除希望删除的镜像。我们在“镜像列表”章节介绍过很多过滤镜像列表的方式都可以拿过来使用。
+像其它可以承接多个实体的命令一样，可以使用**`docker image ls -q`**来配合使用`docker image rm`，这样可以成批的删除希望删除的镜像。我们在“镜像列表”章节介绍过很多过滤镜像列表的方式都可以拿过来使用。
 
 比如，我们需要删除所有仓库名为`redis`的镜像：
 
