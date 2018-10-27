@@ -54,7 +54,7 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 <none>             <none>               00285df0df87        5 days ago          342 MB
 ```
 
-一般来说，虚悬镜像已经失去了存在的价值，是可以随意删除的，可以用下面的命令删除。
+一般来说，虚悬镜像已经失去了存在的价值，是**可以随意删除**的，可以用下面的命令删除。
 
 ```
 $ docker image prune
