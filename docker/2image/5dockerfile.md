@@ -140,8 +140,7 @@ docker build [选项] <上下文路径/URL/->
 如果在`Dockerfile`中这么写：
 
 ```
-COPY
-./package.json /app/
+COPY ./package.json /app/
 ```
 
 这并不是要复制执行`docker build`命令所在的目录下的`package.json`，也不是复制`Dockerfile`所在目录下的`package.json`，而是复制**上下文（context）**目录下的`package.json`。
@@ -175,11 +174,9 @@ Sending build context to Docker daemon 2.048 kB
 或许你已经注意到了，`docker build`还支持从 URL 构建，比如可以直接从 Git repo 中构建：
 
 ```
-$ docker build https://github.com/twang2218/gitlab-ce-zh.git
-#:8.14
+$ docker build https://github.com/twang2218/gitlab-ce-zh.git#:8.14
 
-docker build https://github.com/twang2218/gitlab-ce-zh.git\
-#:8.14
+docker build https://github.com/twang2218/gitlab-ce-zh.git\#:8.14
 
 Sending build context to Docker daemon 2.048 kB
 Step 1 : FROM gitlab/gitlab-ce:8.14.0-ce.0
@@ -202,9 +199,7 @@ $ docker build http://server/context.tar.gz
 #### 从标准输入中读取 Dockerfile 进行构建 {#从标准输入中读取-dockerfile-进行构建}
 
 ```
-docker build - 
-<
- Dockerfile
+docker build - < Dockerfile
 ```
 
 或
