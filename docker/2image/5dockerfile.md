@@ -1,4 +1,4 @@
-## 使用 Dockerfile 镜像 {#使用-dockerfile-定制镜像}
+## 使用 Dockerfile 创建镜像 {#使用-dockerfile-定制镜像}
 
 从刚才的`docker commit`的学习中，我们可以了解到，镜像的定制实际上就是定制每一层所添加的配置、文件。如果我们可以把每一层修改、安装、构建、操作的命令都写入一个脚本，用这个脚本来构建、定制镜像，那么之前提及的无法重复的问题、镜像构建透明性的问题、体积的问题就都会解决。这个脚本就是 Dockerfile。
 
@@ -10,33 +10,15 @@ Dockerfile 是一个文本文件，其内包含了一条条的**指令\(Instruct
 
 ```
 $ mkdir mynginx
-$ 
-cd
- mynginx
+$ cd mynginx
 $ touch Dockerfile
-
 ```
 
 其内容为：
 
 ```
-FROM
- nginx
-
-RUN
-echo
-'
-<
-h1
->
-Hello, Docker!
-<
-/h1
->
-'
->
- /usr/share/nginx/html/index.html
-
+FROM nginx
+RUN echo '<h1>Hello, Docker!</h1>' > /usr/share/nginx/html/index.html
 ```
 
 这个 Dockerfile 很简单，一共就两行。涉及到了两条指令，`FROM`和`RUN`。
@@ -52,10 +34,8 @@ Hello, Docker!
 除了选择现有镜像为基础镜像外，Docker 还存在一个特殊的镜像，名为`scratch`。这个镜像是虚拟的概念，并不实际存在，它表示一个空白的镜像。
 
 ```
-FROM
- scratch
+FROM scratch
 ...
-
 ```
 
 如果你以`scratch`为基础镜像的话，意味着你不以任何镜像为基础，接下来所写的指令将作为镜像第一层开始存在。
@@ -66,66 +46,25 @@ FROM
 
 `RUN`指令是用来执行命令行命令的。由于命令行的强大能力，`RUN`指令在定制镜像时是最常用的指令之一。其格式有两种：
 
-* _shell_
-  格式：
-  `RUN `
-  `<`
-  `命令`
-  `>`
-  ，就像直接在命令行中输入的命令一样。刚才写的 Dockerfile 中的
-  `RUN`
-  指令就是这种格式。
+* shell 格式：RUN &lt;命令&gt;，就像直接在命令行中输入的命令一样。刚才写的 Dockerfile 中的 RUN 指令就是这种格式。
 
 ```
-RUN
-echo
-'
-<
-h1
->
-Hello, Docker!
-<
-/h1
->
-'
->
- /usr/share/nginx/html/index.html
-
+RUN echo '<h1>Hello, Docker!</h1>' > /usr/share/nginx/html/index.html
 ```
 
-* _exec_
-  格式：
-  `RUN ["可执行文件", "参数1", "参数2"]`
-  ，这更像是函数调用中的格式。
+* exec 格式：RUN \["可执行文件", "参数1", "参数2"\]，这更像是函数调用中的格式。
 
 既然`RUN`就像 Shell 脚本一样可以执行命令，那么我们是否就可以像 Shell 脚本一样把每个命令对应一个 RUN 呢？比如这样：
 
 ```
-FROM
- debian:jessie
-
-
-RUN
-apt-get update
-
-RUN
-apt-get install -y gcc libc6-dev make
-
-RUN
-wget -O redis.tar.gz 
-"http://download.redis.io/releases/redis-3.2.5.tar.gz"
-RUN
-mkdir -p /usr/src/redis
-
-RUN
-tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=1
-
-RUN
-make -C /usr/src/redis
-
-RUN
-make -C /usr/src/redis install
-
+FROM debian:jessie
+RUN apt-get update
+RUN apt-get install -y gcc libc6-dev make
+RUN wget -O redis.tar.gz "http://download.redis.io/releases/redis-3.2.5.tar.gz"
+RUN mkdir -p /usr/src/redis
+RUN tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=1
+RUN make -C /usr/src/redis
+RUN make -C /usr/src/redis install
 ```
 
 之前说过，Dockerfile 中每一个指令都会建立一层，`RUN`也不例外。每一个`RUN`的行为，就和刚才我们手工建立镜像的过程一样：新建立一层，在其上执行这些命令，执行结束后，`commit`这一层的修改，构成新的镜像。
@@ -137,63 +76,19 @@ _Union FS 是有最大层数限制的，比如 AUFS，曾经是最大不得超�
 上面的`Dockerfile`正确的写法应该是这样：
 
 ```
-FROM
- debian:jessie
-
-
-RUN
-buildDeps=
-'gcc libc6-dev make'
- \
-    
-&
-&
- apt-get update \
-    
-&
-&
- apt-get install -y 
-$buildDeps
- \
-    
-&
-&
- wget -O redis.tar.gz 
-"http://download.redis.io/releases/redis-3.2.5.tar.gz"
- \
-    
-&
-&
- mkdir -p /usr/src/redis \
-    
-&
-&
- tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=1 \
-    
-&
-&
- make -C /usr/src/redis \
-    
-&
-&
- make -C /usr/src/redis install \
-    
-&
-&
- rm -rf /var/lib/apt/lists/* \
-    
-&
-&
- rm redis.tar.gz \
-    
-&
-&
- rm -r /usr/src/redis \
-    
-&
-&
- apt-get purge -y --auto-remove 
-$buildDeps
+FROM debian:jessie
+RUN buildDeps='gcc libc6-dev make' \
+    && apt-get update \
+    && apt-get install -y $buildDeps \
+    && wget -O redis.tar.gz "http://download.redis.io/releases/redis-3.2.5.tar.gz" \
+    && mkdir -p /usr/src/redis \
+    && tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=1 \
+    && make -C /usr/src/redis \
+    && make -C /usr/src/redis install \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm redis.tar.gz \
+    && rm -r /usr/src/redis \
+    && apt-get purge -y --auto-remove $buildDeps
 ```
 
 首先，之前所有的命令只有一个目的，就是编译、安装 redis 可执行文件。因此没有必要建立很多层，这只是一层的事情。因此，这里没有使用很多个`RUN`对一一对应不同的命令，而是仅仅使用一个`RUN`指令，并使用`&&`将各个所需命令串联起来。将之前的 7 层，简化为了 1 层。在撰写 Dockerfile 的时候，要经常提醒自己，这并不是在写 Shell 脚本，而是在定义每一层该如何构建。
@@ -240,7 +135,6 @@ in
  44aa4490ce2c
 Removing intermediate container 9cdc27646c7b
 Successfully built 44aa4490ce2c
-
 ```
 
 从命令的输出结果中，我们可以清晰的看到镜像的构建过程。在`Step 2`中，如同我们之前所说的那样，`RUN`指令启动了一个容器`9cdc27646c7b`，执行了所要求的命令，并最后提交了这一层`44aa4490ce2c`，随后删除了所用到的这个容器`9cdc27646c7b`。
@@ -271,7 +165,6 @@ docker build [选项]
 ```
 COPY
 ./package.json /app/
-
 ```
 
 这并不是要复制执行`docker build`命令所在的目录下的`package.json`，也不是复制`Dockerfile`所在目录下的`package.json`，而是复制**上下文（context）**目录下的`package.json`。
@@ -286,7 +179,6 @@ COPY
 $ docker build -t nginx:v3 .
 Sending build context to Docker daemon 2.048 kB
 ...
-
 ```
 
 理解构建上下文对于镜像构建是很重要的，避免犯一些不应该的错误。比如有些初学者在发现`COPY /opt/xxxx /app`不工作后，于是干脆将`Dockerfile`放到了硬盘根目录去构建，结果发现`docker build`执行后，在发送一个几十 GB 的东西，极为缓慢而且很容易构建失败。那是因为这种做法是在让`docker build`打包整个硬盘，这显然是使用错误。
@@ -318,7 +210,6 @@ Step 1 : FROM gitlab/gitlab-ce:8.14.0-ce.0
 aed15891ba52: Already exists
 773ae8583d14: Already exists
 ...
-
 ```
 
 这行命令指定了构建所需的 Git repo，并且指定默认的`master`分支，构建目录为`/8.14/`，然后 Docker 就会自己去`git clone`这个项目、切换到指定分支、并进入到指定目录后开始构建。
@@ -327,7 +218,6 @@ aed15891ba52: Already exists
 
 ```
 $ docker build http://server/context.tar.gz
-
 ```
 
 如果所给出的 URL 不是个 Git repo，而是个`tar`压缩包，那么 Docker 引擎会下载这个包，并自动解压缩，以其作为上下文，开始构建。
@@ -338,14 +228,12 @@ $ docker build http://server/context.tar.gz
 docker build - 
 <
  Dockerfile
-
 ```
 
 或
 
 ```
 cat Dockerfile | docker build -
-
 ```
 
 如果标准输入传入的是文本文件，则将其视为`Dockerfile`，并开始构建。这种形式由于直接从标准输入中读取 Dockerfile 的内容，它没有上下文，因此不可以像其他方法那样可以将本地文件`COPY`进镜像之类的事情。
@@ -356,7 +244,6 @@ cat Dockerfile | docker build -
 $ docker build - 
 <
  context.tar.gz
-
 ```
 
 如果发现标准输入的文件格式是`gzip`、`bzip2`以及`xz`的话，将会使其为上下文压缩包，直接将其展开，将里面视为上下文，并开始构建。
