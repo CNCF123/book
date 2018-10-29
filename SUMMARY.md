@@ -30,6 +30,7 @@
       * [9.ENTRYPOINT](docker/2image/6dockerfileInstruction/9entrypoint.md)
       * [10.VOLUME](docker/2image/6dockerfileInstruction/10volume.md)
       * [11.USER](docker/2image/6dockerfileInstruction/11user.md)
+      * [12.WORKDIR](docker/2image/6dockerfileInstruction/12workdir.md)
 * [kubernetes](kubernetes.md)
 * [harbor](harbor.md)
 * [CI/CD](cicd.md)
