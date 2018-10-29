@@ -1,4 +1,4 @@
-# 安装 Docker {#安装-docker}
+## 安装 Docker
 
 Docker 分为 CE 和 EE 两大版本。
 
