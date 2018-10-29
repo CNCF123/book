@@ -2,10 +2,8 @@
 
 该`HEALTHCHECK`指令有两种形式：
 
-* `HEALTHCHECK [OPTIONS] CMD command`
-  （通过在容器内运行命令来检查容器运行状况）
-* `HEALTHCHECK NONE`
-  （禁用从基础映像继承的任何运行状况检查）
+* `HEALTHCHECK [OPTIONS] CMD command`（通过在容器内运行命令来检查容器运行状况）
+* `HEALTHCHECK NONE`（禁用从基础映像继承的任何运行状况检查）
 
 该`HEALTHCHECK`指令告诉Docker如何测试容器以检查它是否仍在工作。即使服务器进程仍在运行，这也可以检测到陷入无限循环且无法处理新连接的Web服务器等情况。
 
@@ -13,22 +11,13 @@
 
 之前可以出现的选项`CMD`是：
 
-* `--interval=DURATION`
-  （默认值：
-  `30s`
-  ）
-* `--timeout=DURATION`
-  （默认值：
-  `30s`
-  ）
-* `--start-period=DURATION`
-  （默认值：
-  `0s`
-  ）
-* `--retries=N`
-  （默认值：
-  `3`
-  ）
+* --interval=DURATION（默认值：30s）
+
+* --timeout=DURATION（默认值：30s）
+
+* --start-period=DURATION（默认值：0s）
+
+* --retries=N（默认值：3）
 
 运行状况检查将首先在容器启动后的**间隔**秒运行，然后在每次上一次检查完成后再**间隔**秒。
 
