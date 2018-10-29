@@ -2,6 +2,10 @@
 
 ENTRYPOINT有两种形式：
 
+* `ENTRYPOINT ["executable", "param1", "param2"] （执行形式，首选）`
+
+* `ENTRYPOINT command param1 param2 （贝壳形式）`
+
 An`ENTRYPOINT`允许您配置将作为可执行文件运行的容器。
 
 例如，以下将使用其默认内容启动nginx，侦听端口80：
