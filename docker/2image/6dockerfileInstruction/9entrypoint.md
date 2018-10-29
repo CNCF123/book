@@ -87,58 +87,19 @@ ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
 ```
 #!/usr/bin/env bash
-set
--e
-if
-[
-"
-$1
-"
-=
-'postgres'
-]
-;
-then
+set -e
 
-chown 
--R
- postgres 
-"
-$PGDATA
-"
-if
-[
--z
-"
-$(
-ls
--A
-"
-$PGDATA
-"
-)
-"
-]
-;
-then
+if [ "$1" = 'postgres' ]; then
+    chown -R postgres "$PGDATA"
 
-gosu postgres initdb
+    if [ -z "$(ls -A "$PGDATA")" ]; then
+        gosu postgres initdb
+    fi
 
+    exec gosu postgres "$@"
 fi
 
-
-exec 
-gosu postgres 
-"
-$@
-"
-fi
-
-
-exec
-"
-$@
-"
+exec "$@"
 ```
 
 最后，如果您需要在关机时进行一些额外的清理（或与其他容器通信），或者协调多个可执行文件，您可能需要确保`ENTRYPOINT`脚本接收Unix信号，传递它们，然后执行一些更多的工作：
