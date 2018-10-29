@@ -1,6 +1,6 @@
 ## LABEL {#label}
 
-* `LABEL <key>=<value> <key>=<value> <key>=<value> ...`
+`LABEL <key>=<value> <key>=<value> <key>=<value> ...`
 
 该`LABEL`指令将元数据添加到图像。A`LABEL`是键值对。要在`LABEL`值中包含空格，请使用引号和反斜杠，就像在命令行解析中一样。一些用法示例：
 

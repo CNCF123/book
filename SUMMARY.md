@@ -23,6 +23,7 @@
       * [2.RUN](docker/2image/6dockerfileInstruction/2run.md)
       * [3.CMD](docker/2image/6dockerfileInstruction/3cmd.md)
       * [4.LABEL](docker/2image/6dockerfileInstruction/4label.md)
+      * [5.EXPOSE](docker/2image/6dockerfileInstruction/5expose.md)
 * [kubernetes](kubernetes.md)
 * [harbor](harbor.md)
 * [CI/CD](cicd.md)
