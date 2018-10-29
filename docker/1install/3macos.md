@@ -1,4 +1,4 @@
-## macOS 安装 Docker {#macos-安装-docker}
+## macOS 安装 Docker CE {#macos-安装-docker}
 
 ### 系统要求 {#系统要求}
 
