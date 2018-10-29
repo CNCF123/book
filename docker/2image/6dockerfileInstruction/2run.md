@@ -1,7 +1,8 @@
+### RUN
+
 RUN有两种形式：
 
-* 
-该`RUN`指令将在当前图像之上的新层中执行任何命令并提交结果。生成的提交图像将用于下一步`Dockerfile`。
+* 该`RUN`指令将在当前图像之上的新层中执行任何命令并提交结果。生成的提交图像将用于下一步`Dockerfile`。
 
 分层`RUN`指令和生成提交符合Docker的核心概念，其中提交很便宜，并且可以从图像历史中的任何点创建容器，就像源代码控制一样。
 
@@ -21,13 +22,12 @@ echo $HOME'
 
 ```
 RUN /bin/bash -c 'source $HOME/.bashrc; echo $HOME'
-
 ```
 
 > **注意**：要使用除“/ bin / sh”之外的其他shell，请使用传入所需shell的_exec_表单。例如，`RUN ["/bin/bash", "-c", "echo hello"]`
-
+>
 > **注意**：_exec_表单被解析为JSON数组，这意味着您必须使用双引号（“）来围绕单词而不是单引号（'）。
-
+>
 > **注意**：与_shell_表单不同，_exec_表单不会调用命令shell。这意味着不会发生正常的shell处理。例如，`RUN [ "echo", "$HOME" ]`不会对变量进行替换`$HOME`。如果你想要shell处理，那么要么使用_shell_表单，要么直接执行shell，例如：`RUN [ "sh", "-c", "echo $HOME" ]`。当使用exec表单并直接执行shell时，就像shell表单的情况一样，它是执行环境变量扩展的shell，而不是docker。
 >
 > **注意**：在_JSON_表单中，必须转义反斜杠。这在反斜杠是路径分隔符的Windows上尤为重要。由于不是有效的JSON，以下行将被视为_shell_表单，并以意外方式失败：`RUN ["c:\windows\system32\tasklist.exe"]`此示例的正确语法是：`RUN ["c:\\windows\\system32\\tasklist.exe"]`
