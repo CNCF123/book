@@ -1,4 +1,4 @@
-## 标签 {#label}
+## LABEL {#label}
 
 * `LABEL <key>=<value> <key>=<value> <key>=<value> ...`
 
