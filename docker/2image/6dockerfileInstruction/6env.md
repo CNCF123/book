@@ -14,9 +14,7 @@ ENV <key>=<value> ...
 例如：
 
 ```
-ENV myName="John Doe" myDog=Rex\ The\ Dog \
-
-    myCat=fluffy
+ENV myName="John Doe" myDog=Rex\ The\ Dog \myCat=fluffy
 ```
 
 和
