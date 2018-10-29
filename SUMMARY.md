@@ -9,7 +9,7 @@
     * [2.容器](docker/0concept/2container.md)
     * [3.仓库](docker/0concept/3registry.md)
   * [1.安装](docker/1install.md)
-    * [1.ubuntu](docker/1install/1ubuntu.md)
+    * [1.Ubuntu](docker/1install/1ubuntu.md)
     * [2.CentOS](docker/1install/2centos.md)
     * [3.MacOS](docker/1install/3macos.md)
   * [2.镜像](docker/2image.md)
