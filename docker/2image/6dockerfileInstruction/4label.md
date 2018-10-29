@@ -13,16 +13,13 @@ LABEL com.example.label-with-value="foo"
 
 LABEL version="1.0"
 
-LABEL description="This text illustrates \
-
-that label-values can span multiple lines."
+LABEL description="This text illustrates that label-values can span multiple lines."
 ```
 
 图像可以有多个标签。您可以在一行中指定多个标签。在Docker 1.10之前，这减小了最终图像的大小，但现在不再是这种情况了。您仍然可以选择在单个指令中指定多个标签，方法有以下两种：
 
 ```
 LABEL multi.label1="value1" multi.label2="value2" other="value3"
-
 ```
 
 ```
