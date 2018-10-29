@@ -58,6 +58,5 @@
 | [docker volume](https://docs.docker.com/v17.09/engine/reference/commandline/volume/) | 管理卷 |
 | [docker wait](https://docs.docker.com/v17.09/engine/reference/commandline/wait/) | 阻止，直到一个或多个容器停止，然后打印退出代码 |
 
-  
 
 
