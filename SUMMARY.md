@@ -25,6 +25,7 @@
       * [4.LABEL](docker/2image/6dockerfileInstruction/4label.md)
       * [5.EXPOSE](docker/2image/6dockerfileInstruction/5expose.md)
       * [6.ENV](docker/2image/6dockerfileInstruction/6env.md)
+      * [7.ADD](docker/2image/6dockerfileInstruction/7add.md)
 * [kubernetes](kubernetes.md)
 * [harbor](harbor.md)
 * [CI/CD](cicd.md)
