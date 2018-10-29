@@ -2,7 +2,11 @@
 
 RUN有两种形式：
 
-* 该`RUN`指令将在当前图像之上的新层中执行任何命令并提交结果。生成的提交图像将用于下一步`Dockerfile`。
+* `RUN <command>（shell表单，该命令在shell中运行，默认情况下/bin/sh -c在Linux或cmd /S /CWindows 上运行）`
+
+* `RUN ["executable", "param1", "param2"]（执行形式）`
+
+该`RUN`指令将在当前图像之上的新层中执行任何命令并提交结果。生成的提交图像将用于下一步`Dockerfile`。
 
 分层`RUN`指令和生成提交符合Docker的核心概念，其中提交很便宜，并且可以从图像历史中的任何点创建容器，就像源代码控制一样。
 
