@@ -2,7 +2,9 @@
 
 ADD有两种形式：
 
+* `ADD [--chown=<user>:<group>] <src>... <dest>`
 
+* `ADD [--chown=<user>:<group>] ["<src>",... "<dest>"] （包含空格的路径需要此表单）`
 
 > **注意**：该`--chown`功能仅在用于构建Linux容器的Dockerfiles上受支持，并且不适用于Windows容器。由于用户和组所有权概念不能在Linux和Windows之间进行转换，因此使用`/etc/passwd`和`/etc/group`将用户名和组名转换为ID会限制此功能仅适用于基于Linux OS的容器。
 
@@ -28,7 +30,6 @@ ADD hom?.txt /mydir/    # ? is replaced with any single character, e.g., "home.t
 
 ```
 ADD arr[[]0].txt /mydir/    # copy a file named "arr[0].txt" to /mydir/
-
 ```
 
 除非可选`--chown`标志指定给定用户名，组名或UID / GID组合以请求所添加内容的特定所有权，否则将使用UID和GID为0创建所有新文件和目录。`--chown`标志的格式允许用户名和组名字符串或任意组合的直接整数UID和GID。提供没有组名的用户名或没有GID的UID将使用与GID相同的数字UID。如果提供了用户名或组名，则容器的根文件系统`/etc/passwd`和`/etc/group`文件将分别用于执行从名称到整数UID或GID的转换。以下示例显示了该`--chown`标志的有效定义：
@@ -48,9 +49,9 @@ ADD --chown=10:11 files* /somedir/
 在`<src>`远程文件URL的情况下，目标将具有600的权限。如果正在检索的远程文件具有HTTP`Last-Modified`标头，则来自该标头的时间戳将用于设置`mtime`目标文件。但是，与在处理期间处理的任何其他文件一样`ADD`，`mtime`将不包括在确定文件是否已更改且应更新缓存中。
 
 > **注意**：如果通过传递`Dockerfile`STDIN（`docker build - < somefile`）进行构建，则没有构建上下文，因此`Dockerfile`只能包含基于URL的`ADD`指令。您还可以通过STDIN :\(`docker build - < archive.tar.gz`）传递压缩存档`Dockerfile`，该存档位于存档的根目录，其余存档将用作构建的上下文。
-
+>
 > **注意**：如果您的网址文件都使用认证保护，您将需要使用`RUN wget`，`RUN curl`或使用其它工具从容器内的`ADD`指令不支持验证。
-
+>
 > **注意**：`ADD`如果内容`<src>`已更改，则第一个遇到的指令将使来自Dockerfile的所有后续指令的高速缓存无效。这包括使缓存无效以获取`RUN`指令。有关详细信息，请参阅“[`Dockerfile`最佳实践指南](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#/build-cache)”。
 
 `ADD`遵守以下规则：
@@ -65,7 +66,7 @@ ADD --chown=10:11 files* /somedir/
 
 > **注意**：不复制目录本身，只复制其内容。
 
-* 如果`<src>`是以可识别的压缩格式（identity，gzip，bzip2或xz）的_本地_tar存档，则将其解压缩为目录。从资源_远程_网址**不**解压。复制或解压缩目录时，它具有与之相同的行为`tar -x`，结果是：
+* 如果`<src>`是以可识别的压缩格式（identity，gzip，bzip2或xz）的_本地\_tar存档，则将其解压缩为目录。从资源_远程\_网址**不**解压。复制或解压缩目录时，它具有与之相同的行为`tar -x`，结果是：
 
   1. 无论在目的地路径上存在什么，
   2. 源树的内容，在逐个文件的基础上解决了有利于“2.”的冲突。
@@ -80,6 +81,5 @@ ADD --chown=10:11 files* /somedir/
 
 * 如果`<dest>`不存在，则会在其路径中创建所有缺少的目录。
 
-  
 
 
