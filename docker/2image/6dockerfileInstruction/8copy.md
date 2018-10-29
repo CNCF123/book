@@ -30,7 +30,6 @@ COPY hom?.txt /mydir/    # ? is replaced with any single character, e.g., "home.
 
 ```
 COPY arr[[]0].txt /mydir/    # copy a file named "arr[0].txt" to /mydir/
-
 ```
 
 除非可选`--chown`标志指定给定用户名，组名或UID / GID组合以请求复制内容的特定所有权，否则将使用UID和GID为0创建所有新文件和目录。`--chown`标志的格式允许用户名和组名字符串或任意组合的直接整数UID和GID。提供没有组名的用户名或没有GID的UID将使用与GID相同的数字UID。如果提供了用户名或组名，则容器的根文件系统`/etc/passwd`和`/etc/group`文件将分别用于执行从名称到整数UID或GID的转换。以下示例显示了该`--chown`标志的有效定义：
