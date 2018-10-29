@@ -71,10 +71,7 @@ root         7  0.0  0.1  15572  2164 ?        R+   08:25   0:00 ps aux
 ```
 FROM debian:stable
 
-RUN apt-get update 
-&
-&
- apt-get install -y --force-yes apache2
+RUN apt-get update && apt-get install -y --force-yes apache2
 
 EXPOSE 80 443
 
@@ -107,93 +104,45 @@ exec "$@"
 ```
 #!/bin/sh
 # Note: I've written this using sh so it works in the busybox container too
+
 # USE the trap if you need to also do manual cleanup after the service is stopped,
 #     or need to start multiple services in the one container
-trap
-"echo TRAPed signal"
- HUP INT QUIT TERM
+trap "echo TRAPed signal" HUP INT QUIT TERM
+
 # start service in background here
-
 /usr/sbin/apachectl start
-echo
-"[hit enter key to exit] or run 'docker stop 
-<
-container
->
-'"
-read
-# stop service and clean up here
-echo
-"stopping apache"
 
+echo "[hit enter key to exit] or run 'docker stop <container>'"
+read
+
+# stop service and clean up here
+echo "stopping apache"
 /usr/sbin/apachectl stop
-echo
-"exited 
-$0
-"
+
+echo "exited $0"
 ```
 
 如果运行此映像`docker run -it --rm -p 80:80 --name test apache`，则可以使用`docker exec`，或检查容器的进程`docker top`，然后请求脚本停止Apache：
 
 ```
-$ 
-docker 
-exec
--it
-test 
-ps aux
-
+$ docker exec -it test ps aux
 USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-
 root         1  0.1  0.0   4448   692 ?        Ss+  00:42   0:00 /bin/sh /run.sh 123 cmd cmd2
-
-root        19  0.0  0.2  71304  4440 ?        Ss   00:42   0:00 /usr/sbin/apache2 
--k
- start
-
-www-data    20  0.2  0.2 360468  6004 ?        Sl   00:42   0:00 /usr/sbin/apache2 
--k
- start
-
-www-data    21  0.2  0.2 360468  6000 ?        Sl   00:42   0:00 /usr/sbin/apache2 
--k
- start
-
+root        19  0.0  0.2  71304  4440 ?        Ss   00:42   0:00 /usr/sbin/apache2 -k start
+www-data    20  0.2  0.2 360468  6004 ?        Sl   00:42   0:00 /usr/sbin/apache2 -k start
+www-data    21  0.2  0.2 360468  6000 ?        Sl   00:42   0:00 /usr/sbin/apache2 -k start
 root        81  0.0  0.1  15572  2140 ?        R+   00:44   0:00 ps aux
-$ 
-docker top 
-test
-
+$ docker top test
 PID                 USER                COMMAND
-
-10035               root                
-{
-run.sh
-}
- /bin/sh /run.sh 123 cmd cmd2
-
-10054               root                /usr/sbin/apache2 
--k
- start
-
-10055               33                  /usr/sbin/apache2 
--k
- start
-
-10056               33                  /usr/sbin/apache2 
--k
- start
-
-$ 
-/usr/bin/time docker stop 
+10035               root                {run.sh} /bin/sh /run.sh 123 cmd cmd2
+10054               root                /usr/sbin/apache2 -k start
+10055               33                  /usr/sbin/apache2 -k start
+10056               33                  /usr/sbin/apache2 -k start
+$ /usr/bin/time docker stop test
 test
-test
-
-real    0m 0.27s
-
-user    0m 0.03s
-
-sys    0m 0.03s
+real	0m 0.27s
+user	0m 0.03s
+sys	0m 0.03s
 ```
 
 > **注意：**您可以使用覆盖`ENTRYPOINT`设置`--entrypoint`，但这只能将二进制设置为_exec_（不会`sh -c`使用）。
