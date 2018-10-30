@@ -63,8 +63,6 @@ root@ba267838cc1b:/# ps
 
 可见，容器中仅运行了指定的 bash 应用。这种特点使得 Docker 对资源的利用率极高，是货真价实的轻量级虚拟化。
 
-
-
 ## 终止容器 {#终止容器}
 
 可以使用`docker container stop`来终止一个运行中的容器。
@@ -76,8 +74,7 @@ root@ba267838cc1b:/# ps
 终止状态的容器可以用`docker container ls -a`命令看到。例如
 
 ```
-docker container ls 
--a
+docker container ls -a
 
 CONTAINER ID        IMAGE                    COMMAND                CREATED             STATUS                          PORTS               NAMES
 ba267838cc1b        ubuntu:14.04             
@@ -86,7 +83,6 @@ ba267838cc1b        ubuntu:14.04
 98e5efa7d997        training/webapp:latest   
 "python app.py"
         About an hour ago   Exited (0) 34 minutes ago                           backstabbing_pike
-
 ```
 
 处于终止状态的容器，可以通过`docker container start`命令来重新启动。
