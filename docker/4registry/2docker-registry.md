@@ -14,7 +14,6 @@
 
 ```
 $ docker run -d -p 5000:5000 --restart=always --name registry registry
-
 ```
 
 这将使用官方的`registry`镜像来启动私有仓库。默认情况下，仓库会被创建在容器的`/var/lib/registry`目录下。你可以通过`-v`参数来将镜像文件存放在本地的指定路径。例如下面的例子将上传的镜像放到本地的`/opt/data/registry`目录。
@@ -24,7 +23,6 @@ $ docker run -d \
     -p 5000:5000 \
     -v /opt/data/registry:/var/lib/registry \
     registry
-
 ```
 
 ### 在私有仓库上传、搜索、下载镜像 {#在私有仓库上传、搜索、下载镜像}
@@ -37,7 +35,6 @@ $ docker run -d \
 $ docker image ls
 REPOSITORY                        TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 ubuntu                            latest              ba5877dc9bec        6 weeks ago         192.7 MB
-
 ```
 
 使用`docker tag`将`ubuntu:latest`这个镜像标记为`127.0.0.1:5000/ubuntu:latest`。
@@ -50,7 +47,6 @@ $ docker image ls
 REPOSITORY                        TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 ubuntu                            latest              ba5877dc9bec        6 weeks ago         192.7 MB
 127.0.0.1:5000/ubuntu:latest      latest              ba5877dc9bec        6 weeks ago         192.7 MB
-
 ```
 
 使用`docker push`上传标记的镜像。
@@ -67,7 +63,6 @@ fc
 b38367233d37: Pushed
 2aebd096e0e2: Pushed
 latest: digest: sha256:fe4277621f10b5026266932ddf760f5a756d2facd505a94d2da12f4f52f71f5a size: 1568
-
 ```
 
 用`curl`查看仓库中的镜像。
@@ -75,7 +70,6 @@ latest: digest: sha256:fe4277621f10b5026266932ddf760f5a756d2facd505a94d2da12f4f5
 ```
 $ curl 127.0.0.1:5000/v2/_catalog
 {"repositories":["ubuntu"]}
-
 ```
 
 这里可以看到`{"repositories":["ubuntu"]}`，表明镜像已经被成功上传了。
@@ -97,7 +91,6 @@ ebc34468f71d: Download complete
 $ docker image ls
 REPOSITORY                         TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 127.0.0.1:5000/ubuntu:latest       latest              ba5877dc9bec        6 weeks ago         192.7 MB
-
 ```
 
 ### 注意事项 {#注意事项}
@@ -127,22 +120,21 @@ $ sudo service docker restart
 
 ```
 {
-  
+
 "registry-mirror"
 : [
-    
+
 "https://registry.docker-cn.com"
 
   ],
-  
+
 "insecure-registries"
 : [
-    
-"192.168.199.100:5000"
+
+"192.168.1.100:5000"
 
   ]
 }
-
 ```
 
 > 注意：该文件必须符合`json`规范，否则 Docker 将不能启动。
