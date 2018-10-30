@@ -41,6 +41,7 @@
     * [3.后台运行](docker/3container/3deamonrun.md)
     * [4.进入容器](docker/3container/4into.md)
     * [5.删除](docker/3container/5delete.md)
+  * [4.仓库](docker/4registry.md)
 * [kubernetes](kubernetes.md)
 * [harbor](harbor.md)
 * [CI/CD](cicd.md)
