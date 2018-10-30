@@ -45,6 +45,7 @@
     * [1.DockerHub](docker/4registry/1dockerhub.md)
     * [2.docker-registry](docker/4registry/2docker-registry.md)
     * [3.harbor](docker/4registry/3harbor.md)
+    * [4.nexus](docker/4registry/4nexus.md)
 * [kubernetes](kubernetes.md)
 * [harbor](harbor.md)
 * [CI/CD](cicd.md)
