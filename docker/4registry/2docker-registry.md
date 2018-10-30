@@ -121,18 +121,14 @@ $ sudo service docker restart
 ```
 {
 
-"registry-mirror"
-: [
+  "registry-mirror": [
 
-"https://registry.docker-cn.com"
-
+    "https://registry.docker-cn.com"
   ],
 
-"insecure-registries"
-: [
+  "insecure-registries": [
 
-"192.168.1.100:5000"
-
+    "192.168.1.100:5000"
   ]
 }
 ```
