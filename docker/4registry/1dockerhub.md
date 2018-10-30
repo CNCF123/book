@@ -1,6 +1,6 @@
 ## Docker Hub {#docker-hub}
 
-目前 Docker 官方维护了一个公共仓库[Docker Hub](https://hub.docker.com/)，其中已经包括了数量超过 15,000 的镜像。大部分需求都可以通过在 Docker Hub 中直接下载镜像来实现。
+目前 Docker 官方维护了一个公共仓库[Docker Hub](https://hub.docker.com/)，其中已经大量的镜像。大部分需求都可以通过在 Docker Hub 中直接下载镜像来实现。
 
 ### 注册 {#注册}
 
@@ -26,7 +26,6 @@ tianon/centos                  CentOS 5 and 6, created using rinse instea...   2
 blalor/centos                  Bare-bones base CentOS 6.5 image                6                    [OK]
 saltstack/centos-6-minimal                                                     6                    [OK]
 tutum/centos-6.4               DEPRECATED. Use tutum/centos:6.4 instead. ...   5                    [OK]
-
 ```
 
 可以看到返回了很多包含关键字的镜像，其中包括镜像名字、描述、收藏数（表示该镜像的受关注程度）、是否官方创建、是否自动创建。
@@ -52,7 +51,6 @@ cd
 76: Download complete
 511136ea3c5a: Download complete
 7064731afe90: Download complete
-
 ```
 
 ### 推送镜像 {#推送镜像}
@@ -71,7 +69,6 @@ ubuntu                   17.10         275d79972a86        6 days ago          9
 username/ubuntu          17.10         275d79972a86        6 days ago          94.6MB
 
 $ docker push username/ubuntu:17.10
-
 ```
 
 ### 自动创建 {#自动创建}
