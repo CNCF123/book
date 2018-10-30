@@ -42,6 +42,7 @@
     * [4.进入容器](docker/3container/4into.md)
     * [5.删除](docker/3container/5delete.md)
   * [4.仓库](docker/4registry.md)
+    * [1.DockerHub](docker/4registry/1dockerhub.md)
 * [kubernetes](kubernetes.md)
 * [harbor](harbor.md)
 * [CI/CD](cicd.md)
