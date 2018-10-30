@@ -31,10 +31,9 @@ root@af8bae53bdd3:/#
 
 ```
 root@af8bae53bdd3:/# pwd
-
 /
-root@af8bae53bdd3:/# ls
 
+root@af8bae53bdd3:/# ls
 bin boot dev etc home lib lib64 media mnt opt proc root run sbin srv sys tmp usr var
 ```
 
