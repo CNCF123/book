@@ -38,6 +38,7 @@
   * [3.容器](docker/3container.md)
     * [1.基本命令](docker/3container/1basecmd.md)
     * [2.启动](docker/3container/2run.md)
+    * [3.后台运行](docker/3container/3deamonrun.md)
 * [kubernetes](kubernetes.md)
 * [harbor](harbor.md)
 * [CI/CD](cicd.md)
