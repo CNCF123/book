@@ -5,13 +5,10 @@
 ### 启动 Nexus 容器 {#启动-nexus-容器}
 
 ```
-$ docker run 
--d
- --name nexus3 --restart=always \
+$ docker run -d --name nexus3 --restart=always \
     -p 8081:8081 \
     --mount src=nexus-data,target=/nexus-data \
     sonatype/nexus3
-
 ```
 
 等待 3-5 分钟，如果`nexus3`容器没有异常退出，那么你可以使用浏览器打开`http://YourIP:8081`访问 Nexus 了。
@@ -25,9 +22,7 @@ $ docker run
 * Name: 仓库的名称
 * HTTP: 仓库单独的访问端口
 * Enable Docker V1 API: 如果需要同时支持 V1 版本请勾选此项（不建议勾选）。
-* Hosted -
-  &gt;
-   Deployment pollcy: 请选择 Allow redeploy 否则无法上传 Docker 镜像。
+* Hosted -&gt; Deployment pollcy: 请选择 Allow redeploy 否则无法上传 Docker 镜像。
 
 其它的仓库创建方法请各位自己摸索，还可以创建一个 docker \(proxy\) 类型的仓库链接到 DockerHub 上。再创建一个 docker \(group\) 类型的仓库把刚才的 hosted 与 proxy 添加在一起。主机在访问的时候默认下载私有仓库中的镜像，如果没有将链接到 DockerHub 中下载并缓存到 Nexus 中。
 
@@ -49,7 +44,7 @@ NGINX 示例配置如下
 upstream
  register
 {
-    
+
 server
 "YourHostName OR IP"
 :
@@ -66,11 +61,11 @@ check
  timeout=
 1000
  type=http;
-    
+
 check_http_send
 "HEAD / HTTP/1.0\r\n\r\n"
 ;
-    
+
 check_http_expect_alive
  http_4xx;
 }
@@ -78,7 +73,7 @@ check_http_expect_alive
 
 server
  {
-    
+
 server_name
  YourDomainName;
 #如果没有 DNS 服务器做解析，请删除此选项使用本机 IP 地址访问
@@ -86,132 +81,132 @@ listen
 443
  ssl;
 
-    
+
 ssl_certificate
  key/example.crt;
-    
+
 ssl_certificate_key
  key/example.key;
 
-    
+
 ssl_session_timeout
 5m
 ;
-    
+
 ssl_protocols
  TLSv1 TLSv1.
 1
  TLSv1.
 2
 ;
-    
+
 ssl_ciphers
   HIGH:!aNULL:!MD5;
-    
+
 ssl_prefer_server_ciphers
 on
 ;
-    
+
 large_client_header_buffers
 4
 32k
 ;
-    
+
 client_max_body_size
 300m
 ;
-    
+
 client_body_buffer_size
 512k
 ;
-    
+
 proxy_connect_timeout
 600
 ;
-    
+
 proxy_read_timeout
 600
 ;
-    
+
 proxy_send_timeout
 600
 ;
-    
+
 proxy_buffer_size
 128k
 ;
-    
+
 proxy_buffers
 4
 64k
 ;
-    
+
 proxy_busy_buffers_size
 128k
 ;
-    
+
 proxy_temp_file_write_size
 512k
 ;
 
-    
+
 location
  / {
-        
+
 proxy_set_header
  Host 
 $host
 ;
-        
+
 proxy_set_header
  X-Forwarded-Proto 
 $scheme
 ;
-        
+
 proxy_set_header
  X-Forwarded-Port 
 $server_port
 ;
-        
+
 proxy_set_header
  X-Forwarded-For 
 $proxy_add_x_forwarded_for
 ;
-        
+
 proxy_http_version
 1
 .
 1
 ;
-        
+
 proxy_set_header
  Upgrade 
 $http_upgrade
 ;
-        
+
 proxy_set_header
  Connection 
 $connection_upgrade
 ;
-        
+
 proxy_redirect
 off
 ;
-        
+
 proxy_set_header
  X-Real-IP 
 $remote_addr
 ;
-        
+
 proxy_pass
  http://register;
-        
+
 proxy_read_timeout
 900s
 ;
 
     }
-    
+
 error_page
 500
 502
@@ -219,7 +214,6 @@ error_page
 504
   /50x.html;
 }
-
 ```
 
 ### Docker 主机访问镜像仓库 {#docker-主机访问镜像仓库}
@@ -242,7 +236,6 @@ $ cat ca.crt | sudo tee
 -a
  /etc/ssl/certs/ca-certificates.crt
 $ systemctl restart docker
-
 ```
 
 使用`docker login YourDomainName OR HostIP`进行测试，用户名密码填写上面 Nexus 中生成的。
