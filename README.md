@@ -40,9 +40,5 @@ github仓库
 
 * [dockerk8s](https://github.com/xsdxn/dockerk8s)
 
-##### 最后：
-
-##### OpenStack必死，docker与k8s为王。
-
 
 
