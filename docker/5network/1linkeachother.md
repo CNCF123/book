@@ -12,7 +12,7 @@
 $ docker network create -d bridge mybridge
 ```
 
-`-d`参数指定 Docker 网络类型，有`bridge overlay`。其中`overlay`网络类型用于[Swarm mode](https://yeasy.gitbooks.io/docker_practice/content/swarm_mode)，在本小节中你可以忽略它。
+`-d`参数指定 Docker 网络类型，有`bridge overlay`。其中`overlay`网络类型用于 **Swarm**，在本小节中你可以忽略它。
 
 ### 连接容器 {#连接容器}
 
