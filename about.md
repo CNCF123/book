@@ -6,5 +6,7 @@
 
 在17年开始接触容器，docker，之后有了kubernetes\(k8s\)。
 
-欢迎以后和大家多多交流。
+Mail : chenkaidi1992@qq.com。
+
+如有错误，请联系本人，谢谢！
 
