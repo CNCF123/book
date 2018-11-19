@@ -2,7 +2,6 @@
 
 * [简介](README.md)
   * [关于我](about.md)
-  * [联系我](contact.md)
 * [docker](docker.md)
   * [0.基本概念](docker/0concept.md)
     * [1.镜像](docker/0concept/1image.md)
