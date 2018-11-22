@@ -1,10 +1,6 @@
 ## macOS 安装 Docker CE {#macos-安装-docker}
 
-### 系统要求 {#系统要求}
-
-[Docker for Mac](https://docs.docker.com/docker-for-mac/)要求系统最低为 macOS 10.10.3 Yosemite。如果系统不满足需求，可以安装[Docker Toolbox](https://docs.docker.com/toolbox/overview/)。
-
-### 安装 {#安装}
+### 安装 {#系统要求}
 
 #### 使用 Homebrew 安装 {#使用-homebrew-安装}
 
@@ -47,8 +43,6 @@ $ docker-machine --version
 docker-machine version 0.13.0, build 9ba6da9
 ```
 
-
-
 如果`docker version`、`docker info`都正常的话，可以尝试运行一个[Nginx 服务器](https://store.docker.com/images/nginx/)：
 
 ```
@@ -70,5 +64,45 @@ $ docker rm webserver
 
 鉴于国内网络问题，后续拉取 Docker 镜像十分缓慢，强烈建议安装 Docker 之后配置镜像加速。
 
-![](/assets/Xnip2018-11-22_13-43-11.jpg)
+https://5cs233bb.mirror.aliyuncs.com![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
+
+![](/assets/Xnip2018-11-22_13-57-16.jpg)
 

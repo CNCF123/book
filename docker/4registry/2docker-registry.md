@@ -37,7 +37,7 @@ REPOSITORY                        TAG                 IMAGE ID            CREATE
 ubuntu                            latest              ba5877dc9bec        6 weeks ago         192.7 MB
 ```
 
-使用`docker tag`将`ubuntu:latest`这个镜像标记为`127.0.0.1:5000/ubuntu:latest`。
+##### 使用**`docker tag`**将`ubuntu:latest`这个镜像标记为`127.0.0.1:5000/ubuntu:latest`。
 
 格式为`docker tag IMAGE[:TAG] [REGISTRY_HOST[:REGISTRY_PORT]/]REPOSITORY[:TAG]`。
 
@@ -49,7 +49,7 @@ ubuntu                            latest              ba5877dc9bec        6 week
 127.0.0.1:5000/ubuntu:latest      latest              ba5877dc9bec        6 weeks ago         192.7 MB
 ```
 
-使用`docker push`上传标记的镜像。
+使用**`docker push`**上传标记的镜像。
 
 ```
 $ docker push 127.0.0.1:5000/ubuntu:latest
@@ -184,7 +184,6 @@ $ openssl x509 -req  -days 3650  -in "root-ca.csr" \
          -extfile "root-ca.cnf"
          -extensions \
          root_ca
-
 ```
 
 第五步生成站点`SSL`私钥。
@@ -193,7 +192,6 @@ $ openssl x509 -req  -days 3650  -in "root-ca.csr" \
 $ openssl genrsa -out 
 "docker.domain.com.key"
  4096
-
 ```
 
 第六步使用私钥生成证书请求文件。
@@ -237,7 +235,6 @@ $ openssl x509 -req -days 750 -in
  -extfile 
 "site.cnf"
  -extensions server
-
 ```
 
 这样已经拥有了`docker.domain.com`的网站 SSL 私钥`docker.domain.com.key`和 SSL 证书`docker.domain.com.crt`及 CA 根证书`root-ca.crt`。
@@ -332,7 +329,6 @@ $ docker run --rm \
     -Bbn username password 
 >
  auth/nginx.htpasswd
-
 ```
 
 > 将上面的`usernamepassword`替换为你自己的用户名和密码。
@@ -368,7 +364,6 @@ volumes:
 
 ```
 127.0.0.1 docker.domain.com
-
 ```
 
 ### 启动 {#启动}
@@ -388,14 +383,12 @@ $ docker-compose up
 $ sudo mkdir -p /etc/docker/certs.d/docker.domain.com
 
 $ sudo cp ssl/root-ca.crt /etc/docker/certs.d/docker.domain.com/ca.crt
-
 ```
 
 登录到私有仓库。
 
 ```
 $ docker login docker.domain.com
-
 ```
 
 尝试推送、拉取镜像。
@@ -410,7 +403,6 @@ $ docker push docker.domain.com/username/ubuntu:18.04
 $ docker image rm docker.domain.com/username/ubuntu:18.04
 
 $ docker pull docker.domain.com/username/ubuntu:18.04
-
 ```
 
 如果我们退出登录，尝试推送镜像。
@@ -423,7 +415,6 @@ logout
 $ docker push docker.domain.com/username/ubuntu:18.04
 
 no basic auth credentials
-
 ```
 
 发现会提示没有登录，不能将镜像推送到私有仓库中。
@@ -431,6 +422,4 @@ no basic auth credentials
 ### 注意事项 {#注意事项}
 
 如果你本机占用了`443`端口，你可以配置[Nginx 代理](https://docs.docker.com/registry/recipes/nginx/)，这里不再赘述。
-
-
 
