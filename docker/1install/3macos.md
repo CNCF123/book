@@ -64,45 +64,7 @@ $ docker rm webserver
 
 鉴于国内网络问题，后续拉取 Docker 镜像十分缓慢，强烈建议安装 Docker 之后配置镜像加速。
 
-https://5cs233bb.mirror.aliyuncs.com![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
-
-![](/assets/Xnip2018-11-22_13-57-16.jpg)
+[https://5cs233bb.mirror.aliyuncs.com](https://5cs233bb.mirror.aliyuncs.com![]%28/assets/Xnip2018-11-22_13-57-16.jpg)
 
 ![](/assets/Xnip2018-11-22_13-57-16.jpg)
 
