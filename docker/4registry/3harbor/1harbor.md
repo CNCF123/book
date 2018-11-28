@@ -44,7 +44,7 @@ harbor的整体架构还是很清晰的，下面简单介绍一下，下图展�
 
 通过三个harbor完成高可用部署，前面通过负载均衡器对外提供服务。共享数据库与缓存。结构如下
 
-Harbor和kubernetes结合
+#### Harbor和kubernetes结合
 
 kubernetes是什么我就不在此赘述了，简单一句话，它是一个用于自动部署，扩展和管理容器化应用程序的开源系统。它的详细内容参考请参考官网。kubernetes中的kubelet组件负责容器的生命周期管理，通过CRI对接到不同的容器实现如：rkt、Docker等，目前默认是Docker，kubelet启动Docker容器的时候，会根据策略IfNotPresent是如果本地不存在则拉取，打上latest标签或者设置Always策略则是一直拉取最新镜像。我们在当前的企业中，Docker的镜像仓库配置成harbor，在容器启动是会拉取harbor中的镜像。这里又几个问题需要注意
 
