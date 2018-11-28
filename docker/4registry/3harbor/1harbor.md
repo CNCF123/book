@@ -58,7 +58,7 @@ kubernetes是什么我就不在此赘述了，简单一句话，它是一个用�
 
 反过来，harbor本身的部署也可以通过kubernetes来完成，通过kubernetes的rc和svc以及pv的配合完成harbor的创建。目前我们的生成环境还是沿用docker-compose的方式部署。
 
-Harbor的未来和改进
+#### Harbor的未来和改进
 
 Harbor的使用有一年多的时间了，也根据自己企业内的需求定制了一些功能，如：直接从公网上面拉取镜像，镜像在不同的项目之间拷贝等功能。这里再给Harbor提几个新能点希望以后能添加：1.镜像同步可以不仅限于harbor之间，只要是实现docker registry API接口镜像仓库都可以同步，2.镜像资源可以有策略的自动回收，避免的资源浪费和撑爆磁盘的问题，作为一个harbor的长期使用者，希望harbor能走的更远，但对Harbor的未来多少有点担忧，主要是因为，Harbor的其实本质还是围绕Docker Registry来做业务扩展，很容易被复制，并且和Docker捆绑。
 
