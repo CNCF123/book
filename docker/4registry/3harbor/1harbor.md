@@ -1,10 +1,10 @@
-### Harbor简介
+## Harbor简介
 
 第一次听到这个名字应该是2016年初的时候，那是在容器技术已经兴起的，各个容器管理平台正处于群雄逐鹿的时候，mesos、kubernetes、swarm等被国内外各个厂商用来作为容器的管理系统。这个时候突然冒出一个词harbor，港湾，同事是这样介绍的：几个VMware中国的人搞了一个容器镜像仓库。于是变成为harbor的第一批用户，后来也有幸成为contributor。说了半天，harbor是什么呢？简单来说，容器是集装箱，集装箱放哪里呢？对，港湾！
 
 官方的说法是：Harbor是一个用于存储和分发Docker镜像的企业级Registry服务器。
 
-##### 我对Harbor的误解
+#### 我对Harbor的误解
 
 1.Harbor是负责存储容器镜像的
 
@@ -14,13 +14,13 @@ Harbor是镜像仓库，那么就应当是存储镜像的，这个可能是大�
 
 这个是我对harbor的第二个误解，镜像的复制，我第一反应应该是镜像分层文件的直接拷贝，当时我还在思考怎么保证复制时镜像分层文件的拷贝冲突、不同存储直接如何转化，如：aufs和devicemapper以及分层文件索引创建等问题，当查看harbor源代码时候才发现，harbor采用了一个更加通用、高屋建瓴的做法，通过docker registry 的API去拷贝，这不是省事，这种做法屏蔽了繁琐的底层文件操作、不仅可以利用现有docker registry功能不必重复造轮子，而且可以解决冲突和一致性的问题。
 
-##### Harbor的架构
+#### Harbor的架构
 
 harbor的整体架构还是很清晰的，下面简单介绍一下，下图展示harbor主要的功能组件和信息流向。
 
 主要组件包括proxy，他是一个nginx前端代理，主要是分发前端页面ui访问和镜像上传和下载流量，上图中通过深蓝色先标识；ui提供了一个web管理页面，当然还包括了一个前端页面和后端API，底层使用mysql数据库；registry是镜像仓库，负责存储镜像文件，当镜像上传完毕后通过hook通知ui创建repository，上图通过红色线标识，当然registry的token认证也是通过ui组件完成；adminserver是系统的配置管理中心附带检查存储用量，ui和jobserver启动时候回需要加载adminserver的配置，通过灰色线标识；jobsevice是负责镜像复制工作的，他和registry通信，从一个registry pull镜像然后push到另一个registry，并记录job\_log，上图通过紫色线标识；log是日志汇总组件，通过docker的log-driver把日志汇总到一起，通过浅蓝色线条标识。
 
-Harbor使用
+#### Harbor使用
 
 我们当前升级的版本是harbor 1.1.1，是从0.5版本升级过来，下面简单从页面角度讲解一下harbor的使用.
 
