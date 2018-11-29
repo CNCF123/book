@@ -41,6 +41,7 @@
     * [2.docker-registry](docker/4registry/2docker-registry.md)
     * [3.harbor](docker/4registry/3harbor.md)
       * [1.harbor简介](docker/4registry/3harbor/1harbor.md)
+      * [2.安装](docker/4registry/3harbor/2install.md)
     * [4.nexus](docker/4registry/4nexus.md)
   * [5.网络](docker/5network.md)
     * [1.容器互联](docker/5network/1linkeachother.md)
