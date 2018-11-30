@@ -60,7 +60,7 @@ cd
 以下命令中的`username`请替换为你的 Docker 账号用户名。
 
 ```
-$ docker tag ubuntu:17.10 username/ubuntu:17.10
+docker tag ubuntu:17.10 username/ubuntu:17.10
 
 $ docker image ls
 
