@@ -68,7 +68,7 @@ REPOSITORY               TAG           IMAGE ID            CREATED             S
 ubuntu                   17.10         275d79972a86        6 days ago          94.6MB
 username/ubuntu          17.10         275d79972a86        6 days ago          94.6MB
 
-$ docker push username/ubuntu:17.10
+docker push username/ubuntu:17.10
 ```
 
 ### 自动创建 {#自动创建}
