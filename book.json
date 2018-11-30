@@ -18,6 +18,7 @@
         "-sharing",
         "advanced-emoji",
         "github",
+        "github-buttons",
         "-highlight",
         "-livereload",
         "simple-page-toc@^0.1.1",
