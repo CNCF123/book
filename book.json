@@ -1,0 +1,122 @@
+{
+    "title": "Docker K8s",
+    "description": "study docker & kubernetes book",
+    "author": "Chen Kiaidi",
+    "output.name": "site",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "root": ".",
+    "links": {
+        "sidebar": {
+            "我的主页": "http://www.chenkaidi.com"
+        }
+    },
+    "plugins": [
+        "-lunr",
+        "-search",
+        "-highlight",
+        "-livereload",
+        "search-plus@^0.0.11",
+        "simple-page-toc@^0.1.1",
+        "prism@^2.1.0",
+        "prism-themes@^0.0.2",
+        "advanced-emoji@^0.2.1",
+        "anchors@^0.7.1",
+        "include-codeblock@^3.0.2",
+        "ace@^0.3.2",
+        "emphasize@^1.1.0",
+        "katex@^1.1.3",
+        "splitter@^0.0.8",
+        "mermaid-gb3@2.1.0",
+        "tbfed-pagefooter@^0.0.1",
+        "expandable-chapters-small@^0.1.7",
+        "sectionx@^3.1.0",
+        "donate@^1.0.2",
+        "local-video@^1.0.1",
+        "sitemap-general@^0.1.1",
+        "anchor-navigation-ex@0.1.8",
+        "todo@^0.1.3",
+        "terminal@^0.3.2",
+        "alerts@^0.2.0",
+        "include-csv@^0.1.0",
+        "puml@^1.0.1",
+        "musicxml@^1.0.2",
+        "klipse@^1.2.0",
+        "-sharing",
+        "sharing-plus@^0.0.2",
+        "graph@^0.1.0",
+        "chart@^0.2.0"
+    ],
+
+    "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
+        "prism": {
+            "css": [
+                "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
+            ]
+        },
+        "include-codeblock": {
+            "template": "ace",
+            "unindent": true,
+            "edit": true
+        },
+        "sharing": {
+           "douban": false,
+           "facebook": false,
+           "google": true,
+           "hatenaBookmark": false,
+           "instapaper": false,
+           "line": false,
+           "linkedin": true,
+           "messenger": false,
+           "pocket": false,
+           "qq": false,
+           "qzone": false,
+           "stumbleupon": false,
+           "twitter": false,
+           "viber": false,
+           "vk": false,
+           "weibo": true,
+           "whatsapp": false,
+           "all": [
+               "facebook", "google", "twitter",
+               "weibo", "instapaper", "linkedin",
+               "pocket", "stumbleupon", "qq", "qzone"
+           ]
+        },
+        "tbfed-pagefooter": {
+            "copyright": "<a href='http://www.miitbeian.gov.cn/publish/query/indexFirst.action'>苏ICP备18000953号-3</a>",
+            "modify_label": "该文件修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "donate": {
+            "alipay": "http://www.dockerk8s.cn/source/image/donate.jpg",
+            "title": "",
+            "button": "打赏",
+            "alipayText": "支付宝"
+        },
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
+        },
+        "sitemap-general": {
+            "prefix": "http://www.dockerk8s.cn"
+        },
+        "anchor-navigation-ex": {
+            "isRewritePageTitle": false,
+            "tocLevel1Icon": "fa fa-hand-o-right",
+            "tocLevel2Icon": "fa fa-hand-o-right",
+            "tocLevel3Icon": "fa fa-hand-o-right"
+        },
+        "sectionx": {
+            "tag": "b"
+        },
+        "terminal": {
+            "copyButtons": true,
+            "fade": false,
+            "style": "flat"
+        }
+    }
+}
