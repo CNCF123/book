@@ -42,6 +42,7 @@
     * [3.harbor](docker/4registry/3harbor.md)
       * [1.安装](docker/4registry/3harbor/1install.md)
     * [4.云仓库](docker/4registry/4cloud-registry.md)
+      * [1.阿里云镜像仓库](docker/4registry/4cloud-registry/1aliyun-registry.md)
   * [5.网络](docker/5network.md)
     * [1.容器互联](docker/5network/1linkeachother.md)
     * [2.访问容器](docker/5network/2accesscontainer.md)
