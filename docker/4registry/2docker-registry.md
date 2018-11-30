@@ -228,76 +228,41 @@ openssl x509 -req -days 750 -in "site.csr" -sha256 \
 私有仓库默认的配置文件位于`/etc/docker/registry/config.yml`，我们先在本地编辑`config.yml`，之后挂载到容器中。
 
 ```
-version:
-0.1
+version: 0.1
 log:
   accesslog:
-    disabled:
-true
-  level:
- debug
-
-  formatter:
- text
-
+    disabled: true
+  level: debug
+  formatter: text
   fields:
-    service:
- registry
-
-    environment:
- staging
-
+    service: registry
+    environment: staging
 storage:
   delete:
-    enabled:
-true
+    enabled: true
   cache:
-    blobdescriptor:
- inmemory
-
+    blobdescriptor: inmemory
   filesystem:
-    rootdirectory:
- /var/lib/registry
-
+    rootdirectory: /var/lib/registry
 auth:
   htpasswd:
-    realm:
- basic-realm
-
-    path:
- /etc/docker/registry/auth/nginx.htpasswd
-
+    realm: basic-realm
+    path: /etc/docker/registry/auth/nginx.htpasswd
 http:
-  addr:
- :
-443
-  host:
- https://docker.domain.com
-
+  addr: :443
+  host: https://docker.domain.com
   headers:
-    X-Content-Type-Options:
- [nosniff]
-
+    X-Content-Type-Options: [nosniff]
   http2:
-    disabled:
-false
+    disabled: false
   tls:
-    certificate:
- /etc/docker/registry/ssl/docker.domain.com.crt
-
-    key:
- /etc/docker/registry/ssl/docker.domain.com.key
-
+    certificate: /etc/docker/registry/ssl/docker.domain.com.crt
+    key: /etc/docker/registry/ssl/docker.domain.com.key
 health:
   storagedriver:
-    enabled:
-true
-    interval:
-10
-s
-
-threshold:
-3
+    enabled: true
+    interval: 10s
+threshold: 3
 ```
 
 ### 生成 http 认证文件 {#生成-http-认证文件}
