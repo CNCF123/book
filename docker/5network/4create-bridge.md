@@ -26,7 +26,7 @@ ip link set dev bridge0 up
 ip addr show bridge0
 4: bridge0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state UP group default
     link/ether 66:38:d0:0d:76:18 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.5.1/24 scope global bridge0
+    inet 192.168.1.1/24 scope global bridge0
        valid_lft forever preferred_lft forever
 ```
 
