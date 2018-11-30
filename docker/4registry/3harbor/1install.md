@@ -18,7 +18,7 @@ Harbor 可以通过以下两种方式之一安装：
 Harbor 部署为几个Docker容器，因此可以部署在任何支持Docker的Linux发行版上。目标主机需要安装Python，Docker和Docker Compose。
 
 * Python应该是2.7或更高版本。
-* Python解释器（2017.6.9补充：Python3 版本会报错，请用2.7版本）
+* Python解释器（注意：Python3 版本会报错，请用2.7版本）
 * Docker引擎应为1.10或更高版本。有关安装说明，请参阅：[docs.docker.com/engine/installation/](https://docs.docker.com/engine/installation/)
 * Docker Compose需要为1.6.0或更高版本。有关安装说明，请参阅：[docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 
@@ -103,8 +103,9 @@ tar xvf harbor-offline-installer-<version>.tgz
 
 * email\_server\_port = 25
 
-* email\_username = 
+* email\_username =   
   [sample\_admin@mydomain.com](mailto:sample_admin@mydomain.com)
+
 * email\_password = abc
 * email\_from = admin 
   [sample\_admin@mydomain.com](mailto:sample_admin@mydomain.com)
