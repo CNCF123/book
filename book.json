@@ -16,6 +16,7 @@
         "-search",
         "search-plus@^0.0.11",
         "-sharing",
+        "advanced-emoji"
         "-highlight",
         "-livereload",
         "simple-page-toc@^0.1.1",
