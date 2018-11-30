@@ -2,7 +2,7 @@
 
 除了默认的`docker0`网桥，用户也可以指定网桥来连接各个容器。
 
-在启动 Docker 服务的时候，使用**`-b BRIDGE`**或**`--bridge=BRIDGE`**来指定使用的网桥。
+在启动 Docker 服务的时候，使用`-b BRIDGE`或`--bridge=BRIDGE`来指定使用的网桥。
 
 如果服务已经运行，那需要先停止服务，并删除旧的网桥。
 
@@ -15,11 +15,9 @@ brctl delbr docker0
 然后创建一个网桥`bridge0`。
 
 ```
-$ sudo brctl addbr bridge0
-$ sudo ip addr add 192.168.5.1/24 dev bridge0
-$ sudo ip link 
-set
- dev bridge0 up
+brctl addbr bridge0
+ip addr add 192.168.5.1/24 dev bridge0
+ip link set dev bridge0 up
 ```
 
 查看确认网桥创建并启动。
