@@ -19,7 +19,7 @@ docker run -d -p 5000:5000 --restart=always --name registry registry
 这将使用官方的`registry`镜像来启动私有仓库。默认情况下，仓库会被创建在容器的`/var/lib/registry`目录下。你可以通过`-v`参数来将镜像文件存放在本地的指定路径。例如下面的例子将上传的镜像放到本地的`/opt/data/registry`目录。
 
 ```
-$ docker run -d \
+docker run -d \
     -p 5000:5000 \
     -v /opt/data/registry:/var/lib/registry \
     registry
