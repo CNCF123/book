@@ -46,9 +46,7 @@ docker run
 还可以使用`udp`标记来指定`udp`端口
 
 ```
-docker run 
--d
- -p 127.0.0.1:5000:5000/udp training/webapp python app.py
+docker run -d -p 127.0.0.1:5000:5000/udp training/webapp python app.py
 ```
 
 ### 查看映射端口配置 {#查看映射端口配置}
