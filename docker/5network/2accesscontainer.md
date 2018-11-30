@@ -38,9 +38,7 @@ docker run -d -p 127.0.0.1:5000:5000 training/webapp python app.py
 使用`ip::containerPort`绑定 localhost 的任意端口到容器的 5000 端口，本地主机会自动分配一个端口。
 
 ```
-docker run 
--d
- -p 127.0.0.1::5000 training/webapp python app.py
+docker run -d -p 127.0.0.1::5000 training/webapp python app.py
 ```
 
 还可以使用`udp`标记来指定`udp`端口
