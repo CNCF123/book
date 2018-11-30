@@ -43,9 +43,7 @@
             "size": "small"
         },
         "tbfed-pagefooter": {
-            "copyright": "<a href='http://www.miitbeian.gov.cn/publish/query/indexFirst.action'>苏ICP备18000953号-3</a>",
-            "modify_label": "该文件修订时间：",
-            "modify_format": "YYYY-MM-DD HH:mm:ss"
+            "copyright": "<a href='http://www.miitbeian.gov.cn/publish/query/indexFirst.action'>苏ICP备18000953号-3</a>"
         },
         "donate": {
             "alipay": "http://www.dockerk8s.cn/source/image/donate.jpg",
