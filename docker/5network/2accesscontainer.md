@@ -65,7 +65,7 @@ docker port nostalgic_morse 5000
 例如
 
 ```
-$ docker run -d \
+docker run -d \
     -p 5000:5000 \
     -p 3000:80 \
     training/webapp \
