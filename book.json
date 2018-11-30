@@ -19,26 +19,14 @@
         "-livereload",
         "search-plus@^0.0.11",
         "simple-page-toc@^0.1.1",
-        "prism@^2.1.0",
-        "prism-themes@^0.0.2",
         "splitter@^0.0.8",
-        "mermaid-gb3@2.1.0",
         "tbfed-pagefooter@^0.0.1",
         "expandable-chapters-small@^0.1.7",
         "donate@^1.0.2",
-        "sitemap-general@^0.1.1",
         "anchor-navigation-ex@0.1.8"
     ],
 
     "pluginsConfig": {
-        "theme-default": {
-            "showLevel": true
-        },
-        "prism": {
-            "css": [
-                "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
-            ]
-        },
         "tbfed-pagefooter": {
             "copyright": "<a href='http://www.miitbeian.gov.cn/publish/query/indexFirst.action'>苏ICP备18000953号-3</a>",
             "modify_label": "该文件修订时间：",
@@ -54,22 +42,11 @@
             "maxDepth": 3,
             "skipFirstH1": true
         },
-        "sitemap-general": {
-            "prefix": "http://www.dockerk8s.cn"
-        },
         "anchor-navigation-ex": {
             "isRewritePageTitle": false,
             "tocLevel1Icon": "fa fa-hand-o-right",
             "tocLevel2Icon": "fa fa-hand-o-right",
             "tocLevel3Icon": "fa fa-hand-o-right"
-        },
-        "sectionx": {
-            "tag": "b"
-        },
-        "terminal": {
-            "copyButtons": true,
-            "fade": false,
-            "style": "flat"
         }
     }
 }
