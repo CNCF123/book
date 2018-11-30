@@ -9,7 +9,7 @@
 下面先创建一个新的 Docker 网络。
 
 ```
-$ docker network create -d bridge mybridge
+docker network create -d bridge mybridge
 ```
 
 `-d`参数指定 Docker 网络类型，有`bridge overlay`。其中`overlay`网络类型用于 **Swarm**，在本小节中你可以忽略它。
@@ -19,19 +19,19 @@ $ docker network create -d bridge mybridge
 运行一个容器并连接到新建的 mybridge 网络
 
 ```
-$ docker run -it --rm --name busybox1 --network mybridge busybox sh
+docker run -it --rm --name busybox1 --network mybridge busybox sh
 ```
 
 打开新的终端，再运行一个容器并加入到mybridge网络
 
 ```
-$ docker run -it --rm --name busybox2 --network mybridge busybox sh
+docker run -it --rm --name busybox2 --network mybridge busybox sh
 ```
 
 再打开一个新的终端查看容器信息
 
 ```
-$ docker container ls
+docker container ls
 
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 b47060aca56b        busybox             
