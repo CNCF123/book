@@ -7,9 +7,9 @@
 使用`docker container ls`可以看到，本地主机的 49155 被映射到了容器的 5000 端口。此时访问本机的 49155 端口即可访问容器内 web 应用提供的界面。
 
 ```
-$ docker run -d -P training/webapp python app.py
+docker run -d -P training/webapp python app.py
 
-$ docker container ls -l
+docker container ls -l
 
 CONTAINER ID  IMAGE                   COMMAND       CREATED        STATUS        PORTS                    NAMES
 bc533791f3f5  training/webapp:latest  python app.py 5 seconds ago  Up 2 seconds  0.0.0.0:49155->5000/tcp  nostalgic_morse
