@@ -42,8 +42,6 @@
         "puml@^1.0.1",
         "musicxml@^1.0.2",
         "klipse@^1.2.0",
-        "-sharing",
-        "sharing-plus@^0.0.2",
         "graph@^0.1.0",
         "chart@^0.2.0"
     ],
@@ -61,30 +59,6 @@
             "template": "ace",
             "unindent": true,
             "edit": true
-        },
-        "sharing": {
-           "douban": false,
-           "facebook": false,
-           "google": true,
-           "hatenaBookmark": false,
-           "instapaper": false,
-           "line": false,
-           "linkedin": true,
-           "messenger": false,
-           "pocket": false,
-           "qq": false,
-           "qzone": false,
-           "stumbleupon": false,
-           "twitter": false,
-           "viber": false,
-           "vk": false,
-           "weibo": true,
-           "whatsapp": false,
-           "all": [
-               "facebook", "google", "twitter",
-               "weibo", "instapaper", "linkedin",
-               "pocket", "stumbleupon", "qq", "qzone"
-           ]
         },
         "tbfed-pagefooter": {
             "copyright": "<a href='http://www.miitbeian.gov.cn/publish/query/indexFirst.action'>苏ICP备18000953号-3</a>",
