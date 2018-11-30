@@ -52,7 +52,7 @@ docker run -d -p 127.0.0.1:5000:5000/udp training/webapp python app.py
 使用`docker port`来查看当前映射的端口配置，也可以查看到绑定的地址
 
 ```
-$ docker port nostalgic_morse 5000
+docker port nostalgic_morse 5000
 127.0.0.1:49155.
 ```
 
