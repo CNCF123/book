@@ -17,6 +17,7 @@
         "search-plus@^0.0.11",
         "-sharing",
         "advanced-emoji",
+        "github",
         "-highlight",
         "-livereload",
         "simple-page-toc@^0.1.1",
@@ -28,6 +29,9 @@
     ],
 
     "pluginsConfig": {
+         "github": {
+            "url": "https://github.com/xsdxn"
+        },
         "tbfed-pagefooter": {
             "copyright": "<a href='http://www.miitbeian.gov.cn/publish/query/indexFirst.action'>苏ICP备18000953号-3</a>",
             "modify_label": "该文件修订时间：",
