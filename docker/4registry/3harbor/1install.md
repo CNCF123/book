@@ -1,4 +1,4 @@
-## 安装和配置指南1
+## 安装和配置指南
 
 Harbor 可以通过以下两种方式之一安装：
 
@@ -108,8 +108,9 @@ tar xvf harbor-offline-installer-<version>.tgz
 
 * email\_password = abc
 
-* email\_from = admin 
+* email\_from = admin   
   [sample\_admin@mydomain.com](mailto:sample_admin@mydomain.com)
+
 * email\_ssl = false
 
 * harbor\_admin\_password：管理员的初始密码。该密码仅在Harbor 第一次启动时生效。之后，此设置将被忽略，并且应在UI中设置管理员的密码。请注意，默认用户名/密码为admin / Harbor12345。
