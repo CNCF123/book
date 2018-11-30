@@ -33,6 +33,15 @@
          "github": {
             "url": "https://github.com/xsdxn"
         },
+        "github-buttons": {
+            "repo": "xsdxn/dockerk8s",
+            "types": [
+                "star",
+                "watch",
+                "fork"
+            ],
+            "size": "small"
+        },
         "tbfed-pagefooter": {
             "copyright": "<a href='http://www.miitbeian.gov.cn/publish/query/indexFirst.action'>苏ICP备18000953号-3</a>",
             "modify_label": "该文件修订时间：",
