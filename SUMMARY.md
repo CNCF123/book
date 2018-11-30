@@ -47,6 +47,7 @@
     * [1.容器互联](docker/5network/1linkeachother.md)
     * [2.访问容器](docker/5network/2accesscontainer.md)
   * [6.数据](docker/6data.md)
+    * [1.数据卷](docker/6data/1data-valume.md)
 * [kubernetes](kubernetes.md)
 * [CI/CD](cicd.md)
 
