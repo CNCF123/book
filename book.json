@@ -24,7 +24,9 @@
         "tbfed-pagefooter@^0.0.1",
         "simple-page-toc@^0.1.1",
         "donate@^1.0.2",
-        "anchor-navigation-ex@0.1.8"  
+        "anchor-navigation-ex@0.1.8",
+        "sectionx",  
+        
     ],
 
     "pluginsConfig": {
@@ -60,6 +62,9 @@
             "tocLevel1Icon": "fa fa-hand-o-right",
             "tocLevel2Icon": "fa fa-hand-o-right",
             "tocLevel3Icon": "fa fa-hand-o-right"
+        },
+        "sectionx": {
+          "tag": "b"
         }
     }
 }
