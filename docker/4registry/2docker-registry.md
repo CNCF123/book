@@ -104,14 +104,13 @@ REPOSITORY                         TAG                 IMAGE ID            CREAT
 对于使用`upstart`的系统而言，编辑`/etc/default/docker`文件，在其中的`DOCKER_OPTS`中增加如下内容：
 
 ```
-DOCKER_OPTS=
-"--registry-mirror=https://registry.docker-cn.com --insecure-registries=192.168.199.100:5000"
+DOCKER_OPTS="--registry-mirror=https://registry.docker-cn.com --insecure-registries=192.168.199.100:5000"
 ```
 
 重新启动服务。
 
 ```
-$ sudo service docker restart
+sudo service docker restart
 ```
 
 #### Ubuntu 16.04+, Debian 8+, centos 7 {#ubuntu-1604-debian-8-centos-7}
@@ -152,13 +151,13 @@ $ sudo service docker restart
 第一步创建`CA`私钥。
 
 ```
-$ openssl genrsa -out "root-ca.key" 4096
+openssl genrsa -out "root-ca.key" 4096
 ```
 
 第二步利用私钥创建`CA`根证书请求文件。
 
 ```
-$ openssl req \
+openssl req \
           -new -key "root-ca.key" \
           -out "root-ca.csr" -sha256 \
           -subj '/C=CN/ST=Shanxi/L=Datong/O=Your Company Name/CN=Your Company Name Docker Registry CA'
@@ -179,7 +178,7 @@ hash
 第四步签发根证书。
 
 ```
-$ openssl x509 -req  -days 3650  -in "root-ca.csr" \
+openssl x509 -req  -days 3650  -in "root-ca.csr" \
          -signkey "root-ca.key" -sha256 -out "root-ca.crt" \
          -extfile "root-ca.cnf"
          -extensions \
@@ -189,21 +188,14 @@ $ openssl x509 -req  -days 3650  -in "root-ca.csr" \
 第五步生成站点`SSL`私钥。
 
 ```
-$ openssl genrsa -out 
-"docker.domain.com.key"
- 4096
+openssl genrsa -out "docker.domain.com.key" 4096
 ```
 
 第六步使用私钥生成证书请求文件。
 
 ```
-$ openssl req -new -key 
-"docker.domain.com.key"
- -out 
-"site.csr"
- -sha256 \
-          -subj 
-'/C=CN/ST=Shanxi/L=Datong/O=Your Company Name/CN=docker.domain.com'
+openssl req -new -key "docker.domain.com.key" -out "site.csr" -sha256 \
+          -subj '/C=CN/ST=Shanxi/L=Datong/O=Your Company Name/CN=docker.domain.com'
 ```
 
 第七步配置证书，新建`site.cnf`文件。
@@ -222,7 +214,7 @@ hash
 第八步签署站点`SSL`证书。
 
 ```
-$ openssl x509 -req -days 750 -in 
+openssl x509 -req -days 750 -in 
 "site.csr"
  -sha256 \
     -CA 
