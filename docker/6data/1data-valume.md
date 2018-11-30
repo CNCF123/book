@@ -15,13 +15,13 @@
 #### 创建一个数据卷
 
 ```
-$ docker volume create my-volume
+docker volume create my-volume
 ```
 
 查看所有的数据卷
 
 ```
-$ docker volume ls 
+docker volume ls 
 
 local               my-volume
 ```
@@ -49,7 +49,7 @@ docker volume inspect my-volume
 下面创建一个名为web的容器，并加载一个数据卷到容器的/webapp目录。
 
 ```
-$ docker run -d -P \
+docker run -d -P \
     --name web \
     # -v my-volume:/wepapp \
     --mount source=my-volume,target=/webapp \
@@ -62,7 +62,7 @@ $ docker run -d -P \
 在主机里使用以下命令可以查看web容器的信息
 
 ```
-$ docker inspect web
+docker inspect web
 ```
 
 数据卷信息在 "Mounts" Key 下面
@@ -85,7 +85,7 @@ $ docker inspect web
 ### 删除数据卷 {#删除数据卷}
 
 ```
-$ docker volume rm my-volume
+docker volume rm my-volume
 ```
 
 数据卷是被设计用来持久化数据的，它的生命周期独立于容器，Docker 不会在容器被删除后自动删除数据卷，并且也不存在垃圾回收这样的机制来处理没有任何容器引用的数据卷。如果需要在删除容器的同时移除数据卷。可以在删除容器的时候使用docker rm -v这个命令。
@@ -93,7 +93,7 @@ $ docker volume rm my-volume
 无主的数据卷可能会占据很多空间，要清理请使用以下命令
 
 ```
-$ docker volume prune
+docker volume prune
 ```
 
 
