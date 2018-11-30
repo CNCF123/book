@@ -19,12 +19,8 @@ Harbor 部署为几个Docker容器，因此可以部署在任何支持Docker的L
 
 * Python应该是2.7或更高版本。
 * Python解释器（2017.6.9补充：Python3 版本会报错，请用2.7版本）
-* Docker引擎应为1.10或更高版本。有关安装说明，请参阅：
-  [https：](https://docs.docker.com/engine/installation/)
-  [//docs.docker.com/engine/installation/](https://docs.docker.com/engine/installation/)
-* Docker Compose需要为1.6.0或更高版本。有关安装说明，请参阅：
-  [https：](https://docs.docker.com/compose/install/)
-  [//docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
+* Docker引擎应为1.10或更高版本。有关安装说明，请参阅：[docs.docker.com/engine/installation/](https://docs.docker.com/engine/installation/)
+* Docker Compose需要为1.6.0或更高版本。有关安装说明，请参阅：[docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 
 ## 安装步骤
 
@@ -33,7 +29,7 @@ Harbor 部署为几个Docker容器，因此可以部署在任何支持Docker的L
 1. 下载安装程序;
 2. 配置
    ports.cfg
-    ;
+    ;
 3. 运行
    install.sh
    来安装和启动Harbor;
@@ -106,10 +102,11 @@ tar xvf harbor-offline-installer-<version>.tgz
 * email\_server = smtp.mydomain.com
 
 * email\_server\_port = 25
-* email\_username = 
+
+* email\_username = 
   [sample\_admin@mydomain.com](mailto:sample_admin@mydomain.com)
 * email\_password = abc
-* email\_from = admin 
+* email\_from = admin 
   [sample\_admin@mydomain.com](mailto:sample_admin@mydomain.com)
 * email\_ssl = false
 
@@ -138,8 +135,6 @@ tar xvf harbor-offline-installer-<version>.tgz
 * project\_creation\_restriction：用于控制用户有权创建项目的标志。默认情况下，每个人都可以创建一个项目，设置为“adminonly”，以便只有admin才能创建项目。
 
 * verify\_remote\_cert：（上或关闭，默认为上）该标志，判断是否验证SSL / TLS证书时码头与远程注册表实例通信。将此属性设置为off可绕过SSL / TLS验证，SSL / TLS验证通常在远程实例具有自签名或不受信任的证书时使用。
-
-
 
 #### 配置存储后端（可选）
 
@@ -180,7 +175,7 @@ docker login reg.yourdomain.com
 docker push reg.yourdomain.com/myproject/myrepo:mytag
 ```
 
-重要信息： Harbor的默认安装使用HTTP – 因此，您需要将该选项添加`--insecure-registry`到客户端的Docker守护程序中，然后重新启动Docker服务。
+重要信息： Harbor的默认安装使用HTTP – 因此，您需要将该选项添加`--insecure-registry`到客户端的Docker守护程序中，然后重新启动Docker服务。
 
 ##### 公证人安装
 
@@ -198,11 +193,11 @@ docker push reg.yourdomain.com/myproject/myrepo:mytag
 
 #### 使用HTTPS访问配置港口
 
-Harbor 不附带任何证书，默认情况下，使用HTTP提供请求。虽然这使得设置和运行相对简单 – 特别是对于开发或测试环境 – 不建议在生产环境中使用。要启用HTTPS，请参阅[使用HTTPS访问配置Harbor ](https://github.com/vmware/harbor/blob/master/docs/configure_https.md)。
+Harbor 不附带任何证书，默认情况下，使用HTTP提供请求。虽然这使得设置和运行相对简单 – 特别是对于开发或测试环境 – 不建议在生产环境中使用。要启用HTTPS，请参阅[使用HTTPS访问配置Harbor ](https://github.com/vmware/harbor/blob/master/docs/configure_https.md)。
 
 ### 管理港口的生命周期
 
-您可以使用docker-compose来管理Harbor的生命周期。一些有用的命令如下所列（必须与docker -compose.yml在同一目录中运行）。
+您可以使用docker-compose来管理Harbor的生命周期。一些有用的命令如下所列（必须与docker -compose.yml在同一目录中运行）。
 
 停止Harbor ：
 
@@ -240,11 +235,10 @@ rm -r / data / registry
 
 #### 管理港湾的安全生产周期
 
-当Harbor 与Notary安装时，docker `docker-compose.notary.yml`-compose命令需要一个额外的模板文件。用于管理Harbor 生命周期的码头组合命令是：
+当Harbor 与Notary安装时，docker `docker-compose.notary.yml`-compose命令需要一个额外的模板文件。用于管理Harbor 生命周期的码头组合命令是：
 
 ```
 docker-compose -f ./docker-compose.yml -f ./docker-compose.notary.yml [ up|down|ps|stop|start ]
-
 ```
 
 例如，如果要在配有Notary的情况下更改配置`harbor.cfg`并重新部署Harbor，则应使用以下命令：
@@ -350,7 +344,7 @@ hostname = 192.168.0.2:8888
   harbor-log          /bin/sh -c crond && rsyslo ...   Up      127.0.0.1:1514->514/tcp                    
   harbor-ui           /harbor/harbor_ui                Up                                               
   nginx               nginx -g daemon off;             Up      0.0.0.0:443->443/tcp, 0.0.0.0:80->80/tcp 
-  registry            /entrypoint.sh serve /etc/ ...   Up      5000/tcp                                 
+  registry            /entrypoint.sh serve /etc/ ...   Up      5000/tcp
 ```
 
 如果容器未处于UP状态，请检查目录中该容器的日志文件`/var/log/harbor`。例如，如果容器`harbor-ui`没有运行，则应该查看日志文件`ui.log`。
@@ -362,7 +356,4 @@ proxy_set_header X-Forwarded-Proto $scheme;
 ```
 
 并重新部署Harbor 参考上一节“管理Harbor 的生命周期”。
-
-  
-
 
