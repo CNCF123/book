@@ -1,6 +1,6 @@
 ## 安装和配置指南
 
-Harbor 可以通过以下两种方式之一安装：
+Harbor 可以通过以下两种方式之一安装：1
 
 * 在线安装程序：
   安装程序从Docker集线器下载Harbour的映像。因此，安装程序的尺寸非常小。
@@ -108,7 +108,7 @@ tar xvf harbor-offline-installer-<version>.tgz
 
 * email\_password = abc
 
-* email\_from = admin   
+* email\_from = admin  
   [sample\_admin@mydomain.com](mailto:sample_admin@mydomain.com)
 
 * email\_ssl = false
