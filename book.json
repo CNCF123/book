@@ -25,8 +25,8 @@
         "simple-page-toc@^0.1.1",
         "donate@^1.0.2",
         "anchor-navigation-ex@0.1.8",
-        "sectionx",
-        "baidu"
+        "sectionx"
+
         
     ],
 
@@ -66,9 +66,7 @@
         },
         "sectionx": {
           "tag": "b"
-        },
-        "baidu": {
-            "token": "66e1303a1dc649f8f4837ed82f4821ba"
         }
+
     }
 }
