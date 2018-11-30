@@ -19,14 +19,12 @@
         "advanced-emoji",
         "github",
         "github-buttons",
-        "-highlight",
-        "-livereload",
-        "simple-page-toc@^0.1.1",
         "splitter@^0.0.8",
-        "tbfed-pagefooter@^0.0.1",
         "expandable-chapters-small@^0.1.7",
+        "tbfed-pagefooter@^0.0.1",
+        "simple-page-toc@^0.1.1",
         "donate@^1.0.2",
-        "anchor-navigation-ex@0.1.8"
+        "anchor-navigation-ex@0.1.8"  
     ],
 
     "pluginsConfig": {
