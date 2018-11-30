@@ -34,11 +34,7 @@ ip addr show bridge0
 
 ```
 {
-
-"bridge"
-: 
-"bridge0"
-,
+  "bridge": "bridge0",
 }
 ```
 
