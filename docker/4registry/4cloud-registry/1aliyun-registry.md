@@ -11,39 +11,7 @@
 
 ## 操作步骤 {#h2-url-2}
 
-1. 登录
-   [容器服务管理控制台](https://cs.console.aliyun.com/)
-   。
-2. 在 Swarm 菜单下，单击左侧导航栏中的
-   集群
-   。
-3. 选择要配置的集群并单击
-   管理
-   。
- 
-   ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7003/4833_zh-CN.png)
- 
-4. 在集群的详情页面，单击
-   登录镜像仓库
-   。
- 
-   ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7003/4834_zh-CN.png)
- 
-5. 在弹出的对话框中，对相关参数进行配置。
- 
-   ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7003/4835_zh-CN.png)
- 
-   * 仓库域名：镜像仓库的 hub 域名。以一个镜像地址
-     `registry.cn-hangzhou.aliyuncs.com/acs/agent:0.8`
-     为例，
-     `registry.cn-hangzhou.aliyuncs.com`
-     即是仓库域名。
-   * 用户名：您当前登录的阿里云账号全称。
-   * 密码：Registry 的独立登录密码。Registry 的登录密码是在容器镜像服务的控制台上设置与修改的。
-   * 邮箱：可选。
-6. 单击
-   确定
-   后，若无报错信息，说明已经成功登录到镜像仓库。
+1.点击控制台页面的”容器镜像服务“![](/assets/Xnip2018-11-30_19-11-02.jpg)2.先点击创建命名空间，名称为”chenkaidi“
 
-
+3.创建密码：![](/assets/Xnip2018-11-30_19-16-28.jpg)
 
