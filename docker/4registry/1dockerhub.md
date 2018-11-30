@@ -43,7 +43,7 @@ tutum/centos-6.4               DEPRECATED. Use tutum/centos:6.4 instead. ...   5
 下载官方`centos`镜像到本地。
 
 ```
-$ docker pull centos
+docker pull centos
 Pulling repository centos
 0b443ba03958: Download complete
 539c0211
