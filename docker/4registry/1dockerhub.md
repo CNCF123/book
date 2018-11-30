@@ -19,7 +19,7 @@
 例如以`centos`为关键词进行搜索：
 
 ```
-$ docker search centos
+docker search centos
 NAME                           DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
 centos                         The official build of CentOS.                   465       [OK]
 tianon/centos                  CentOS 5 and 6, created using rinse instea...   28
