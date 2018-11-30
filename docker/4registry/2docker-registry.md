@@ -268,14 +268,11 @@ threshold: 3
 ### 生成 http 认证文件 {#生成-http-认证文件}
 
 ```
-$ mkdir auth
-
-$ docker run --rm \
+mkdir auth
+docker run --rm \
     --entrypoint htpasswd \
     registry \
-    -Bbn username password 
->
- auth/nginx.htpasswd
+    -Bbn username password > auth/nginx.htpasswd
 ```
 
 > 将上面的`usernamepassword`替换为你自己的用户名和密码。
@@ -283,23 +280,16 @@ $ docker run --rm \
 ### 编辑`docker-compose.yml` {#编辑-docker-composeyml}
 
 ```
-version:
-'3'
+version: '3'
+
 services:
   registry:
-    image:
- registry
-
+    image: registry
     ports:
-      -
-"443:443"
+      - "443:443"
     volumes:
-      -
- ./:/etc/docker/registry
-
-      - registry-data:
-/var/lib/registry
-
+      - ./:/etc/docker/registry
+      - registry-data:/var/lib/registry
 
 volumes:
   registry-data:
@@ -316,8 +306,7 @@ volumes:
 ### 启动 {#启动}
 
 ```
-$ docker-compose up 
--d
+docker-compose up -d
 ```
 
 这样我们就搭建好了一个具有权限认证、TLS 的私有仓库，接下来我们测试其功能是否正常。
@@ -327,39 +316,39 @@ $ docker-compose up
 由于自行签发的 CA 根证书不被系统信任，所以我们需要将 CA 根证书`ssl/root-ca.crt`移入`/etc/docker/certs.d/docker.domain.com`文件夹中。
 
 ```
-$ sudo mkdir -p /etc/docker/certs.d/docker.domain.com
+sudo mkdir -p /etc/docker/certs.d/docker.domain.com
 
-$ sudo cp ssl/root-ca.crt /etc/docker/certs.d/docker.domain.com/ca.crt
+sudo cp ssl/root-ca.crt /etc/docker/certs.d/docker.domain.com/ca.crt
 ```
 
 登录到私有仓库。
 
 ```
-$ docker login docker.domain.com
+docker login docker.domain.com
 ```
 
 尝试推送、拉取镜像。
 
 ```
-$ docker pull ubuntu:18.04
+docker pull ubuntu:18.04
 
-$ docker tag ubuntu:18.04 docker.domain.com/username/ubuntu:18.04
+docker tag ubuntu:18.04 docker.domain.com/username/ubuntu:18.04
 
-$ docker push docker.domain.com/username/ubuntu:18.04
+docker push docker.domain.com/username/ubuntu:18.04
 
-$ docker image rm docker.domain.com/username/ubuntu:18.04
+docker image rm docker.domain.com/username/ubuntu:18.04
 
-$ docker pull docker.domain.com/username/ubuntu:18.04
+docker pull docker.domain.com/username/ubuntu:18.04
 ```
 
 如果我们退出登录，尝试推送镜像。
 
 ```
-$ docker 
+docker 
 logout
  docker.domain.com
 
-$ docker push docker.domain.com/username/ubuntu:18.04
+docker push docker.domain.com/username/ubuntu:18.04
 
 no basic auth credentials
 ```
