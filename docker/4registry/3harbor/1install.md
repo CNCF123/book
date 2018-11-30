@@ -248,7 +248,6 @@ docker-compose -f ./docker-compose.yml -f ./docker-compose.notary.yml [ up|down|
 
 ```
 docker-compose -f ./docker-compose.yml -f ./docker-compose.notary.yml down -v
-vim harbor.cfg
 准备 - 公证
 docker-compose -f ./docker-compose.yml -f ./docker-compose.notary.yml up -d
 ```
