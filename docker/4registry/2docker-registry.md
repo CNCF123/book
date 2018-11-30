@@ -13,7 +13,7 @@
 你可以通过获取官方`registry`镜像来运行。
 
 ```
-$ docker run -d -p 5000:5000 --restart=always --name registry registry
+docker run -d -p 5000:5000 --restart=always --name registry registry
 ```
 
 这将使用官方的`registry`镜像来启动私有仓库。默认情况下，仓库会被创建在容器的`/var/lib/registry`目录下。你可以通过`-v`参数来将镜像文件存放在本地的指定路径。例如下面的例子将上传的镜像放到本地的`/opt/data/registry`目录。
@@ -37,7 +37,7 @@ REPOSITORY                        TAG                 IMAGE ID            CREATE
 ubuntu                            latest              ba5877dc9bec        6 weeks ago         192.7 MB
 ```
 
-##### 使用**`docker tag`**将`ubuntu:latest`这个镜像标记为`127.0.0.1:5000/ubuntu:latest`。
+##### 使用`docker tag`将`ubuntu:latest`这个镜像标记为`127.0.0.1:5000/ubuntu:latest`。
 
 格式为`docker tag IMAGE[:TAG] [REGISTRY_HOST[:REGISTRY_PORT]/]REPOSITORY[:TAG]`。
 
@@ -49,7 +49,7 @@ ubuntu                            latest              ba5877dc9bec        6 week
 127.0.0.1:5000/ubuntu:latest      latest              ba5877dc9bec        6 weeks ago         192.7 MB
 ```
 
-使用**`docker push`**上传标记的镜像。
+使用`docker push`上传标记的镜像。
 
 ```
 $ docker push 127.0.0.1:5000/ubuntu:latest
