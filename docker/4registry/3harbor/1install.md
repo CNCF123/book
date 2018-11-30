@@ -1,4 +1,4 @@
-## 安装和配置指南
+## 安装和配置指南1
 
 Harbor 可以通过以下两种方式之一安装：
 
@@ -103,10 +103,11 @@ tar xvf harbor-offline-installer-<version>.tgz
 
 * email\_server\_port = 25
 
-* email\_username =   
+* email\_username =  
   [sample\_admin@mydomain.com](mailto:sample_admin@mydomain.com)
 
 * email\_password = abc
+
 * email\_from = admin 
   [sample\_admin@mydomain.com](mailto:sample_admin@mydomain.com)
 * email\_ssl = false
