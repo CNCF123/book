@@ -214,19 +214,9 @@ hash
 第八步签署站点`SSL`证书。
 
 ```
-openssl x509 -req -days 750 -in 
-"site.csr"
- -sha256 \
-    -CA 
-"root-ca.crt"
- -CAkey 
-"root-ca.key"
-  -CAcreateserial \
-    -out 
-"docker.domain.com.crt"
- -extfile 
-"site.cnf"
- -extensions server
+openssl x509 -req -days 750 -in "site.csr" -sha256 \
+    -CA "root-ca.crt" -CAkey "root-ca.key"  -CAcreateserial \
+    -out "docker.domain.com.crt" -extfile "site.cnf" -extensions server
 ```
 
 这样已经拥有了`docker.domain.com`的网站 SSL 私钥`docker.domain.com.key`和 SSL 证书`docker.domain.com.crt`及 CA 根证书`root-ca.crt`。
