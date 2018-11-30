@@ -9,7 +9,7 @@
 ```
 systemctl stop docker
 ip link set dev docker0 down
-brctl delbr docker0
+brctl del br docker0
 ```
 
 然后创建一个网桥`bridge0`。
