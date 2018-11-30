@@ -20,7 +20,7 @@ bc533791f3f5  training/webapp:latest  python app.py 5 seconds ago  Up 2 seconds 
 使用`hostPort:containerPort`格式本地的 5000 端口映射到容器的 5000 端口，可以执行
 
 ```
-$ docker run -d -p 5000:5000 training/webapp python app.py
+docker run -d -p 5000:5000 training/webapp python app.py
 ```
 
 此时默认会绑定本地所有接口上的所有地址。
