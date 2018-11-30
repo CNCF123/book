@@ -30,7 +30,7 @@ docker run -d -p 5000:5000 training/webapp python app.py
 可以使用`ip:hostPort:containerPort`格式指定映射使用一个特定地址，比如 localhost 地址 127.0.0.1
 
 ```
-$ docker run -d -p 127.0.0.1:5000:5000 training/webapp python app.py
+docker run -d -p 127.0.0.1:5000:5000 training/webapp python app.py
 ```
 
 ### 映射到指定地址的任意端口 {#映射到指定地址的任意端口}
