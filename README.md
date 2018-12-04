@@ -16,9 +16,11 @@
 
 CNCF 已经吸收了一系列终端用户与支持者企业:
 
-![](/assets/Members-CNCF.jpg)                     
+![](/assets/Members-CNCF.jpg)
 
-    其中不仅包括 Google、IBM、Intel、Docker 和 Red Hat 等知名公司，也包括 DaoCloud 等后起之秀。CNCF 的成员代表了容器、云计算技术、IT 服务和终端用户，共同营造全球云原生生态系统，维护和集成开源技术，支持容器化编排的微服务架构应用，携手推动现代化企业架构的进程。
+```
+其中不仅包括 Google、IBM、Intel、Docker 和 Red Hat 等知名公司，也包括 DaoCloud 等后起之秀。CNCF 的成员代表了容器、云计算技术、IT 服务和终端用户，共同营造全球云原生生态系统，维护和集成开源技术，支持容器化编排的微服务架构应用，携手推动现代化企业架构的进程。
+```
 
 ### docker
 
