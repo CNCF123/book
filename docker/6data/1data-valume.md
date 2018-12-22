@@ -26,7 +26,7 @@ docker volume ls
 local               my-volume
 ```
 
-在主机里使用以下命令可以查看指定数据卷的信息
+查看指定数据卷的信息
 
 ```
 docker volume inspect my-volume
@@ -49,12 +49,7 @@ docker volume inspect my-volume
 下面创建一个名为web的容器，并加载一个数据卷到容器的/webapp目录。
 
 ```
-docker run -d -P \
-    --name web \
-    # -v my-volume:/wepapp \
-    --mount source=my-volume,target=/webapp \
-    training/webapp \
-    python app.py
+docker run -d -P --name web  -v my-volume:/wepapp --mount source=my-volume,target=/webapp training/webapp python app.py
 ```
 
 ### 查看数据卷的具体信息 {#查看数据卷的具体信息}
