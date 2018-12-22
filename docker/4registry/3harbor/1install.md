@@ -32,8 +32,7 @@ Harbor 部署为几个Docker容器，因此可以部署在任何支持Docker的L
 2. 配置
    ports.cfg
 3. 运行
-   install.sh
-   来安装和启动Harbor;
+   install.sh来安装和启动Harbor;
 
 #### 下载安装程序：
 
