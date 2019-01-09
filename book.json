@@ -27,18 +27,6 @@
     ],
 
     "pluginsConfig": {
-         "github": {
-            "url": "https://github.com/dockerk8s"
-        },
-        "github-buttons": {
-            "repo": "dockerk8s/dockerk8s-book",
-            "types": [
-                "star",
-                "watch",
-                "fork"
-            ],
-            "size": "small"
-        },
         "tbfed-pagefooter": {
             "copyright": "<a href='http://www.miitbeian.gov.cn/publish/query/indexFirst.action'>苏ICP备18000953号-3</a>",
             "modify_label": "File Modify：",
