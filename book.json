@@ -12,7 +12,7 @@
         "-sharing",
         "expandable-chapters-small",
         "tbfed-pagefooter",
-        "donate",
+        "donate"
     ],
 
     "pluginsConfig": {
