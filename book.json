@@ -5,24 +5,14 @@
     "output.name": "site",
     "language": "zh-hans",
     "gitbook": "3.2.3",
-    "root": ".",
-    "links": {
-        "sidebar": {
-            "个人主页": "http://www.chenkaidi.com"
-        }
-    },
     "plugins": [
         "-lunr",
         "-search",
         "search-plus@^0.0.11",
         "-sharing",
-        "toggle-chapters",
         "expandable-chapters-small@^0.1.7",
         "tbfed-pagefooter@^0.0.1",
-        "simple-page-toc@^0.1.1",
         "donate@^1.0.2",
-        "anchor-navigation-ex@0.1.8",
-        "sectionx"
     ],
 
     "pluginsConfig": {
@@ -37,18 +27,6 @@
             "button": "打赏",
             "alipayText": "支付宝"
         },
-        "simple-page-toc": {
-            "maxDepth": 3,
-            "skipFirstH1": true
-        },
-        "anchor-navigation-ex": {
-            "isRewritePageTitle": false,
-            "tocLevel1Icon": "fa fa-hand-o-right",
-            "tocLevel2Icon": "fa fa-hand-o-right",
-            "tocLevel3Icon": "fa fa-hand-o-right"
-        },
-        "sectionx": {
-          "tag": "b"
-        }
+
     }
 }
