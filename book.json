@@ -10,7 +10,8 @@
         "-search",
         "search-plus@^0.0.11",
         "-sharing",
-        "expandable-chapters-small",
+        "splitter",
+        "toggle-chapters",
         "tbfed-pagefooter",
         "donate"
     ],
