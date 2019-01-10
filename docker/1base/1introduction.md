@@ -1,4 +1,4 @@
-### Docker是什么
+# Docker是什么
 
 Docker 最初是 dotCloud 公司创始人 Solomon Hykes 在法国期间发起的一个公司内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于[2013 年 3 月以 Apache 2.0 授权协议开源](https://en.wikipedia.org/wiki/Docker_%28software%29)，主要项目代码在[GitHub](https://github.com/moby/moby)上进行维护。
 
