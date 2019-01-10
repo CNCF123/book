@@ -6,7 +6,7 @@
 
 * 先讲一个集装箱改变全球运输业的生动故事，
 
-* 再拿容器技术与集装箱做联系与对比，说明笔者是如何通过集装箱参悟了容器技术的发展命脉 —— [Docker](http://lib.csdn.net/base/docker)实现了应用发布和运行的集装箱化。
+* 再拿容器技术与集装箱做联系与对比，说明笔者是如何通过集装箱参悟了容器技术的发展命脉 —— [Docker](http://lib.csdn.net/base/docker)实现了应用发布和运行的集装箱化。
 
 * 说说容器技术，尤其是Docker的诱人之处，
 
@@ -57,7 +57,7 @@
 
 ## 集装箱对容器技术\(Docker\)的启发 {#集装箱对容器技术docker的启发}
 
-这本书的英文名称是”The Box:How the shipping [`Container`](http://lib.csdn.net/base/docker) made the world smaller and the world economy bigger”
+这本书的英文名称是”The Box:How the shipping [`Container`](http://lib.csdn.net/base/docker) made the world smaller and the world economy bigger”
 
 阅读此书的过程中，我已经联想到了现今逐渐流行也备受质疑的以Docker为首的容器技术；当留意到`container`一词出现在书名中时，我已经迫不及待地把我的观点分享给你，帮助你从一个技术圈从未提及的角度来理解容器技术。
 
@@ -84,25 +84,25 @@ Docker近两年成了容器技术的代言，我们做一个集装箱与容器�
 
 容器技术正在快速改变着公司和用户创建，发布，运行分布式应用的方式，在未来5年将给[云计算](http://lib.csdn.net/base/hadoop)行业带来它应有的价值，其诱人之处包括：
 
-* 资源独立、隔离   
-  资源隔离是云计算平台的最基本需求。Docker通过[Linux](http://lib.csdn.net/base/linux) namespace, cgroup限制了硬件资源与软件运行环境，与宿主机上的其他应用实现了隔离，做到了互不影响。不同应用或服务以“集装箱”（container）为单位装“船”或卸“船”，“集装箱船”（运行container的宿主机或集群 ）上，数千数万个“集装箱”排列整齐，不同公司、不同种类的“货物”（运行应用所需的程序，组件，运行环境，依赖）保持独立。
+* 资源独立、隔离  
+  资源隔离是云计算平台的最基本需求。Docker通过[Linux](http://lib.csdn.net/base/linux) namespace, cgroup限制了硬件资源与软件运行环境，与宿主机上的其他应用实现了隔离，做到了互不影响。不同应用或服务以“集装箱”（container）为单位装“船”或卸“船”，“集装箱船”（运行container的宿主机或集群 ）上，数千数万个“集装箱”排列整齐，不同公司、不同种类的“货物”（运行应用所需的程序，组件，运行环境，依赖）保持独立。
 
-* 环境的一致性   
+* 环境的一致性  
   开发工程师完成应用开发后build一个docker image，基于这个image创建的container像是一个集装箱，里面打包了各种“散件货物”（运行应用所需的程序，组件，运行环境，依赖）。无论这个集装箱在哪里：开发环境、[测试](http://lib.csdn.net/base/softwaretest)环境、生产环境，都可以确保集装箱里面的“货物”种类与个数完全相同，软件包不会在测试环境缺失，环境变量不会在生产环境忘记配置，开发环境与生产环境不会因为安装了不同版本的依赖导致应用运行异常。这样的一致性得益于“发货”（build docker image）时已经密封到”集装箱“中，而每一个环节都是在运输这个完整的、不需要拆分合并的”集装箱“。
 
-* 轻量化   
+* 轻量化  
   相比传统的虚拟化技术（VM），使用docker在cpu, memory, disk IO, network IO上的性能损耗都有同样水平甚至更优的表现。Container的快速创建、启动、销毁受到很多赞誉。
 
-* Build Once, Run Everywhere   
+* Build Once, Run Everywhere  
   这个特性着实吸引了我，“货物”（应用）在“汽车”，“火车”，“轮船”（私有云、公有云等服务）之间迁移交换时，只需要迁移符合标准规格和装卸方式的“集装箱”（docker container），削减了耗时费力的人工“装卸”（上线、下线应用），带来的是巨大的时间人力成本节约。这使未来仅有少数几个运维人员运维超大规模装载线上应用的容器集群成本可能，如同60年代后少数几个机器操作员即可在几小时内连装带卸完一艘万级集装箱船。
 
 我相信以上4点是容器能够定义未来应用发布的几个原力，现在正值原力的觉醒。
 
-我在日常工作中遇到的一个有趣的例子是：我所在的部门有人希望使用或为其他人提供[大数据](http://lib.csdn.net/base/hadoop)技术栈中的某些软件服务，如：Elasticsearch\(ES\), Kibana, [Spark](http://lib.csdn.net/base/spark), Kafka, [Redis](http://lib.csdn.net/base/redis), [MongoDB](http://lib.csdn.net/base/mongodb)。一些人甚至只是想做些简单的功能验证，而他们却要先花一上午甚至一天去依次完成下载软件本身、修改ulimit、设置环境变量、下载[Java](http://lib.csdn.net/base/javase)运行环境、编译某些组件、安装其他依赖包、创建目录、进行若干次容易出错的配置、经历3次以上程序启动失败。可悲的是，下次如果想在其他服务器上提供类似的服务仍要重复前面的经历，更别提把这个任务交给一个新人负责完成需要多长时间。他们就像50年前可怜的码头工人一样，四肢发达，头脑简单，重复着旧式散货装卸模式，抱怨着活多钱少。我们现在正着手用Docker做一个类似Google Cloud Engine一键创建服务\(one click\)的`Setup ELK (ES + Logstash + Kibana) in One Click`。
+我在日常工作中遇到的一个有趣的例子是：我所在的部门有人希望使用或为其他人提供[大数据](http://lib.csdn.net/base/hadoop)技术栈中的某些软件服务，如：Elasticsearch\(ES\), Kibana, [Spark](http://lib.csdn.net/base/spark), Kafka, [Redis](http://lib.csdn.net/base/redis), [MongoDB](http://lib.csdn.net/base/mongodb)。一些人甚至只是想做些简单的功能验证，而他们却要先花一上午甚至一天去依次完成下载软件本身、修改ulimit、设置环境变量、下载[Java](http://lib.csdn.net/base/javase)运行环境、编译某些组件、安装其他依赖包、创建目录、进行若干次容易出错的配置、经历3次以上程序启动失败。可悲的是，下次如果想在其他服务器上提供类似的服务仍要重复前面的经历，更别提把这个任务交给一个新人负责完成需要多长时间。他们就像50年前可怜的码头工人一样，四肢发达，头脑简单，重复着旧式散货装卸模式，抱怨着活多钱少。我们现在正着手用Docker做一个类似Google Cloud Engine一键创建服务\(one click\)的`Setup ELK (ES + Logstash + Kibana) in One Click`。
 
 ## 容器技术是整个互联网的协同创新和原有技术的组合创新 {#容器技术是整个互联网的协同创新和原有技术的组合创新}
 
-正如集装箱对全球运输业及经济的变革不应仅仅归因于集装箱本身而是全社会系统协同创新一样，Docker也将是全系统的变革和原有技术的组合创新，除了拥有运行容器的基础技术工具，还需要构建整个生态系统。如 “Build, Ship, and Run   
+正如集装箱对全球运输业及经济的变革不应仅仅归因于集装箱本身而是全社会系统协同创新一样，Docker也将是全系统的变革和原有技术的组合创新，除了拥有运行容器的基础技术工具，还需要构建整个生态系统。如 “Build, Ship, and Run  
 Any App, Anywhere”需要依赖应用所有的宿主在基础[架构](http://lib.csdn.net/base/architecture)上搭建好docker container的运行环境才可以；而要实现现在容器行业大力宣扬的”大规模应用弹性伸缩“，如果没有大规模的容器和资源管理方案（如Mesos, Kubernetes）是绝不可能实现的。Docker公司在这方面还是比较有远见的，自己开发或收购了不少产品布局整个生态，如Docker hub, Docker swarm, Docker compose, Tutum。
 
 实际的货运中，发货商只关注货物从出发到到达客户手中的总运价和时间，他们希望减少总成本和时间，运输公司负责并且能够处理好公路铁路航海运输中的一切细节。没有发货人会去关注运输的路线、顺序以及集装箱轮船停靠在哪个港口。目前提供容器服务的产品还远未达到真正帮助应用发布者节省时间和成本的目的，享受容器优势的同时，应用发布者总是不得不亲自处理各种细节甚至亲自实现其中缺失的功能，开发者在Docker及周边产品的源码中发现了很多坑，由此导致的额外成本埋没了容器服务潜在的巨大价值。随着容器技术及其生态系统的发展，相信以上问题会逐渐得到改善，Docker版本的迭代速度一直很快。
@@ -154,6 +154,5 @@ Mesos, Kubernetes等容器管理方案将助力 “巴拿马级”，“马六�
 2. 巴拿马级，马六甲级的轮船指的是巴拿马运河、马六甲海峡允许通过的最大尺寸的轮船，意指集装箱船体量大，运载能力强。如《集装箱改变世界》一书中提到“马六甲级集装箱船的长度将达到1320英尺，宽地达到190英尺，它的运载能力将是18000只标准箱。”
 
 3. 
-  
 
 
