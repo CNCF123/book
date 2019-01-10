@@ -8,7 +8,7 @@
 
 从15年1月开始工作，主要方向是Linux运维。
 
-在17年开始接触容器，docker，之后有了kubernetes\(k8s\)。
+从17年开始接触容器docker，之后有了kubernetes\(k8s\)，然后Istio......
 
 #### 邮箱
 
