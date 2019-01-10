@@ -58,8 +58,8 @@
   * [1.入门](kubernetes/1an-zhuang.md)
   * [2.安装](kubernetes/2an-zhuang-pei-zhi.md)
 * [Istio](istio.md)
-  * 1.入门
-  * 2.安装
+  * [1.入门](istio/1base.md)
+  * [2.安装](istio/2install.md)
 * [CICD](cicd.md)
-  * 1.入门
+  * [1.入门](cicd/1base.md)
 
