@@ -1,7 +1,7 @@
 # Summary
 
 * [简介](README.md)
-  * [关于我](about.md)
+  * [关于本人](about.md)
 * [docker](docker.md)
   * [1.入门](docker/1base.md)
     * [1.简介](docker/1base/1introduction.md)
