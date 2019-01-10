@@ -52,5 +52,7 @@
     * [1.数据卷](docker/6data/1data-valume.md)
     * [2.主机卷](docker/6data/2host-volume.md)
 * [kubernetes](kubernetes.md)
+  * [1.入门](kubernetes/1an-zhuang.md)
+  * [2.安装](kubernetes/2an-zhuang-pei-zhi.md)
 * [CI/CD](cicd.md)
 
