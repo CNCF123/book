@@ -12,7 +12,7 @@
     * [3.MacOS](docker/2install/3macos.md)
   * [3.镜像](docker/3image.md)
     * [1.镜像获取](docker/3image/1getimage.md)
-    * [2.镜像列表](docker/3image/3imagelist.md)
+    * [2.镜像列表](docker/3image/2imagelist.md)
     * [3.删除镜像](docker/3image/3deleteimage.md)
     * [4.commit创建镜像](docker/3image/4commit.md)
     * [5.Dockerfile创建镜像](docker/3image/5dockerfile.md)
