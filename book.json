@@ -23,7 +23,7 @@
             "modify_format": "YYYY-MM-DD"
         },
         "donate": {
-            "alipay": "http://www.dockerk8s.net/source/image/donate.jpg",
+            "alipay": "http://www.dockerk8s.net/assets/donate.jpg",
             "title": "",
             "button": "打赏",
             "alipayText": "支付宝"
