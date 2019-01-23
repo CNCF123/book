@@ -58,7 +58,7 @@
   * [8.三剑客](docker/8three-swordman.md)
     * [1.compose](docker/8three-swordman/1compose.md)
       * [1.入门](docker/8three-swordman/1compose/1base.md)
-      * [2.安装](docker/8three-swordman/1compose/2an-zhuang.md)
+      * [2.安装](docker/8three-swordman/1compose/2install.md)
     * [2.machine](docker/8san-jian-ke/2machine.md)
     * [3.swarm](docker/8san-jian-ke/3swarm.md)
 * [kubernetes](kubernetes.md)
