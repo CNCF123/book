@@ -1,6 +1,10 @@
 ## 利用 commit 创建镜像 {#利用-commit-理解镜像构成}
 
-注意：`docker commit`命令除了学习之外，还有一些特殊的应用场合，比如被入侵后保存现场等。但是，不要使用`docker commit`定制镜像，定制镜像应该使用`Dockerfile`来完成。如果你想要定制镜像请查看下一小节。
+注意：`docker commit`命令除了学习之外，还有一些特殊的应用场合，比如被入侵后保存现场等。
+
+#### **但是，不要使用docker commit定制镜像，定制镜像应该使用Dockerfile来完成。**
+
+如果你想要定制镜像请查看下一小节。
 
 镜像是容器的基础，每次执行`docker run`的时候都会指定哪个镜像作为容器运行的基础。在之前的例子中，我们所使用的都是来自于 Docker Hub 的镜像。直接使用这些镜像是可以满足一定的需求，而当这些镜像无法直接满足需求时，我们就需要定制这些镜像。接下来的几节就将讲解如何定制镜像。
 
@@ -23,9 +27,7 @@ $ docker run --name webserver -d -p 80:80 nginx
 现在，假设我们非常不喜欢这个欢迎页面，我们希望改成欢迎 Docker 的文字，我们可以使用`docker exec`命令进入容器，修改其内容。
 
 ```
-$ docker 
-exec
- -it webserver bash
+$ docker exec -it webserver bash
 root@3729b97e8226:/
 # echo '<h1> Hello, Docker!</h1>' > /usr/share/nginx/html/index.html
 
