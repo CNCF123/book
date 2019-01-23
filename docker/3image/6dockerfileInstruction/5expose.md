@@ -1,8 +1,6 @@
 ## EXPOSE {#expose}
 
-```
-EXPOSE <port> [<port>/<protocol>...]
-```
+* `EXPOSE <port> [<port>/<protocol>...]`
 
 该`EXPOSE`指令通知Docker容器在运行时侦听指定的网络端口。您可以指定端口是侦听TCP还是UDP，如果未指定协议，则默认为TCP。
 
@@ -12,7 +10,6 @@ EXPOSE <port> [<port>/<protocol>...]
 
 ```
 EXPOSE 80/udp
-
 ```
 
 要在TCP和UDP上公开，请包含两行：
@@ -33,11 +30,7 @@ docker run
  80:80/tcp 
 -p
  80:80/udp ...
-
 ```
 
 要在主机系统上设置端口重定向，请参阅[使用-P标志](https://docs.docker.com/engine/reference/run/#expose-incoming-ports)。该`docker network`命令支持为容器之间的通信创建网络，而无需公开或发布特定端口，因为连接到网络的容器可以通过任何端口相互通信。有关详细信息，请参阅[此功能](https://docs.docker.com/engine/userguide/networking/)的[概述](https://docs.docker.com/engine/userguide/networking/)）。
-
-  
-
 
