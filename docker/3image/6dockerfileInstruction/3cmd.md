@@ -2,11 +2,11 @@
 
 3种形式：
 
-* CMD \["executable","param1","param2"\]（执行形式，这是首选形式）
+* `CMD ["executable","param1","param2"]（执行形式，这是首选形式）`
 
-* CMD \["param1","param2"\]（作为ENTRYPOINT的默认参数）
+* `CMD ["param1","param2"]（作为ENTRYPOINT的默认参数）`
 
-* CMD command param1 param2（贝壳形式）
+* `CMD command param1 param2（贝壳形式）`
 
 a中只能有一条`CMD`指令`Dockerfile`。如果列出多个，`CMD`则只有最后一个`CMD`生效。
 
