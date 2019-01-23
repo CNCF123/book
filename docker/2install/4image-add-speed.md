@@ -22,3 +22,5 @@
 
 注意：建议使用阿里云镜像加速
 
+备注：本人阿里云镜像加速地址：[https://5cs233bb.mirror.aliyuncs.com](https://5cs233bb.mirror.aliyuncs.com)
+
