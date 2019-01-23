@@ -1,6 +1,8 @@
 ## Docker Hub {#docker-hub}
 
-Docker 官方维护了一个公共仓库[Docker Hub](https://hub.docker.com/)，已经有大量的镜像。大部分需求都可以通过在 Docker Hub 中直接下载镜像来实现。
+Docker 官方维护了一个公共仓库[Docker Hub](https://hub.docker.com/)，已经有大量的镜像。
+
+大部分需求都可以通过在 Docker Hub 中直接下载镜像来实现。
 
 ### 注册 {#注册}
 
@@ -12,7 +14,7 @@ Docker 官方维护了一个公共仓库[Docker Hub](https://hub.docker.com/)，
 
 你可以通过`docker logout`退出登录。
 
-### 拉取镜像 {#拉取镜像}
+### 查找镜像 {#拉取镜像}
 
 你可以通过`docker search`命令来查找官方仓库中的镜像，并利用`docker pull`命令来将它下载到本地。
 
@@ -39,6 +41,8 @@ tutum/centos-6.4               DEPRECATED. Use tutum/centos:6.4 instead. ...   5
 还有一种类型，比如`tianon/centos`镜像，它是由 Docker 的用户创建并维护的，往往带有用户名称前缀。可以通过前缀`username/`来指定使用某个用户提供的镜像，比如 tianon 用户。
 
 另外，在查找的时候通过`--filter=stars=N`参数可以指定仅显示收藏数量为`N`以上的镜像。
+
+### 拉取镜像
 
 下载官方`centos`镜像到本地。
 
