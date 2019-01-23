@@ -1,6 +1,6 @@
 ## 获取镜像 {#获取镜像}
 
-[Docker Hub](https://hub.docker.com/explore/)上有大量的高质量的镜像可以用，这里我们就说一下怎么获取这些镜像。
+[Docker Hub](https://hub.docker.com/explore/)上有大量的镜像可以用。
 
 从 Docker 镜像仓库获取镜像的命令是`docker pull`。
 
