@@ -1,9 +1,6 @@
 ## ONBUILD {#onbuild}
 
-```
-ONBUILD [INSTRUCTION]
-
-```
+* `ONBUILD [INSTRUCTION] `
 
 当图像用作另一个构建的基础时，该`ONBUILD`指令向图像添加将在稍后执行的_触发_指令。触发器将在下游构建的上下文中执行，就好像它已经`FROM`在下游指令之后立即插入一样`Dockerfile`。
 
@@ -63,7 +60,7 @@ ONBUILD RUN /usr/local/bin/python-build --dir /app/src
 ```
 
 > **警告**：不允许`ONBUILD`使用链接指令`ONBUILD ONBUILD`。
-
+>
 > **警告**：`ONBUILD`指令可能不会触发`FROM`或`MAINTAINER`指令。
 
 
