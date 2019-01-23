@@ -17,7 +17,7 @@ docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]
 * 仓库名：如之前所说，这里的仓库名是两段式名称，即`<用户名>/<软件名>`。
 * 对于 Docker Hub，如果不给出用户名，则默认为`library`，也就是官方镜像。
 
-比如：
+例如：
 
 ```
 docker pull ubuntu:16.04
