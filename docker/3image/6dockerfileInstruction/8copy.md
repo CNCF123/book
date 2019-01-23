@@ -1,6 +1,6 @@
 ## COPY
 
-COPY有两种形式：
+2种形式：
 
 * COPY \[--chown=&lt;user&gt;:&lt;group&gt;\] &lt;src&gt;... &lt;dest&gt;
 
