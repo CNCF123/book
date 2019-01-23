@@ -1,6 +1,6 @@
 ## RUN
 
-RUN有两种形式：
+2种形式：
 
 * `RUN <command>（shell表单，该命令在shell中运行，默认情况下/bin/sh -c在Linux或cmd /S /CWindows 上运行）`
 
