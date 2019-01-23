@@ -10,7 +10,7 @@
 docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]
 ```
 
-具体的选项可以通过`docker pull --help`命令看到，这里我们说一下镜像名称的格式。
+可以通过`docker pull --help`命令看到，镜像名称的格式如下：
 
 * Docker 镜像仓库地址：地址的格式一般是`<域名/IP>[:端口号]`。
 * 默认地址是 Docker Hub。
