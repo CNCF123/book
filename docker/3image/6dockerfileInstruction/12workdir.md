@@ -1,8 +1,6 @@
 ## WORKDIR {#workdir}
 
-```
-WORKDIR /path/to/workdir
-```
+* `WORKDIR /path/to/workdir`
 
 该`WORKDIR`指令集的工作目录对任何`RUN`，`CMD`，`ENTRYPOINT`，`COPY`和`ADD`它后面的说明`Dockerfile`。如果`WORKDIR`不存在，即使它未在任何后续`Dockerfile`指令中使用，也将创建它。
 
