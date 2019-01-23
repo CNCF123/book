@@ -130,7 +130,7 @@ sudo service docker restart
 
 对于 Docker for Windows 、 Docker for Mac 在设置中编辑`daemon.json`增加和上边一样的字符串即可。
 
-## 高级配置 {#私有仓库高级配置}
+## 高级证书配置 {#私有仓库高级配置}
 
 上一节我们搭建了一个具有基础功能的私有仓库，本小节我们来使用`Docker Compose`搭建一个拥有权限认证、TLS 的私有仓库。
 
