@@ -1,5 +1,7 @@
 ## FROM
 
+3种形式：
+
 * `FROM <image> [AS <name>]`
 
 * `FROM <image>[:<tag>] [AS <name>]`
