@@ -1,6 +1,6 @@
 ## CMD
 
-该`CMD`指令有三种形式：
+3种形式：
 
 * CMD \["executable","param1","param2"\]（执行形式，这是首选形式）
 
