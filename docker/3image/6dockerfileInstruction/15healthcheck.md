@@ -49,5 +49,3 @@ HEALTHCHECK --interval=5m --timeout=3s \
 
 当容器的运行状况更改时，将`health_status`生成具有新状态的事件。
 
-该`HEALTHCHECK`功能已添加到Docker 1.12中。
-
