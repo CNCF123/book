@@ -1,9 +1,9 @@
 ## ENV {#env}
 
-```
-ENV <key> <value>
-ENV <key>=<value> ...
-```
+2种形式：
+
+* `ENV <key> <value>`
+* `ENV <key>=<value> ...`
 
 该`ENV`指令将环境变量`<key>`设置为该值`<value>`。此值将在构建阶段中所有后续指令的环境中，并且也可以在许多[内联替换](https://docs.docker.com/engine/reference/builder/#environment-replacement)。
 
