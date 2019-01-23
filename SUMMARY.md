@@ -64,7 +64,6 @@
         * [1.安装](docker/8three-swordman/2machine/1aliyun-docker-machine/1install.md)
         * [2.使用](docker/8three-swordman/2machine/1aliyun-docker-machine/2use.md)
     * [3.swarm](docker/8three-swordman/3swarm.md)
-      * [1.我不学习swarm的原因](docker/8three-swordman/3swarm/1not-study-reason.md)
 * [kubernetes](kubernetes.md)
   * [1.入门](kubernetes/1base.md)
     * [1.发展历史](kubernetes/1base/1history.md)
