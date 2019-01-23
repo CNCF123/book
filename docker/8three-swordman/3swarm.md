@@ -6,3 +6,5 @@ swarm是基于docker平台实现的集群技术，他可以通过几条简单的
 
 但是，kubernetes赢得了胜利。
 
+接下来，你将进入kubernetes的世界。
+
