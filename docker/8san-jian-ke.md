@@ -1,10 +1,10 @@
 ## 三剑客简介
 
-### docker-machine
+DOCKER技术在推出后掀起了一阵容器化技术的热潮，容器化使得服务的部署变得极其简易，这为微服务和分布式计算提供了很大的便利。
 
-docker技术是基于Linux内核的`cgroup`技术实现的，那么问题来了，在非Linux平台上是否就不能使用docker技术了呢？答案是可以的，不过显然需要借助虚拟机去模拟出Linux环境来。
+为了把容器化技术的优点发挥到极致，docker公司先后推出了三大技术:`docker-machine`,`docker-compose`,`docker-swarm`，可以说是几乎实现了容器化技术中所有可能需要的底层技术手段。
 
-docker-machine就是docker公司官方提出的，用于在各种平台上快速创建具有docker服务的虚拟机的技术，甚至可以通过指定driver来定制虚拟机的实现原理（一般是virtualbox）。
+### 
 
 ### docker-compose
 
