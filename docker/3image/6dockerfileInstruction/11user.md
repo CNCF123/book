@@ -1,6 +1,8 @@
 ## USER
 
-* `USER <user>[:<group>] `
+2种形式：
+
+* `USER <user>[:<group>]`
 * `USER <UID>[:<GID>]`
 
 的`USER`运行的图像和用于当任何指令设置的用户名（或UID）和任选的所述用户组（或GID）使用`RUN`，`CMD`和`ENTRYPOINT`它后面的指令`Dockerfile`。
