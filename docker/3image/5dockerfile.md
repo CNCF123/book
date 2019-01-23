@@ -89,13 +89,13 @@ Sending build context to Docker daemon 2.048 kB
 
 那么为什么会有人误以为`.`是指定`Dockerfile`所在目录呢？这是因为在默认情况下，如果不额外指定`Dockerfile`的话，会将上下文目录下的名为`Dockerfile`的文件作为 Dockerfile。
 
-这只是默认行为，实际上**`Dockerfile`的文件名并不要求必须为`Dockerfile`**，而且并不要求必须位于上下文目录中，比如可以用`-f ../Dockerfile.php`参数指定某个文件作为`Dockerfile`。
+这只是默认行为，实际上`Dockerfile`**的文件名并不要求必须为**`Dockerfile`，而且并不要求必须位于上下文目录中，比如可以用`-f ../Dockerfile.php`参数指定某个文件作为`Dockerfile`。
 
 当然，一般大家习惯性的会使用默认的文件名`Dockerfile`，以及会将其置于镜像构建上下文目录中。
 
 ### 其它`docker build`的用法 {#其它-docker-build-的用法}
 
-#### 直接用 Git repo 进行构建 {#直接用-git-repo-进行构建}
+#### 直接用 Git repo 进行构建  {#直接用-git-repo-进行构建}
 
 或许你已经注意到了，`docker build`还支持从 URL 构建，比如可以直接从 Git repo 中构建：
 
