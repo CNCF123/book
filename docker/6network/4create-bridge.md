@@ -12,21 +12,21 @@ ip link set dev docker0 down
 brctl del br docker0
 ```
 
-然后创建一个网桥**`bridge0`**。
+然后创建一个网桥`bridge0`。
 
 ```
-brctl addbr bridge0
-ip addr add 192.168.1.1/24 dev bridge0
-ip link set dev bridge0 up
+brctl addbr mybridge
+ip addr add 192.168.1.1/24 dev mybridge
+ip link set dev mybridge up
 ```
 
 查看确认网桥创建并启动。
 
 ```
-ip addr show bridge0
-4: bridge0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state UP group default
-    link/ether 66:38:d0:0d:76:18 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.1.1/24 scope global bridge0
+ip addr show mybridge
+4: mybridge: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state UP group default
+    link/ether 93:18:d0:0d:26:98 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.1/24 scope global mybridge
        valid_lft forever preferred_lft forever
 ```
 
@@ -34,13 +34,13 @@ ip addr show bridge0
 
 ```
 {
-  "bridge": "bridge0",
+  "bridge": "mybridge",
 }
 ```
 
 启动 Docker 服务。
 
-新建一个容器，可以看到它已经桥接到了`bridge0`上。
+新建一个容器，可以看到它已经桥接到了`mybridge`上。
 
 可以继续用`brctl show`命令查看桥接的信息。另外，在容器中可以使用`ip addr`和`ip route`命令来查看 IP 地址配置和路由信息。
 
