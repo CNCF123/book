@@ -1,14 +1,10 @@
 ## FROM
 
-FROM &lt;image&gt; \[AS &lt;name&gt;\]
+* `FROM <image> [AS <name>]`
 
-Or
+* `FROM <image>[:<tag>] [AS <name>]`
 
-FROM &lt;image&gt;\[:&lt;tag&gt;\] \[AS &lt;name&gt;\]
-
-Or
-
-FROM &lt;image&gt;\[@&lt;digest&gt;\] \[AS &lt;name&gt;\]
+* `FROM <image>[@<digest>] [AS <name>]`
 
 该`FROM`指令初始化新的构建阶段并为后续指令设置[_基本映像_](https://docs.docker.com/engine/reference/glossary/#base-image)。因此，有效`Dockerfile`必须以`FROM`指令开始。图像可以是任何有效图像 - 通过从[_公共存储库中_](https://docs.docker.com/engine/tutorials/dockerrepos/)**提取图像**来启动它尤其容易。
 
