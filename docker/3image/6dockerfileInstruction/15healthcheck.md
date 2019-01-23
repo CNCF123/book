@@ -1,6 +1,6 @@
 ## HEALTHCHECK
 
-该`HEALTHCHECK`指令有两种形式：
+2种形式：
 
 * `HEALTHCHECK [OPTIONS] CMD command`（通过在容器内运行命令来检查容器运行状况）
 * `HEALTHCHECK NONE`（禁用从基础映像继承的任何运行状况检查）
