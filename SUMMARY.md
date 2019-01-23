@@ -12,7 +12,7 @@
     * [2.CentOS](docker/2install/2centos.md)
     * [3.MacOS](docker/2install/3macos.md)
   * [3.镜像](docker/3image.md)
-    * [1.镜像加速与获取](docker/3image/1getimage.md)
+    * [1.镜像加速与获取](docker/3image/1image-add-speed-and-get-image.md)
     * [2.镜像列表](docker/3image/2imagelist.md)
     * [3.删除镜像](docker/3image/3deleteimage.md)
     * [4.commit创建镜像](docker/3image/4commit.md)
