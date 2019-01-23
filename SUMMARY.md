@@ -61,7 +61,7 @@
       * [2.安装](docker/8three-swordman/1compose/2install.md)
     * [2.machine](docker/8three-swordman/2machine.md)
       * [1.阿里云docker-machine](docker/8three-swordman/2machine/1aliyun-docker-machine.md)
-    * [3.swarm](docker/8san-jian-ke/3swarm.md)
+    * [3.swarm](docker/8three-swordman/3swarm.md)
 * [kubernetes](kubernetes.md)
   * [1.入门](kubernetes/1base.md)
     * [1.发展历史](kubernetes/1base/1history.md)
