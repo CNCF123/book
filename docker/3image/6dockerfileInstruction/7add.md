@@ -1,6 +1,6 @@
 ## ADD
 
-ADD有两种形式：
+2种形式：
 
 * `ADD [--chown=<user>:<group>] <src>... <dest>`
 
