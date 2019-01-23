@@ -11,7 +11,6 @@
     * [1.Ubuntu](docker/2install/1ubuntu.md)
     * [2.CentOS](docker/2install/2centos.md)
     * [3.MacOS](docker/2install/3macos.md)
-    * [4.镜像加速](docker/2install/4image-add-speed.md)
   * [3.镜像](docker/3image.md)
     * [1.镜像获取与加速](docker/3image/1getimage.md)
     * [2.镜像列表](docker/3image/2imagelist.md)
