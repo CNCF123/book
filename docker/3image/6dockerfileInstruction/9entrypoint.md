@@ -1,6 +1,6 @@
 ## ENTRYPOINT
 
-ENTRYPOINT有两种形式：
+2种形式：
 
 * `ENTRYPOINT ["executable", "param1", "param2"] （执行形式，首选）`
 
@@ -140,9 +140,9 @@ PID                 USER                COMMAND
 10056               33                  /usr/sbin/apache2 -k start
 $ /usr/bin/time docker stop test
 test
-real	0m 0.27s
-user	0m 0.03s
-sys	0m 0.03s
+real    0m 0.27s
+user    0m 0.03s
+sys    0m 0.03s
 ```
 
 > **注意：**您可以使用覆盖`ENTRYPOINT`设置`--entrypoint`，但这只能将二进制设置为_exec_（不会`sh -c`使用）。
