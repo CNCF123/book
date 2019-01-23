@@ -62,7 +62,7 @@
     * [2.machine](docker/8san-jian-ke/2machine.md)
     * [3.swarm](docker/8san-jian-ke/3swarm.md)
 * [kubernetes](kubernetes.md)
-  * [1.入门](kubernetes/1an-zhuang.md)
+  * [1.入门](kubernetes/1base.md)
     * [1.发展历史](kubernetes/1an-zhuang/1history.md)
   * [2.安装](kubernetes/2an-zhuang-pei-zhi.md)
 * [Istio](istio.md)
