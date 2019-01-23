@@ -18,6 +18,8 @@ Hello world
 
 这跟在本地直接执行`/bin/echo 'hello world'`几乎感觉不出任何区别。
 
+#### 交互模式
+
 下面的命令则启动一个 bash 终端，允许用户进行交互。
 
 ```
@@ -36,6 +38,8 @@ root@af8bae53bdd3:/# pwd
 root@af8bae53bdd3:/# ls
 bin boot dev etc home lib lib64 media mnt opt proc root run sbin srv sys tmp usr var
 ```
+
+
 
 当利用`docker run`来创建容器时，Docker 在后台运行的标准操作包括：
 
