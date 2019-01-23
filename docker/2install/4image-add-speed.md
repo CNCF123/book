@@ -15,7 +15,7 @@
 ```
 {
   "registry-mirrors": [
-    "https://registry.docker-cn.com"
+    "https://5cs233bb.mirror.aliyuncs.com"
   ]
 }
 ```
