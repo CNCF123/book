@@ -95,21 +95,12 @@ Sending build context to Docker daemon 2.048 kB
 
 ### 其它`docker build`的用法 {#其它-docker-build-的用法}
 
-#### 直接用 Git repo 进行构建  {#直接用-git-repo-进行构建}
+#### 直接用 Git repo 进行构建 {#直接用-git-repo-进行构建}
 
 或许你已经注意到了，`docker build`还支持从 URL 构建，比如可以直接从 Git repo 中构建：
 
 ```
-$ docker build https://github.com/twang2218/gitlab-ce-zh.git#:8.14
-
-docker build https://github.com/twang2218/gitlab-ce-zh.git\#:8.14
-
-Sending build context to Docker daemon 2.048 kB
-Step 1 : FROM gitlab/gitlab-ce:8.14.0-ce.0
-8.14.0-ce.0: Pulling from gitlab/gitlab-ce
-aed15891ba52: Already exists
-773ae8583d14: Already exists
-...
+$ docker build 
 ```
 
 这行命令指定了构建所需的 Git repo，并且指定默认的`master`分支，构建目录为`/8.14/`，然后 Docker 就会自己去`git clone`这个项目、切换到指定分支、并进入到指定目录后开始构建。
