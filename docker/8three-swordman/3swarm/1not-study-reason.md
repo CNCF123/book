@@ -1,4 +1,4 @@
-# Docker 官方将支持 Kubernetes，容器编排大战宣告结束
+# Docker 官方将支持 Kubernetes，Kubernetes 赢得了胜利
 
 2017年 10 月 17 日，Docker 在丹麦哥本哈根举行的 DockerCon 大会上宣布，将扩大其 Docker 平台并选择积极拥抱容器编排对手 Kubernetes。这意味着 Docker 客户及开发人员将可以选择同时使用 Kubernetes 与 DockerSwarm 进行容器工作负载的编排。
 
