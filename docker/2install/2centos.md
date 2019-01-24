@@ -48,7 +48,7 @@ sudo yum makecache fast
 #### 安装 Docker CE {#安装-docker-ce}
 
 ```
-$ sudo yum install docker-ce
+$ sudo yum -y install docker-ce
 ```
 
 ### 使用脚本自动安装 {#使用脚本自动安装}
