@@ -1,4 +1,4 @@
-## Istio
+# Istio
 
 * `Istio是什么`
 * `为什么要学习Istio`
