@@ -1,4 +1,4 @@
-# 架构
+## 架构
 
 Docker 使用客户端-服务器 \(C/S\) 架构模式，使用远程API来管理和创建Docker容器。
 
@@ -25,13 +25,13 @@ Docker 容器通过 Docker 镜像来创建。
 | Docker 仓库\(Registry\) | Docker 仓库用来保存镜像，可以理解为代码控制中的代码仓库。Docker Hub\([https://hub.docker.com](https://hub.docker.com/)\) 提供了庞大的镜像集合供使用。 |
 | Docker Machine | Docker Machine是一个简化Docker安装的命令行工具，通过一个简单的命令行即可在相应的平台上安装Docker，比如VirtualBox、 Digital Ocean、Microsoft Azure。 |
 
-## 镜像image {#docker-镜像}
+### 镜像image
 
 我们都知道，操作系统分为内核和用户空间。对于 Linux 而言，内核启动后，会挂载`root`文件系统为其提供用户空间支持。而 Docker 镜像（Image），就相当于是一个`root`文件系统。比如官方镜像`ubuntu:16.04`就包含了完整的一套 Ubuntu 16.04 最小系统的`root`文件系统。
 
 Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。
 
-### 分层存储（联合文件系统） {#分层存储}
+### 分层存储（联合文件系统）
 
 因为镜像包含操作系统完整的`root`文件系统，其体积往往是庞大的，因此在 Docker 设计时，就充分利用[Union FS](https://en.wikipedia.org/wiki/Union_mount)的技术，将其设计为分层存储的架构。所以严格来说，镜像并非是像一个 ISO 那样的打包文件，镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由一组文件系统组成，或者说，由多层文件系统联合组成。
 
@@ -41,7 +41,7 @@ Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需�
 
 关于镜像构建，将会在后续相关章节中做进一步的讲解。
 
-## 容器container {#docker-容器}
+### 容器container
 
 镜像（`Image`）和容器（`Container`）的关系，就像是面向对象程序设计中的`类`和`实例`一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。
 
@@ -55,7 +55,7 @@ Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需�
 
 数据卷的生存周期独立于容器，容器消亡，数据卷不会消亡。因此，使用数据卷后，容器删除或者重新运行之后，数据却不会丢失。
 
-## 仓库Registry {#docker-registry}
+### 仓库Registry
 
 镜像构建完成后，可以很容易的在当前宿主机上运行，但是，如果需要在其它服务器上使用这个镜像，我们就需要一个集中的存储、分发镜像的服务，Docker Registry就是这样的服务。
 
@@ -67,7 +67,7 @@ Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需�
 
 仓库名经常以_两段式路径_形式出现，比如`jwilder/nginx-proxy`，前者往往意味着 Docker Registry 多用户环境下的用户名，后者则往往是对应的软件名。但这并非绝对，取决于所使用的具体 Docker Registry 的软件或服务。
 
-### Registry 公开服务 {#docker-registry-公开服务}
+#### Registry 公开服务
 
 Docker Registry 公开服务是开放给用户使用、允许用户管理镜像的 Registry 服务。一般这类公开服务允许用户免费上传、下载公开的镜像，并可能提供收费服务供用户管理私有镜像。
 
@@ -77,7 +77,7 @@ Docker Registry 公开服务是开放给用户使用、允许用户管理镜像�
 
 国内也有一些云服务商提供类似于 Docker Hub 的公开服务。比如[时速云镜像仓库](https://hub.tenxcloud.com/)、[网易云镜像服务](https://c.163.com/hub#/m/library/)、[DaoCloud 镜像市场](https://hub.daocloud.io/)、[阿里云镜像库](https://cr.console.aliyun.com/)等。
 
-### 私有Registry {#私有-docker-registry}
+#### 私有Registry
 
 除了使用公开服务外，用户还可以在本地搭建私有 Docker Registry。Docker 官方提供了[Docker Registry](https://store.docker.com/images/registry/)镜像，可以直接使用做为私有 Registry 服务。在私有仓库一节中，会有进一步的搭建私有 Registry 服务的讲解。
 
