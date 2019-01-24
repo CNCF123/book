@@ -28,7 +28,7 @@ Kubernetes 特点
 
 ### CNCF\(Cloud Native Computing Foundation\)
 
-* 早在 2006 年 8 月 9 日，google公司董事长埃里克·施密特（EricSchmidt）在搜索引擎大会上首次提出了“云计算”（Cloud Computing）的概念。一转眼十年过去了，它的发展势如破竹，不断渗透当代的 IT 市场。
+* 在 2006 年 8 月 9 日，google公司董事长埃里克·施密特（EricSchmidt）在搜索引擎大会上首次提出了“云计算”（Cloud Computing）的概念。一转眼十年过去了，它的发展势如破竹，不断渗透当代的 IT 市场。
 
 * 云计算被视为继 80 年代大型计算机到客户端-服务器的大转变之后的又一次革命，为我们带来了工作方式和商业模式的根本性变，进而成为推动企业创新的引擎。2013年，Pivotal 的 MattStine 提出了云原生（Cloud Native）的概念，凭借其优良的可伸缩性，云原生应用和服务也越来越受到青睐。
 
