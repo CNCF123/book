@@ -67,6 +67,7 @@
 * [kubernetes](kubernetes.md)
   * [1.入门](kubernetes/1base.md)
     * [1.历史](kubernetes/1base/1history.md)
+    * 2.简介
   * [2.安装](kubernetes/2an-zhuang-pei-zhi.md)
 * [Istio](istio.md)
   * [1.入门](istio/1base.md)
