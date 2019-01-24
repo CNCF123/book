@@ -7,6 +7,7 @@
   * [1.入门](docker/1base.md)
     * [1.简介](docker/1base/1introduction.md)
     * [2.架构](docker/1base/2arch.md)
+    * [3.为什么使用docker](docker/1base/3why-use-docker.md)
   * [2.安装](docker/2install.md)
     * [1.Ubuntu](docker/2install/1ubuntu.md)
     * [2.CentOS](docker/2install/2centos.md)
