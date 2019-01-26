@@ -26,7 +26,7 @@ nginx               alpine              315798907716        4 weeks ago         
 
 如果仔细观察，会注意到这里标识的所占用空间和在 Docker Hub 上看到的镜像大小不同。
 
-比如，`ubuntu:16.04`镜像大小，在这里是`127 MB`，但是在[Docker Hub](https://hub.docker.com/r/library/ubuntu/tags/)显示的却是`50 MB`。
+比如，`ubuntu:16.04`镜像大小，在这里是`117 MB`，但是在[Docker Hub](https://hub.docker.com/r/library/ubuntu/tags/)显示的却是`50 MB`。
 
 这是因为 Docker Hub 中显示的体积是**压缩后的体积**。
 
