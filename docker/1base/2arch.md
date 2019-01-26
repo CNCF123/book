@@ -77,7 +77,7 @@ Docker Registry 公开服务是开放给用户使用、允许用户管理镜像�
 
 国内也有一些云服务商提供类似于 Docker Hub 的公开服务。比如[时速云镜像仓库](https://hub.tenxcloud.com/)、[网易云镜像服务](https://c.163.com/hub#/m/library/)、[DaoCloud 镜像市场](https://hub.daocloud.io/)、[阿里云镜像库](https://cr.console.aliyun.com/)等。
 
-#### 私有Registry
+#### Registry 私有
 
 除了使用公开服务外，用户还可以在本地搭建私有 Docker Registry。Docker 官方提供了[Docker Registry](https://store.docker.com/images/registry/)镜像，可以直接使用做为私有 Registry 服务。在私有仓库一节中，会有进一步的搭建私有 Registry 服务的讲解。
 
