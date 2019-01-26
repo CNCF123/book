@@ -89,9 +89,9 @@ docker image ls -a
 ```
 docker image ls ubuntu
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-ubuntu              16.04               f753707788c5        4 weeks ago         127 MB
-ubuntu              latest              f753707788c5        4 weeks ago         127 MB
-ubuntu              14.04               1e0c3dd64ccd        4 weeks ago         188 MB
+ubuntu              16.04               7e87e2b3bf7a        3 days ago          117MB
+ubuntu              18.04               20bb25d32758        3 days ago          87.5MB
+ubuntu              latest              20bb25d32758        3 days ago          87.5MB
 ```
 
 列出特定的某个镜像，也就是说指定仓库名和标签
