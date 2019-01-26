@@ -5,13 +5,15 @@
 ```
 docker image ls
 REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
-redis                latest              5f515359c7f8        5 days ago          183 MB
-nginx                latest              05a60462f8ba        5 days ago          181 MB
-mongo                3.2                 fe9198c04d62        5 days ago          342 MB
-<none>               <none>              00285df0df87        5 days ago          342 MB
-ubuntu               16.04               f753707788c5        4 weeks ago         127 MB
-ubuntu               latest              f753707788c5        4 weeks ago         127 MB
-ubuntu               14.04               1e0c3dd64ccd        4 weeks ago         188 MB
+redis               latest              82629e941a38        3 days ago          95MB
+nginx               latest              42b4762643dc        3 days ago          109MB
+ubuntu              16.04               7e87e2b3bf7a        3 days ago          117MB
+ubuntu              latest              20bb25d32758        3 days ago          87.5MB
+hello-world         latest              fce289e99eb9        3 weeks ago         1.84kB
+busybox             latest              3a093384ac30        3 weeks ago         1.2MB
+nginx               alpine              315798907716        4 weeks ago         17.8MB
+<none>              <none>              00285df0df87        5 days ago          342 MB
+
 ```
 
 列表包含了`仓库名`、`标签`、`镜像 ID`、`创建时间`以及`所占用的空间`。
