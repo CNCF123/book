@@ -8,19 +8,19 @@ REPOSITORY           TAG                 IMAGE ID            CREATED            
 redis               latest              82629e941a38        3 days ago          95MB
 nginx               latest              42b4762643dc        3 days ago          109MB
 ubuntu              16.04               7e87e2b3bf7a        3 days ago          117MB
+ubuntu              18.04               20bb25d32758        3 days ago          87.5MB
 ubuntu              latest              20bb25d32758        3 days ago          87.5MB
 hello-world         latest              fce289e99eb9        3 weeks ago         1.84kB
 busybox             latest              3a093384ac30        3 weeks ago         1.2MB
 nginx               alpine              315798907716        4 weeks ago         17.8MB
 <none>              <none>              00285df0df87        5 days ago          342 MB
-
 ```
 
 列表包含了`仓库名`、`标签`、`镜像 ID`、`创建时间`以及`所占用的空间`。
 
 其中仓库名、标签在之前的基础概念章节已经介绍过了。**镜像 ID**则是镜像的唯一标识，一个镜像可以对应多个**标签**。
 
-因此，在上面的例子中，我们可以看到`ubuntu:16.04`和`ubuntu:latest`拥有相同的 ID，因为它们对应的是同一个镜像。
+因此，在上面的例子中，我们可以看到ubuntu:**18.04**和ubuntu:**latest**拥有相同的 ID，因为它们对应的是同一个镜像。
 
 ### 镜像体积 {#镜像体积}
 
