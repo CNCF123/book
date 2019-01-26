@@ -139,5 +139,11 @@ fce289e99eb9
 315798907716
 ```
 
+### 其他仓库的镜像获取
+
+其他仓库的的镜像获取，请参考本章第五节[仓库。](http://www.dockerk8s.net/docker/5registry.html)
+
+
+
 
 
