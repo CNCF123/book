@@ -16,19 +16,17 @@
 
 ```
 $ docker run -dit ubuntu
-69d137adef7a8a689cbcb059e94da5489d3cddd240ff675c640c8d96e84fe1f6
+bb7d14c27fe9c094717715f4f8a69d554b6ffa0127ada690f4523fe319cd7760
 
 $ docker container ls
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-69d137adef7a        ubuntu:latest       
-"/bin/bash"
-         18 seconds ago      Up 17 seconds                           zealous_swirles
-
-$ docker exec -i 69d1 bash ls
+bb7d14c27fe9        ubuntu              "/bin/bash"         28 seconds ago      Up 26 seconds                           inspiring_cocks
 bin boot dev ...
 
-$ docker exec -it 69d1 bash
-root@69d137adef7a:/#
+$ docker exec -it bb7d14c27fe9 /bin/sh
+# ls
+bin   dev  home  lib64	mnt  proc  run	 srv  tmp  var
+boot  etc  lib	 media	opt  root  sbin  sys  usr
 ```
 
 如果从这个 stdin 中 exit，不会导致容器的停止。这就是为什么推荐大家使用`docker exec`的原因。
