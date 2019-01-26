@@ -99,7 +99,7 @@ ubuntu              latest              20bb25d32758        3 days ago          
 ```
 docker image ls ubuntu:16.04
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-ubuntu              16.04               f753707788c5        4 weeks ago         127 MB
+ubuntu              16.04               7e87e2b3bf7a        3 days ago          117MB
 ```
 
 除此以外，`docker image ls`还支持强大的过滤器参数`--filter`，或者简写`-f`。之前我们已经看到了使用过滤器来列出虚悬镜像的用法，它还有更多的用法。比如，我们希望看到在`mongo:3.2`之后建立的镜像，可以用下面的命令：
