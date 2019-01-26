@@ -25,9 +25,11 @@ bin boot dev ...
 
 $ docker exec -it bb7d14c27fe9 /bin/sh
 # ls
-bin   dev  home  lib64	mnt  proc  run	 srv  tmp  var
-boot  etc  lib	 media	opt  root  sbin  sys  usr
+bin   dev  home  lib64    mnt  proc  run     srv  tmp  var
+boot  etc  lib     media    opt  root  sbin  sys  usr
 ```
+
+从什么的ls命令可以看到，容器内部的文件系统与host主机的文件类似。
 
 如果从这个 stdin 中 exit，不会导致容器的停止。这就是为什么推荐大家使用`docker exec`的原因。
 
