@@ -65,7 +65,7 @@ Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需�
 
 以[Ubuntu 镜像](https://store.docker.com/images/ubuntu)为例，`ubuntu`是仓库的名字，其内包含有不同的版本标签，如，`14.04`,`16.04`。我们可以通过`ubuntu:14.04`，或者`ubuntu:16.04`来具体指定所需哪个版本的镜像。如果忽略了标签，比如`ubuntu`，那将视为`ubuntu:latest`。
 
-仓库名经常以_两段式路径_形式出现，比如`jwilder/nginx-proxy`，前者往往意味着 Docker Registry 多用户环境下的用户名，后者则往往是对应的软件名。但这并非绝对，取决于所使用的具体 Docker Registry 的软件或服务。
+仓库名经常以_两段式路径_形式出现，比如`xxx/nginx`，前者往往意味着 Docker Registry 多用户环境下的用户名xxx，后者则往往是对应的软件名。但这并非绝对，取决于所使用的具体 Docker Registry 的软件或服务。
 
 #### 公开Registry
 
@@ -77,7 +77,7 @@ Docker Registry 公开服务是开放给用户使用、允许用户管理镜像�
 
 国内也有一些云服务商提供类似于 Docker Hub 的公开服务。比如[时速云镜像仓库](https://hub.tenxcloud.com/)、[网易云镜像服务](https://c.163.com/hub#/m/library/)、[DaoCloud 镜像市场](https://hub.daocloud.io/)、[阿里云镜像库](https://cr.console.aliyun.com/)等。
 
-#### 私有Registry 
+#### 私有Registry
 
 除了使用公开服务外，用户还可以在本地搭建私有 Docker Registry。Docker 官方提供了[Docker Registry](https://store.docker.com/images/registry/)镜像，可以直接使用做为私有 Registry 服务。在私有仓库一节中，会有进一步的搭建私有 Registry 服务的讲解。
 
