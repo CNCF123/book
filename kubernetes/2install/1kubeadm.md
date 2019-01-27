@@ -96,9 +96,17 @@ cat /proc/sys/net/bridge/bridge-nf-call-ip6tables
 
 方法：
 
-修改 vim /usr/lib/systemd/system/docker.service，在“ExecStart=/usr/bin/dockerd”的下面，添加一行
+修改 vim /usr/lib/systemd/system/docker.service，在“ExecStart=/usr/bin/dockerd”的**下面**，添加一行
 
 ExecStartPost=/usr/sbin/iptables -P FORWARD ACCEPT
+
+由于“你懂的”的原因，无法访问某些网站，所以需要设置代理
+
+方法：
+
+修改 vim /usr/lib/systemd/system/docker.service，在“ExecStart=/usr/bin/dockerd”的**上面**，添加一行
+
+Environment="HTTPS\_PROXY=http://www.ik8s.io:10080"
 
 启动，开机自启动
 
@@ -140,7 +148,7 @@ kubeadm初始化，有二种方法
 
 使用命令行初始化：
 
-kubeadm init --kubernetes-version=v1.13.2 \
+kubeadm init --kubernetes-version=v**1.13.2** \
 
 --pod-network-cidr=10.244.0.0/16 \
 
