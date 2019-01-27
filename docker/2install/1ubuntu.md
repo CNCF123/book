@@ -198,7 +198,7 @@ For more examples and ideas, visit:
 
 您可以在 Docker 守护进程启动时传入 --registry-mirror 参数：
 
-\# docker --registry-mirror=[https://registry.docker-cn.com](https://registry.docker-cn.com) daemon
+$sudo docker --registry-mirror=[https://registry.docker-cn.com](https://registry.docker-cn.com) daemon
 
 为了永久性保留更改，您可以修改 /etc/docker/daemon.json 文件并添加上 registry-mirrors 键值。
 
