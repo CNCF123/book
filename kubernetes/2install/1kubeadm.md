@@ -154,9 +154,27 @@ kubeadm init --kubernetes-version=v**1.13.2** \
 
 --ignore-preflight-errors=Swap
 
-
-
 方法二：
 
 使用配置文件kubeadm-config.yaml
+
+
+
+#### step6
+
+master节点配置kubectl的配置文件
+
+默认情况下，kubectl会从当前用户的.kube目录下读取名称为config的配置文件，该文件包括集群、用户认证的证书和令牌等信息
+
+在集群初始化时，在/etc/kubetnetes/admin.conf已经保存了这些信息，只需要复制该文件即可
+
+mkdir -p $HOME/.kube
+
+cp -i /etc/kubenetes/admin.conf  $HOEM/.kube/config
+
+此时此刻，master节点配置完毕
+
+
+
+
 
