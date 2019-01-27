@@ -6,7 +6,7 @@
 $ docker image rm [选项] <镜像1> [<镜像2> ...]
 ```
 
-* docker image rm 等同于 docker rmi
+* **docker image rm** 等同于 **docker rmi**
 
 ### 用 ID、镜像名、摘要删除镜像 {#用-id、镜像名、摘要删除镜像}
 
