@@ -158,8 +158,6 @@ kubeadm init --kubernetes-version=v**1.13.2** \
 
 使用配置文件kubeadm-config.yaml
 
-
-
 #### step6
 
 master节点配置kubectl的配置文件
@@ -174,7 +172,9 @@ cp -i /etc/kubenetes/admin.conf  $HOEM/.kube/config
 
 此时此刻，master节点配置完毕
 
+`kubectl get nodes`
 
+`NAME       STATUS     ROLES    AGE   VERSION`
 
-
+`master01   NotReady   master   75m   v1.13.2`
 
