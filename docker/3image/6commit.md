@@ -2,7 +2,7 @@
 
 注意：`docker commit`命令除了学习之外，尽量**不要**在生产环境中使用。
 
-#### **但是，不要使用docker commit定制镜像，定制镜像应该使用Dockerfile来完成。**
+#### **使用docker commit定制镜像，定制镜像应该使用Dockerfile来完成。**
 
 如果你想要定制镜像请查看下一小节。
 
