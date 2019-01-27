@@ -7,7 +7,7 @@
 * 1.运行此命令以下载最新版本的Docker Compose：
 
 ```
-sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+# curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
 备注：1.23.1为compose的安装版本，最新版本前往 [https://github.com/docker/compose.git](https://github.com/docker/compose.git)
@@ -15,7 +15,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-
 * 2.对二进制文件应用可执行权限：
 
 ```
-sudo chmod +x /usr/local/bin/docker-compose
+# chmod +x /usr/local/bin/docker-compose
 ```
 
 
