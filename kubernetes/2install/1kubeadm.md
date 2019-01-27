@@ -116,15 +116,17 @@ yum -y install kubelet kubeadm kubectl
 
 node节点：
 
+配置kubelet配置文件
 
+在k8s 1.8版本开始，强制要求关闭系统的swap交换分区，否则kubelet无法安装
+
+编辑 vim /etc/sysconfig/kubelet, 用来忽略禁止使用swap的限制
+
+`KUBELET_EXTRA_ARGS="--fail-swap=false"`
 
 
 
 #### step5
 
 kubeadm初始化
-
-
-
-
 
