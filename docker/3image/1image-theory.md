@@ -1,10 +1,8 @@
-## docker 镜像原理
+## 镜像原理
 
 docker 镜像是一个只读的 docker 容器模板，含有启动 docker 容器所需的文件系统结构及其内容，因此是启动一个 docker 容器的基础。docker 镜像的文件内容以及一些运行 docker 容器的配置文件组成了 docker 容器的静态文件系统运行环境：rootfs。可以这么理解，docker 镜像是 docker 容器的静态视角，docker 容器是 docker 镜像的运行状态。我们可以通过下图来理解 docker daemon、docker 镜像以及 docker 容器三者的关系\(此图来自互联网\)：
 
 ![](/assets/image-container-releationship.png)
-
-
 
 **rootfs**
 
