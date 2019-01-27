@@ -208,31 +208,31 @@ kubeadm join 172.16.0.53:6443 --token d387y7.j5na40ast2iz162h --discovery-token-
 
 * 查看集群pods信息
 
-`NAME                               READY   STATUS    RESTARTS   AGE    IP            NODE       `
+`kubectl get pods -n kube-system`
 
-`coredns-86c58d9df4-hvjhl           1/1     Running   1          138m   10.244.0.5    master01   `
+`NAME                               READY   STATUS    RESTARTS   AGE    IP            NODE`
 
-`coredns-86c58d9df4-rrbgn           1/1     Running   1          138m   10.244.0.4    master01   `
+`coredns-86c58d9df4-hvjhl           1/1     Running   1          138m   10.244.0.5    master01`
 
-`etcd-master01                      1/1     Running   1          138m   172.16.0.53   master01   `
+`coredns-86c58d9df4-rrbgn           1/1     Running   1          138m   10.244.0.4    master01`
 
-`kube-apiserver-master01            1/1     Running   2          137m   172.16.0.53   master01   `
+`etcd-master01                      1/1     Running   1          138m   172.16.0.53   master01`
 
-`kube-controller-manager-master01   1/1     Running   1          137m   172.16.0.53   master01   `
+`kube-apiserver-master01            1/1     Running   2          137m   172.16.0.53   master01`
 
-`kube-flannel-ds-amd64-d57gf        1/1     Running   2          58m    172.16.0.53   master01   `
+`kube-controller-manager-master01   1/1     Running   1          137m   172.16.0.53   master01`
 
-`kube-flannel-ds-amd64-qprb4        1/1     Running   0          31m    172.16.0.55   node02     `
+`kube-flannel-ds-amd64-d57gf        1/1     Running   2          58m    172.16.0.53   master01`
 
-`kube-flannel-ds-amd64-x4wwm        1/1     Running   0          31m    172.16.0.54   node01     `
+`kube-flannel-ds-amd64-qprb4        1/1     Running   0          31m    172.16.0.55   node02`
 
-`kube-proxy-9jbqd                   1/1     Running   0          31m    172.16.0.54   node01     `
+`kube-flannel-ds-amd64-x4wwm        1/1     Running   0          31m    172.16.0.54   node01`
 
-`kube-proxy-9p222                   1/1     Running   0          31m    172.16.0.55   node02     `
+`kube-proxy-9jbqd                   1/1     Running   0          31m    172.16.0.54   node01`
 
-`kube-proxy-rt6rp                   1/1     Running   1          138m   172.16.0.53   master01   `
+`kube-proxy-9p222                   1/1     Running   0          31m    172.16.0.55   node02`
 
-`kube-scheduler-master01            1/1     Running   2          138m   172.16.0.53   master01   `
+`kube-proxy-rt6rp                   1/1     Running   1          138m   172.16.0.53   master01`
 
-
+`kube-scheduler-master01            1/1     Running   2          138m   172.16.0.53   master01`
 
