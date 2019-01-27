@@ -10,7 +10,7 @@
 sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
-备注：1.23.1为compose的安装版本。
+备注：1.23.1为compose的安装版本，最新版本前往 [https://github.com/docker/compose.git](https://github.com/docker/compose.git)
 
 * 2.对二进制文件应用可执行权限：
 
