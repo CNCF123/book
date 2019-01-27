@@ -1,6 +1,6 @@
 ## kubeadm安装k8s
 
-#### step1 
+#### step1
 
 准备一个master节点，二个node节点
 
@@ -10,7 +10,7 @@ Container: Docekr CE 1809
 
 Kubernetes: 1.12
 
-#### step2 
+#### step2
 
 1.主机名解析
 
@@ -58,15 +58,17 @@ Kubernetes: 1.12
 
 `for i in $(ls $ipvs_mods_dir | grep -o "^[^.]*"); do`
 
-`    /sbin/modinfo -F filename $i &> /dev/null`
+`/sbin/modinfo -F filename $i &> /dev/null`
 
-`    if [ $? -eq 0 ]; then`
+`if [ $? -eq 0 ]; then`
 
-`        /sbin/modprobe $i`
+`/sbin/modprobe $i`
 
-`    fi`
+`fi`
 
 `done`
+
+#### step3
 
 
 
