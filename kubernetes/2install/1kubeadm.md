@@ -136,7 +136,7 @@ systemctl eabled kubelet
 
 kubeadm初始化
 
-备注：解决k8s.gcr.io问题，请看下篇文章
+备注：解决k8s.gcr.io的镜像问题，请看下篇文章
 
 有二种方法：
 
