@@ -3,7 +3,7 @@
 删除本地的镜像，使用`docker image rm`命令，其格式为：
 
 ```
-$ docker image rm [选项] <镜像1> [<镜像2> ...]
+# docker image rm [选项] <镜像1> [<镜像2> ...]
 ```
 
 * **docker image rm** 等同于 **docker rmi**
@@ -15,7 +15,7 @@ $ docker image rm [选项] <镜像1> [<镜像2> ...]
 比如我们有这么一些镜像：
 
 ```
-$ docker image ls
+# docker image ls
 REPOSITORY                  TAG                 IMAGE ID            CREATED             SIZE
 centos                      latest              0584b3d2cf6d        3 weeks ago         196.5 MB
 redis                       alpine              501ad78535f0        3 weeks ago         21.03 MB
@@ -28,7 +28,7 @@ nginx                       latest              e43d811ce2f4        5 weeks ago 
 比如这里，如果我们要删除`redis:alpine`镜像，可以执行：
 
 ```
-$ docker image rm 501
+# docker image rm 501
 Untagged: redis:alpine
 Untagged: redis@sha256:f1ed3708f538b537eb9c2a7dd50dc90a706f7debd7e1196c9264edeea521a86d
 Deleted: sha256:501ad78535f015d88872e13fa87a828425117e3d28075d0c117932b05bf189b7
@@ -44,7 +44,7 @@ fc
 我们也可以用`镜像名`，也就是`<仓库名>:<标签>`，来删除镜像。
 
 ```
-$ docker image rm centos
+# docker image rm centos
 Untagged: centos:latest
 Untagged: centos@sha256:b2f9d1c0ff5f87a4743104d099a3d561002ac500db1b9bfa02a783a46e0d366c
 Deleted: sha256:0584b3d2cf6d235ee310cf14b54667d889887b838d3f3d3033acd70
@@ -56,11 +56,11 @@ Deleted: sha256:97ca462ad9eeae25941546209454496e1d66749d53dfa2ee32bf1faabd239d38
 当然，更精确的是使用`镜像摘要`docker image ls --digests，删除镜像。
 
 ```
-$ docker image ls --digests
+# docker image ls --digests
 REPOSITORY                  TAG                 DIGEST                                                                    IMAGE ID            CREATED             SIZE
 node                        slim                sha256:b4f0e0bdeb578043c1ea6862f0d40cc4afe32a4a582f3be235a3b164422be228   6e0c4c8e3913        3 weeks ago         214 MB
 
-$ docker image rm node@sha256:b4f0e0bdeb578043c1ea6862f0d40cc4afe32a4a582f3be235a3b164422be228
+# docker image rm node@sha256:b4f0e0bdeb578043c1ea6862f0d40cc4afe32a4a582f3be235a3b164422be228
 Untagged: node@sha256:b4f0e0bdeb578043c1ea6862f0d40cc4afe32a4a582f3be235a3b164422be228
 ```
 
@@ -81,13 +81,13 @@ Untagged: node@sha256:b4f0e0bdeb578043c1ea6862f0d40cc4afe32a4a582f3be235a3b16442
 比如，我们需要删除所有仓库名为`redis`的镜像：
 
 ```
-$ docker image rm $(docker image ls -q redis)
+# docker image rm $(docker image ls -q redis)
 ```
 
 或者删除所有在`mongo:3.2`之前的镜像：
 
 ```
-$ docker image rm $(docker image ls -q -f before=mongo:3.2)
+# docker image rm $(docker image ls -q -f before=mongo:3.2)
 ```
 
 充分利用你的想象力和 Linux 命令行的强大，你可以完成很多非常赞的功能。
