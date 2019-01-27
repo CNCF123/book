@@ -72,6 +72,7 @@
   * [1.入门](kubernetes/1base.md)
     * [1.历史](kubernetes/1base/1history.md)
     * [2.简介](kubernetes/1base/2introduction.md)
+    * [3.架构](kubernetes/1base/3arch.md)
   * [2.安装](kubernetes/2install.md)
     * [1.minikube](kubernetes/2install/1minikube.md)
     * [2.kubeadm](kubernetes/2install/2kubeadm.md)
