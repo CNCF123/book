@@ -132,3 +132,19 @@ systemctl eabled kubelet
 
 kubeadm初始化
 
+方法一：
+
+使用命令行初始化：
+
+kubeadm init --kubernetes-version=v1.11.2 \
+
+--pod-network-cidr=10.244.0.0/16 \
+
+--service-cidr=10.96.0.0/12 \
+
+--apiserver-advertise-address=0.0.0.0 \
+
+--ignore-preflight-errors=Swap
+
+
+
