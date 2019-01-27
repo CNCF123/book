@@ -180,7 +180,7 @@ cp -i /etc/kubenetes/admin.conf  $HOEM/.kube/config
 
 #### step7
 
-部署网络插件CNI
+master和node部署网络插件CNI
 
 kubectl apply -f [https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml](https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml)
 
