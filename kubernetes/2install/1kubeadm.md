@@ -124,7 +124,7 @@ node节点：
 
 编辑 vim /etc/sysconfig/kubelet, 用来忽略禁止使用swap的限制
 
-`KUBELET_EXTRA_ARGS="--fail-swap=false"`
+`KUBELET_EXTRA_ARGS="--fail-swap-on=false"`
 
 设置开机自启动
 
@@ -132,7 +132,7 @@ systemctl eabled kubelet
 
 #### step5
 
-kubeadm初始化
+kubeadm初始化，有二种方法
 
 方法一：
 
