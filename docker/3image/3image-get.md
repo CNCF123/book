@@ -7,7 +7,7 @@
 其命令格式为：
 
 ```
-docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]
+# docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]
 ```
 
 可以通过`docker pull --help`命令看到，镜像名称的格式如下：
@@ -20,7 +20,7 @@ docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]
 例如：
 
 ```
-docker pull ubuntu:16.04
+# docker pull ubuntu:16.04
 16.04: Pulling from library/ubuntu
 bf5d46315322: Pull complete
 9f13e0ac480c: Pull complete
