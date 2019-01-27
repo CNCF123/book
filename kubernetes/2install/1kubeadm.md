@@ -184,7 +184,7 @@ cp -i /etc/kubenetes/admin.conf  $HOEM/.kube/config
 
 kubectl apply -f [https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml](https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml)
 
-step8
+#### step8
 
 添加node节点
 
@@ -192,7 +192,7 @@ kubeadm join 172.16.0.53:6443 --token d387y7.j5na40ast2iz162h --discovery-token-
 
 注意：node节点需要 kube-proxy、pause 、quay.io/coreos/flannel的镜像，需要拉取，参考k8s.gcr.io问题
 
-#### step8
+#### step9
 
 * 查看集群信息
 
