@@ -1,5 +1,7 @@
 ## kubeadm安装k8s
 
+说明：kubelet和docker使用systemd服务运行，其他组件都是以Pod资源的形式运行。
+
 #### step1
 
 准备一个master节点，二个node节点
@@ -145,6 +147,8 @@ kubeadm init --kubernetes-version=v1.11.2 \
 --apiserver-advertise-address=0.0.0.0 \
 
 --ignore-preflight-errors=Swap
+
+方法二：
 
 
 
