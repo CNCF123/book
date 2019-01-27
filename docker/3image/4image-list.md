@@ -3,7 +3,7 @@
 列出已经下载下来的镜像，使用`docker image ls`命令。
 
 ```
-docker image ls
+# docker image ls
 REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
 redis               latest              82629e941a38        3 days ago          95MB
 nginx               latest              42b4762643dc        3 days ago          109MB
@@ -37,7 +37,7 @@ nginx               alpine              315798907716        4 weeks ago         
 你可以通过以下命令来便捷的查看镜像、容器、数据卷所占用的空间。
 
 ```
-$ docker system df
+# docker system df
 
 TYPE                TOTAL               ACTIVE              SIZE                RECLAIMABLE
 Images              24                  0                   1.992GB             1.992GB (100%)
@@ -57,7 +57,7 @@ Build Cache                                                 0B                  
 这个镜像原本是有镜像名和标签的，原来为`mongo:3.2`，随着官方镜像维护，发布了新版本后，重新`docker pull mongo:3.2`时，`mongo:3.2`这个镜像名被转移到了新下载的镜像身上，而旧的镜像上的这个名称则被取消，从而成为了`<none>`。除了`docker pull`可能导致这种情况，`docker build`也同样可以导致这种现象。**由于新旧镜像同名，旧镜像名称被取消**，从而出现仓库名、标签均为`<none>`的镜像。这类无标签镜像也被称为**虚悬镜像\(dangling image\)**，可以用下面的命令专门显示这类镜像：
 
 ```
-docker image ls -f dangling=true
+# docker image ls -f dangling=true
 
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 
@@ -67,7 +67,7 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 一般来说，虚悬镜像已经失去了存在的价值，是**可以随意删除**的，可以用下面的命令删除。
 
 ```
-docker image prune
+# docker image prune
 ```
 
 ### 中间层镜像 {#中间层镜像}
@@ -75,7 +75,7 @@ docker image prune
 为了加速镜像构建、重复利用资源，Docker 会利用**中间层镜像**。所以在使用一段时间后，可能会看到一些依赖的中间层镜像。默认的`docker image ls`列表中只会显示顶层镜像，如果希望显示包括中间层镜像在内的所有镜像的话，需要加`-a`参数。
 
 ```
-docker image ls -a
+# docker image ls -a
 ```
 
 这样会看到很多无标签的镜像，与之前的虚悬镜像不同，这些无标签的镜像很多都是中间层镜像，是其它镜像所依赖的镜像。这些无标签镜像不应该删除，否则会导致上层镜像因为依赖丢失而出错。实际上，这些镜像也没必要删除，因为之前说过，相同的层只会存一遍，而这些镜像是别的镜像的依赖，因此并不会因为它们被列出来而多存了一份，无论如何你也会需要它们。只要删除那些依赖它们的镜像后，这些依赖的中间层镜像也会被连带删除。
@@ -87,7 +87,7 @@ docker image ls -a
 根据仓库名列出镜像
 
 ```
-docker image ls ubuntu
+# docker image ls ubuntu
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 ubuntu              16.04               7e87e2b3bf7a        3 days ago          117MB
 ubuntu              18.04               20bb25d32758        3 days ago          87.5MB
@@ -97,7 +97,7 @@ ubuntu              latest              20bb25d32758        3 days ago          
 列出特定的某个镜像，也就是说指定仓库名和标签
 
 ```
-docker image ls ubuntu:16.04
+# docker image ls ubuntu:16.04
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 ubuntu              16.04               7e87e2b3bf7a        3 days ago          117MB
 ```
@@ -105,7 +105,7 @@ ubuntu              16.04               7e87e2b3bf7a        3 days ago          
 除此以外，`docker image ls`还支持强大的过滤器参数`--filter`，或者简写`-f`。之前我们已经看到了使用过滤器来列出虚悬镜像的用法，它还有更多的用法。比如，我们希望看到在`busybox`之后建立的镜像，可以用下面的命令：
 
 ```
-docker image ls -f since=busybox
+# docker image ls -f since=busybox
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 redis               latest              82629e941a38        3 days ago          95MB
 nginx               latest              42b4762643dc        3 days ago          109MB
@@ -128,7 +128,7 @@ hello-world         latest              fce289e99eb9        3 weeks ago         
 默认情况下，`docker image ls`会输出一个完整的表格，但是我们并非所有时候都会需要这些内容。比如，刚才删除虚悬镜像的时候，我们需要利用`docker image ls`把所有的虚悬镜像的 ID 列出来，然后才可以交给`docker image rm`命令作为参数来删除指定的这些镜像，这个时候就用到了`-q`参数。
 
 ```
-docker image ls -q
+# docker image ls -q
 82629e941a38
 42b4762643dc
 7e87e2b3bf7a
