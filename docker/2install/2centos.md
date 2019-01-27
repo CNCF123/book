@@ -11,7 +11,7 @@ Docker CE 支持 64 位版本 CentOS 7，并且要求内核版本不低于 3.10�
 旧版本的 Docker 称为`docker`或者`docker-engine`，使用以下命令卸载旧版本：
 
 ```
-$ sudo yum remove docker \
+# yum remove docker \
                   docker-client \
                   docker-client-latest \
                   docker-common \
@@ -28,7 +28,7 @@ $ sudo yum remove docker \
 执行以下命令安装依赖包：
 
 ```
-$ sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+# yum install -y yum-utils device-mapper-persistent-data lvm2
 ```
 
 鉴于国内网络问题，强烈建议使用国内源，这里使用阿里云的yum源。
@@ -36,19 +36,19 @@ $ sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 执行下面的命令添加`yum`软件源：
 
 ```
-$ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+# yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 ```
 
 更新 yum 缓存：
 
 ```
-sudo yum makecache fast
+# yum makecache fast
 ```
 
 #### 安装 Docker CE {#安装-docker-ce}
 
 ```
-$ sudo yum -y install docker-ce
+# yum -y install docker-ce
 ```
 
 ### 使用脚本自动安装 {#使用脚本自动安装}
@@ -56,8 +56,8 @@ $ sudo yum -y install docker-ce
 在测试或开发环境中 Docker 官方为了简化安装流程，提供了一套便捷的安装脚本，CentOS 系统上可以使用这套脚本安装：
 
 ```
-$ curl -fsSL get.docker.com -o get-docker.sh
-$ sudo sh get-docker.sh --mirror Aliyun
+# curl -fsSL get.docker.com -o get-docker.sh
+# sh get-docker.sh --mirror Aliyun
 ```
 
 执行这个命令后，脚本就会自动的将一切准备工作做好，并且把 Docker CE 的 Edge 版本安装在系统中。
@@ -65,8 +65,8 @@ $ sudo sh get-docker.sh --mirror Aliyun
 ### 启动 Docker CE {#启动-docker-ce}
 
 ```
-$ sudo systemctl enable docker
-$ sudo systemctl start docker
+# systemctl enable docker
+# systemctl start docker
 ```
 
 ### 建立 docker 用户组 {#建立-docker-用户组}
@@ -76,13 +76,13 @@ $ sudo systemctl start docker
 建立`docker`组：
 
 ```
-$ sudo groupadd docker
+# groupadd docker
 ```
 
 将当前用户加入`docker`组：
 
 ```
-$ sudo usermod -a G docker $USER
+# usermod -a G docker $USER
 ```
 
 退出当前终端并重新登录，进行如下测试。
@@ -90,7 +90,7 @@ $ sudo usermod -a G docker $USER
 ### 测试 Docker 是否安装正确 {#测试-docker-是否安装正确}
 
 ```
-$ docker run hello-world
+# docker run hello-world
 
 Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
@@ -134,7 +134,7 @@ WARNING: bridge-nf-call-ip6tables is disabled
 请添加内核配置参数以启用这些功能。
 
 ```
-$ sudo tee -a /etc/sysctl.conf <<-EOF
+# tee -a /etc/sysctl.conf <<-EOF
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 EOF
@@ -143,7 +143,7 @@ EOF
 然后重新加载`sysctl.conf`即可
 
 ```
-$ sudo sysctl -p
+# sysctl -p
 ```
 
 ### 参考文档 {#参考文档}
