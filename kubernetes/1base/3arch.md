@@ -1,6 +1,8 @@
 ## 架构
 
-![](/assets/k8s-arch-1.png)Kubernetes 集群由分布式存储 etcd、控制节点master controller 以及服务节点 Node 组成。
+![](/assets/k8s-arch-1.jpeg)
+
+Kubernetes 集群由分布式存储 etcd、控制节点master controller 以及服务节点 Node 组成。
 
 #### master节点：
 
