@@ -16,24 +16,25 @@ kubernetes，简称K8s，是用8代替8个字符“ubernete”而成的缩写。
 
 ### 组件
 
-* 1.Master 组件
+#### Master 组件
 
-* * 1.1kube-apiserver
-  * 1.2ETCD
-  * 1.3kube-controller-manager
-  * 1.4cloud-controller-manager
-  * 1.5kube-scheduler
-  * 1.6插件 addons
-  * 1.6.1DNS
-  * 1.6.2用户界面
-  * 1.6.3容器资源监测
-  * 1.6.4Cluster-level Logging
-* 2.Node 组件
-* * 2.1kubelet
-  * 2.2kube-proxy
-  * 2.3docker
+* 1.kube-apiserver
+* 2.ETCD
+* 3.kube-controller-manager
+* 4.cloud-controller-manager
+* 5.kube-scheduler
+* 6.插件 addons
+* 6.1.DNS
+* 6.2.用户界面
+* 6.3.容器资源监测
+* 6.4.Cluster-level Logging
 
-  * 2.4fluentd
+#### Node 组件
+
+* 1.kubelet
+* 2.kube-proxy
+* 3.docker
+* 4.fluentd
 
 
 
