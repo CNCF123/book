@@ -154,5 +154,9 @@ kubeadm init --kubernetes-version=v**1.13.2** \
 
 --ignore-preflight-errors=Swap
 
+如果给出下面的提示，则安装成功：
+
+kubeadm join 172.16.0.53:6443 --token d387y7.j5na40ast2iz162h --discovery-token-ca-cert-hash sha256:dab4f81996be52ac17160bff6943fa6eddd73e2cdb8c9343751ea0bde083087f
+
 方法二：
 
