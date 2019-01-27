@@ -81,7 +81,7 @@ A /var/cache/nginx/uwsgi_temp
 
 ```
 # docker commit \
-    --author "tom <123456@qq.com>" \
+    --author "kaidi <123456@qq.com>" \
     --message "修改了默认网页" \
     webserver \
     nginx:v2
