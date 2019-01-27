@@ -74,7 +74,7 @@ Kubernetes: 1.12
 
 `cd /etc/yum.repos.d/`
 
-`wget   wget `[`https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo`](https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo)
+`wget   wget`[`https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo`](https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo)
 
 `yum -y install docker-ce`
 
@@ -82,11 +82,11 @@ Kubernetes: 1.12
 
 确认这两个参数为1
 
-cat /proc/sys/net/bridge/bridge-nf-call-iptables 
+cat /proc/sys/net/bridge/bridge-nf-call-iptables
 
-1
+1
 
-cat /proc/sys/net/bridge/bridge-nf-call-ip6tables 
+cat /proc/sys/net/bridge/bridge-nf-call-ip6tables
 
 1
 
@@ -106,7 +106,7 @@ ExecStartPost=/usr/sbin/iptables -P FORWARD ACCEPT
 
 `systemctl enable docker`
 
-#### step4 
+#### step4
 
 安装k8s的相关组件
 
@@ -114,37 +114,15 @@ master节点：
 
 yum -y install kubelet kubeadm kubectl
 
+node节点：
 
 
 
 
 
+#### step5
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+kubeadm初始化
 
 
 
