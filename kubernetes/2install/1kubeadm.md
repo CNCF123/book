@@ -160,3 +160,9 @@ kubeadm join 172.16.0.53:6443 --token d387y7.j5na40ast2iz162h --discovery-token-
 
 方法二：
 
+使用配置文件kubeadm-config.yaml
+
+
+
+
+
