@@ -1,6 +1,6 @@
 ## commit 创建镜像 {#利用-commit-理解镜像构成}
 
-注意：`docker commit`命令除了学习之外，还有一些特殊的应用场合，比如被入侵后保存现场等。
+注意：`docker commit`命令除了学习之外，尽量不要在生产环境中使用。
 
 #### **但是，不要使用docker commit定制镜像，定制镜像应该使用Dockerfile来完成。**
 
