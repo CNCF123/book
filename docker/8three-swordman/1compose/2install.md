@@ -4,13 +4,15 @@
 
 例如，在 Linux 64 位系统上直接下载对应的二进制包。
 
-1.运行此命令以下载最新版本的Docker Compose：
+* 1.运行此命令以下载最新版本的Docker Compose：
 
 ```
 sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 
-2.对二进制文件应用可执行权限：
+备注：1.23.1为compose的安装版本。
+
+* 2.对二进制文件应用可执行权限：
 
 ```
 sudo chmod +x /usr/local/bin/docker-compose
