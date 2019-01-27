@@ -114,9 +114,11 @@ ExecStartPost=/usr/sbin/iptables -P FORWARD ACCEPT
 
 master节点：
 
-yum -y install kubelet kubeadm kubectl
+`yum -y install kubelet kubeadm kubectl`
 
 node节点：
+
+`yum -y install kubelet kubeadm`
 
 配置kubelet配置文件
 
@@ -149,6 +151,4 @@ kubeadm init --kubernetes-version=v1.11.2 \
 --ignore-preflight-errors=Swap
 
 方法二：
-
-
 
