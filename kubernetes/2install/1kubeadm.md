@@ -136,6 +136,8 @@ systemctl eabled kubelet
 
 kubeadm初始化，有二种方法
 
+备注：解决k8s.gcr.io问题，请看下篇文章
+
 方法一：
 
 使用命令行初始化：
@@ -153,6 +155,4 @@ kubeadm init --kubernetes-version=v**1.13.2** \
 方法二：
 
 
-
-解决k8s.gcr.io问题
 
