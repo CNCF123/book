@@ -15,7 +15,7 @@
     * [4.docker-info](docker/2install/4docker-info.md)
   * [3.镜像](docker/3image.md)
     * [1.镜像原理](docker/3image/1image-theory.md)
-    * [2.镜像加速](docker/3image/1image-add-speed.md)
+    * [2.镜像加速](docker/3image/2image-add-speed.md)
     * [3.镜像获取](docker/3image/3image-get.md)
     * [4.镜像列表](docker/3image/4image-list.md)
     * [5.删除镜像](docker/3image/4image-delete.md)
