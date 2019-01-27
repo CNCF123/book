@@ -134,9 +134,11 @@ systemctl eabled kubelet
 
 #### step5
 
-kubeadm初始化，有二种方法
+kubeadm初始化
 
 备注：解决k8s.gcr.io问题，请看下篇文章
+
+有二种方法：
 
 方法一：
 
@@ -153,6 +155,4 @@ kubeadm init --kubernetes-version=v**1.13.2** \
 --ignore-preflight-errors=Swap
 
 方法二：
-
-
 
