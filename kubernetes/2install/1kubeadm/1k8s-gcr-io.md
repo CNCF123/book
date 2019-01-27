@@ -1,8 +1,6 @@
-## [解决k8s.gcr.io问题](https://blog.csdn.net/jinguangliu/article/details/82792617 )
+## 解决k8s.gcr.io问题
 
 新版本的Kubernetes在安装部署中，需要从k8s.grc.io仓库中拉取所需镜像文件，但由于GFW导致无法正常拉取，本文将介绍如何绕过此问题，来完成业务的部署。
-
-
 
 ```
     [ERROR ImagePull]: failed to pull image k8s.gcr.io/kube-apiserver:v1.13.2
