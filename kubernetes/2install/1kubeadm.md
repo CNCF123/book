@@ -72,7 +72,7 @@ Kubernetes: 1.12
 
 #### step3
 
-1.在master和node节点安装docker-ce
+在master和node节点安装docker-ce
 
 `cd /etc/yum.repos.d/`
 
