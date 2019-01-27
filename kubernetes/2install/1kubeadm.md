@@ -100,14 +100,6 @@ cat /proc/sys/net/bridge/bridge-nf-call-ip6tables
 
 ExecStartPost=/usr/sbin/iptables -P FORWARD ACCEPT
 
-由于“你懂的”的原因，无法访问某些网站，所以需要设置代理
-
-方法：
-
-修改 vim /usr/lib/systemd/system/docker.service，在“ExecStart=/usr/bin/dockerd”的**上面**，添加一行
-
-Environment="HTTPS\_PROXY=[http://www.ik8s.io:10080](http://www.ik8s.io:10080)"
-
 docker启动，开机自启动
 
 `systemctl daemon-reload`
@@ -159,4 +151,8 @@ kubeadm init --kubernetes-version=v**1.13.2** \
 --ignore-preflight-errors=Swap
 
 方法二：
+
+
+
+解决k8s.gcr.io问题
 
