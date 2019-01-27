@@ -85,7 +85,7 @@ A /var/cache/nginx/uwsgi_temp
     --message "修改了默认网页" \
     webserver \
     nginx:v2
-sha256:07e33465974800ce65751acc279adc6ed2dc5ed4e0838f8b86f0c87aa1795214
+sha256:91233465974800ce65751acc279adc6ed2dc5ed4e0838f8b86f0c87aa1746291
 ```
 
 其中`--author`是指定修改的作者，而`--message`则是记录本次修改的内容。这点和`git`版本控制相似，不过这里这些信息可以省略留空。
