@@ -186,7 +186,7 @@ kubectl apply -f [https://raw.githubusercontent.com/coreos/flannel/master/Docume
 
 #### step8
 
-添加node节点
+添加node节点，在node节点上执行
 
 kubeadm join 172.16.0.53:6443 --token d387y7.j5na40ast2iz162h --discovery-token-ca-cert-hash sha256:dab4f81996be52ac17160bff6943fa6eddd73e2cdb8c9343751ea0bde083087f
 
