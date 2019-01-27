@@ -184,8 +184,6 @@ cp -i /etc/kubenetes/admin.conf  $HOEM/.kube/config
 
 kubectl apply -f [https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml](https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml)
 
-
-
 step8
 
 添加node节点
@@ -193,4 +191,48 @@ step8
 kubeadm join 172.16.0.53:6443 --token d387y7.j5na40ast2iz162h --discovery-token-ca-cert-hash sha256:dab4f81996be52ac17160bff6943fa6eddd73e2cdb8c9343751ea0bde083087f
 
 注意：node节点需要 kube-proxy、pause 、quay.io/coreos/flannel的镜像，需要拉取，参考k8s.gcr.io问题
+
+#### step8
+
+* 查看集群信息
+
+`kubectl get nodes`
+
+`NAME       STATUS   ROLES    AGE    VERSION`
+
+`master01   Ready    master   136m   v1.13.2`
+
+`node01     Ready    <none>   28m    v1.13.2`
+
+`node02     Ready    <none>   28m    v1.13.2`
+
+* 查看集群pods信息
+
+`NAME                               READY   STATUS    RESTARTS   AGE    IP            NODE       `
+
+`coredns-86c58d9df4-hvjhl           1/1     Running   1          138m   10.244.0.5    master01   `
+
+`coredns-86c58d9df4-rrbgn           1/1     Running   1          138m   10.244.0.4    master01   `
+
+`etcd-master01                      1/1     Running   1          138m   172.16.0.53   master01   `
+
+`kube-apiserver-master01            1/1     Running   2          137m   172.16.0.53   master01   `
+
+`kube-controller-manager-master01   1/1     Running   1          137m   172.16.0.53   master01   `
+
+`kube-flannel-ds-amd64-d57gf        1/1     Running   2          58m    172.16.0.53   master01   `
+
+`kube-flannel-ds-amd64-qprb4        1/1     Running   0          31m    172.16.0.55   node02     `
+
+`kube-flannel-ds-amd64-x4wwm        1/1     Running   0          31m    172.16.0.54   node01     `
+
+`kube-proxy-9jbqd                   1/1     Running   0          31m    172.16.0.54   node01     `
+
+`kube-proxy-9p222                   1/1     Running   0          31m    172.16.0.55   node02     `
+
+`kube-proxy-rt6rp                   1/1     Running   1          138m   172.16.0.53   master01   `
+
+`kube-scheduler-master01            1/1     Running   2          138m   172.16.0.53   master01   `
+
+
 
