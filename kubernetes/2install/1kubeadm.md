@@ -106,9 +106,9 @@ ExecStartPost=/usr/sbin/iptables -P FORWARD ACCEPT
 
 修改 vim /usr/lib/systemd/system/docker.service，在“ExecStart=/usr/bin/dockerd”的**上面**，添加一行
 
-Environment="HTTPS\_PROXY=http://www.ik8s.io:10080"
+Environment="HTTPS\_PROXY=[http://www.ik8s.io:10080](http://www.ik8s.io:10080)"
 
-启动，开机自启动
+docker启动，开机自启动
 
 `systemctl daemon-reload`
 
