@@ -124,7 +124,9 @@ node节点：
 
 `KUBELET_EXTRA_ARGS="--fail-swap=false"`
 
+设置开机自启动
 
+systemctl eabled kubelet
 
 #### step5
 
