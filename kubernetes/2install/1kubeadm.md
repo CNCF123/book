@@ -70,5 +70,21 @@ Kubernetes: 1.12
 
 #### step3
 
+1.在master和node节点安装docker-ce
+
+cd /etc/yum.repos.d/
+
+wget   wget https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
+yum -y install docker-ce
+
+设置[镜像加速](http://www.dockerk8s.net/docker/3image/2image-add-speed.html)
+
+启动，开机自启动
+
+
+
+
+
 
 
