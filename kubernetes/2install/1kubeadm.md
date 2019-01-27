@@ -178,3 +178,9 @@ cp -i /etc/kubenetes/admin.conf  $HOEM/.kube/config
 
 `master01   NotReady   master   75m   v1.13.2`
 
+step7
+
+部署网络插件CNI
+
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+
