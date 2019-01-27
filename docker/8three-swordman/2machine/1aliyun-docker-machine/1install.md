@@ -12,9 +12,9 @@
 
 ### 安装 ECS Driver
 
-Docker Machine 要求 ECS Driver 的 binary 在系统路径（以 Mac OSX 为例，就是`$PATH`包含的路径）下，将文件名改为`docker-machine-driver-aliyunecs`并添加执行权限即可，这样 Docker Machine 可以直接访问到。
+Docker Machine 要求 ECS Driver 的 binary 在系统路径（以** Mac OS** 为例，就是`$PATH`包含的路径）下，将文件名改为`docker-machine-driver-aliyunecs`并添加执行权限即可，这样 Docker Machine 可以直接访问到。
 
-**Mac OSX** 下安装命令其实就是将 ECS Driver 的 binary 拷贝到了`/usr/local/bin`目录下。
+**Mac OS** 下安装命令其实就是将 ECS Driver 的 binary 拷贝到了`/usr/local/bin`目录下。
 
 命令如下所示：
 
