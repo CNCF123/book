@@ -22,3 +22,7 @@ Namespace Node Role ClusterRole  RoleBinding  ClusterRoleBinding
 
 HPA PodTemplate LimitRang
 
+使用命令**kubectl api-resources**,可以查看所有的资源类型
+
+
+
