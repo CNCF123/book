@@ -4,11 +4,11 @@ Pod、Deployment、Service和 ConfigMap等资源属于名称空间级别，可�
 
 * Namespace
 
-资源对象名称的作用范围，绝大多数对象都隶属于某个名称空间，默认 时隶属于“default”。
+资源对象名称的作用范围，绝大多数对象都隶属于某个名称空间，默认属于“default”。
 
 * Node
 
- Kubemetes 集群的工作节点，其标识柯:在当前集群中必须是唯一的 。
+Kubemetes 集群的工作节点，其标识在当前集群中必须是唯一的 。
 
 * Role
 
