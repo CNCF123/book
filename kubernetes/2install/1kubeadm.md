@@ -70,6 +70,12 @@ Kubernetes: 1.13.2
 
 `done`
 
+执行
+
+chmod +x /etc/sysconfig/modules/ipvs.modules
+
+/etc/sysconfig/modules/ipvs.modules
+
 #### step3
 
 1.在master和node节点安装docker-ce
