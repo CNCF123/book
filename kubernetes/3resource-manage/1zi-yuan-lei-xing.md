@@ -4,7 +4,7 @@
 
 * 工作负载型资源对象    
 
-Pod  Replicaset  Deployments StatefulSets Daemonset Job CronJob
+Pod  ReplicationController Replicaset  Deployments StatefulSets Daemonset Job CronJob
 
 * 服务发现及负载均衡     
 
