@@ -78,7 +78,7 @@
       * [1.解决k8s.gcr.io问题](kubernetes/2install/1kubeadm/1k8s-gcr-io.md)
     * [2.二进制包](kubernetes/2install/2bin-tar.md)
   * [3.资源管理](kubernetes/3resource-manage.md)
-    * [1.资源类型](kubernetes/3resource-manage/1zi-yuan-lei-xing.md)
+    * [1.资源类型](kubernetes/3resource-manage/1resource-type.md)
     * [2.工作负载型资源](kubernetes/3resource-manage/2work-load.md)
   * [4.Pod对象管理](kubernetes/4pod-object-manage.md)
   * [5.控制器](kubernetes/5controller.md)
