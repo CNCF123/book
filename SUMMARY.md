@@ -81,7 +81,7 @@
     * [1.资源类型](kubernetes/3resource-manage/1resource-type.md)
       * [1.工作负载型资源对象](kubernetes/3resource-manage/1resource-type/1work-load.md)
       * [2.服务发现及负载均衡](kubernetes/3resource-manage/1resource-type/2service-discover-loadbalance.md)
-      * [3.配置与存储](kubernetes/3resource-manage/1resource-type/4config-storage.md)
+      * [3.配置与存储](kubernetes/3resource-manage/1resource-type/3config-storage.md)
       * [4.集群资源](kubernetes/3resource-manage/1resource-type/4cluster-resource.md)
       * [5.元数据资源](kubernetes/3resource-manage/1resource-type/5matadata-resource.md)
   * [4.Pod对象管理](kubernetes/4pod-object-manage.md)
