@@ -82,7 +82,7 @@
     * [2.工作负载型资源](kubernetes/3resource-manage/2work-load.md)
     * [3.服务发现及负载均衡](kubernetes/3resource-manage/3fu-wu-fa-xian-ji-fu-zai-jun-heng.md)
     * [4.配置与存储](kubernetes/3resource-manage/4pei-zhi-yu-cun-chu.md)
-    * 5.集群资源
+    * [5.集群资源](kubernetes/3resource-manage/5ji-qun-zi-yuan.md)
     * 6.元数据资源
   * [4.Pod对象管理](kubernetes/4pod-object-manage.md)
   * [5.控制器](kubernetes/5controller.md)
