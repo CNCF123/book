@@ -84,8 +84,6 @@
       * [3.配置与存储](kubernetes/3resource-manage/1resource-type/4config-storage.md)
       * [4.集群资源](kubernetes/3resource-manage/1resource-type/4cluster-resource.md)
       * [5.元数据资源](kubernetes/3resource-manage/1resource-type/5matadata-resource.md)
-    * [2.工作负载型资源](kubernetes/3resource-manage/2work-load.md)
-    * [3.服务发现及负载均衡](kubernetes/3resource-manage/3fu-wu-fa-xian-ji-fu-zai-jun-heng.md)
     * [4.配置与存储](kubernetes/3resource-manage/4pei-zhi-yu-cun-chu.md)
     * [5.集群资源](kubernetes/3resource-manage/5ji-qun-zi-yuan.md)
     * [6.元数据资源](kubernetes/3resource-manage/6yuan-shu-ju-zi-yuan.md)
