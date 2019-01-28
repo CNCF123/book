@@ -100,7 +100,7 @@ Kubernetes: 1.13.2
 
 `ExecStartPost=/usr/sbin/iptables -P FORWARD ACCEPT`
 
-docker启动，开机自启动
+5.docker启动，开机自启动
 
 `systemctl daemon-reload`
 
