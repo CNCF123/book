@@ -97,6 +97,7 @@
   * [13.资源调度](kubernetes/12resource-scheduler.md)
   * [14.资源监控和HPA](kubernetes/13resource-monitor-hpa.md)
   * [15.Helm和Charts](kubernetes/14helmhe-charts.md)
+  * [16.扩展](kubernetes/16extend.md)
 * [Istio](istio.md)
   * [1.入门](istio/1base.md)
   * [2.安装](istio/2install.md)
