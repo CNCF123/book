@@ -24,7 +24,7 @@ Pod是工作负载型资源中的基础资源，它负责运行容器，并为�
 
 * DaemonSet
 
-用于确保每个节点都运行了某 Pod的一个副本，新增的节点一样会被添 加此类 Pod ;在节点移除时，此类 Pod 会被回收; DaemonSet 常用于运行集群存储 守护进程一一如 glusterd 和 C巳ph，还有日志收集进程一一如 fluentd 和 logstash，以及监控进程一一一如 Prometheus 的 Node Exporter、 collectd、 Datadog agent 和 Ganglia的 gmond 等 。
+用于确保每个节点都运行了某 Pod的一个副本，新增的节点一样会被添 加此类 Pod ;在节点移除时，此类 Pod 会被回收; DaemonSet 常用于运行集群存储 守护进程一一如 glusterd 和 Ceph，还有日志收集进程一一如 fluentd 和 logstash，以及监控进程一一一如 Prometheus 的 Node Exporter、 collectd、 Datadog agent 和 Ganglia的 gmond 等 。
 
 * Job 
 
