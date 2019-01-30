@@ -20,7 +20,7 @@ Pod是工作负载型资源中的基础资源，它负责运行容器，并为�
 
 * StatefulSet 
 
-用于管理有状态的持久化应用，如 database服务程序; 其与 D巳ployment 的不同之处在于 StatefulSet会为每个 Pod创建一个独有的持久性标识符，并会确保 各 Pod之间的顺序性。
+用于管理有状态的持久化应用，如 database服务程序; 其与 Deployment 的不同之处在于 StatefulSet会为每个 Pod创建一个独有的持久性标识符，并会确保 各 Pod之间的顺序性。
 
 * DaemonSet
 
