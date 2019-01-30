@@ -6,11 +6,13 @@ Pod是工作负载型资源中的基础资源，它负责运行容器，并为�
 
 * ReplicationController
 
-用于确保每个 Pod 副本在任-时刻均能满足目标数量 ，换言 之，它用于保证每个容器或容器组总是运行并且可访问;它是上一代的无状态 Pod 应用控制器，建议读者使用新型控制器 Deployment和 ReplicaSet来取代它。
+用于确保每个 Pod 副本在任-时刻均能满足目标数量 ，换言 之，它用于保证每个容器或容器组总是运行并且可访问;
+
+它是上一代的无状态 Pod 应用控制器，建议读者使用新型控制器 Deployment和 ReplicaSet来取代它。
 
 * ReplicaSet 
 
-新一代 ReplicationController， 它与 ReplicationController 的唯一不同之处仅 在于支持的标签选择器不同， R巳plicationController只支持等值选择器，而 ReplicaSet还 额外支持基于集合的选择器 。
+新一代 ReplicationController， 它与 ReplicationController 的唯一不同之处仅 在于支持的标签选择器不同， ReplicationController只支持等值选择器，而 ReplicaSet还 额外支持基于集合的选择器 。
 
 * Deployment
 
