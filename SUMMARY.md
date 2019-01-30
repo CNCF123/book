@@ -79,7 +79,7 @@
     * [2.二进制包](kubernetes/2install/2bin-tar.md)
   * [3.资源管理](kubernetes/3resource-manage.md)
     * [1.资源类型](kubernetes/3resource-manage/1resource-type.md)
-      * [1.工作负载型资源对象](kubernetes/3resource-manage/1resource-type/1work-load.md)
+      * [1.工作负载](kubernetes/3resource-manage/1resource-type/1work-load.md)
       * [2.服务发现及负载均衡](kubernetes/3resource-manage/1resource-type/2service-discover-loadbalance.md)
       * [3.配置与存储](kubernetes/3resource-manage/1resource-type/3config-storage.md)
       * [4.集群资源](kubernetes/3resource-manage/1resource-type/4cluster-resource.md)
