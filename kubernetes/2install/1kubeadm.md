@@ -82,7 +82,7 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 `cd /etc/yum.repos.d/`
 
-`wget   wget`[`https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo`](https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo)
+`wget https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo`
 
 `yum -y install docker-ce`
 
