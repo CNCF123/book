@@ -10,7 +10,11 @@
 
 \# docker --registry-mirror=[https://registry.docker-cn.com](https://registry.docker-cn.com) daemon
 
-对于使用[systemd](https://www.freedesktop.org/wiki/Software/systemd/)的系统，请在`/etc/docker/daemon.json`中写入如下内容（如果文件不存在请新建该文件）
+对于使用CentOS7的系统:
+
+`# mkdir /etc/docker`
+
+`/etc/docker/daemon.json`中写入如下内容（如果文件不存在请新建该文件）
 
 ```
 {
