@@ -90,9 +90,9 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 3.确认这两个参数为1
 
-echo 1 &gt;` /proc/sys/net/bridge/bridge-nf-call-iptables`
+echo 1 &gt;`/proc/sys/net/bridge/bridge-nf-call-iptables`
 
-echo 1 &gt;` /proc/sys/net/bridge/bridge-nf-call-ip6tables`
+echo 1 &gt;`/proc/sys/net/bridge/bridge-nf-call-ip6tables`
 
 4.从docker1.13开始，iptables的FORWARD的默认规则为DROP，这可能影响k8s的报文转发功能，修改为ACCEPT
 
@@ -190,9 +190,11 @@ kubectl apply -f [https://raw.githubusercontent.com/coreos/flannel/master/Docume
 
 添加node节点，在node节点上执行
 
+注意：node节点需要 kube-proxy、pause 、quay.io/coreos/flannel的镜像，需要拉取，参考k8s.gcr.io问题
+
 kubeadm join 172.16.0.53:6443 --token d387y7.j5na40ast2iz162h --discovery-token-ca-cert-hash sha256:dab4f81996be52ac17160bff6943fa6eddd73e2cdb8c9343751ea0bde083087f
 
-注意：node节点需要 kube-proxy、pause 、quay.io/coreos/flannel的镜像，需要拉取，参考k8s.gcr.io问题
+
 
 #### step9
 
