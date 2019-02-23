@@ -90,13 +90,9 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 3.确认这两个参数为1
 
-`cat /proc/sys/net/bridge/bridge-nf-call-iptables`
+echo 1 &gt;` /proc/sys/net/bridge/bridge-nf-call-iptables`
 
-`1`
-
-`cat /proc/sys/net/bridge/bridge-nf-call-ip6tables`
-
-`1`
+echo 1 &gt;` /proc/sys/net/bridge/bridge-nf-call-ip6tables`
 
 4.从docker1.13开始，iptables的FORWARD的默认规则为DROP，这可能影响k8s的报文转发功能，修改为ACCEPT
 
