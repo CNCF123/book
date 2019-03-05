@@ -65,6 +65,7 @@ Docker CE 支持 64 位版本 CentOS 7，并且要求内核版本不低于 3.10�
 ### 启动 Docker CE {#启动-docker-ce}
 
 ```
+# systemctl daemon-reload
 # systemctl enable docker
 # systemctl start docker
 ```
