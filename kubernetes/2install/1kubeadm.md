@@ -114,6 +114,20 @@ echo 1 &gt;`/proc/sys/net/bridge/bridge-nf-call-ip6tables`
 
 安装k8s的相关组件
 
+添加 kubernetes的yum源
+
+vim /etc/yum.repos.d/kubernetes.repo
+
+\[kubernetes\]
+
+name=kubernetes repo
+
+baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86\_64/
+
+gpgcheck=0
+
+enabled=1
+
 master节点：
 
 `yum -y install kubelet kubeadm kubectl`
@@ -193,8 +207,6 @@ kubectl apply -f [https://raw.githubusercontent.com/coreos/flannel/master/Docume
 注意：node节点需要 kube-proxy、pause 、quay.io/coreos/flannel的镜像，需要拉取，参考k8s.gcr.io问题
 
 kubeadm join 172.16.0.53:6443 --token d387y7.j5na40ast2iz162h --discovery-token-ca-cert-hash sha256:dab4f81996be52ac17160bff6943fa6eddd73e2cdb8c9343751ea0bde083087f
-
-
 
 #### step9
 
