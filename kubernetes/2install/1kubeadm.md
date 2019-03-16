@@ -146,7 +146,7 @@ node节点：
 
 设置开机自启动
 
-systemctl enble kubelet
+systemctl enable kubelet
 
 #### step5
 
