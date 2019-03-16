@@ -88,13 +88,7 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 2.设置[镜像加速](http://www.dockerk8s.net/docker/3image/2image-add-speed.html)
 
-3.确认这两个参数为1
-
-echo 1 &gt;`/proc/sys/net/bridge/bridge-nf-call-iptables`
-
-echo 1 &gt;`/proc/sys/net/bridge/bridge-nf-call-ip6tables`
-
-4.从docker1.13开始，iptables的FORWARD的默认规则为DROP，这可能影响k8s的报文转发功能，修改为ACCEPT
+3.从docker1.13开始，iptables的FORWARD的默认规则为DROP，这可能影响k8s的报文转发功能，修改为ACCEPT
 
 方法：
 
@@ -102,13 +96,19 @@ echo 1 &gt;`/proc/sys/net/bridge/bridge-nf-call-ip6tables`
 
 `ExecStartPost=/usr/sbin/iptables -P FORWARD ACCEPT`
 
-5.docker启动，开机自启动
+4.docker启动，开机自启动
 
 `systemctl daemon-reload`
 
 `systemctl start docker`
 
 `systemctl enable docker`
+
+5.设置这两个参数为1
+
+echo 1 &gt;`/proc/sys/net/bridge/bridge-nf-call-iptables`
+
+echo 1 &gt;`/proc/sys/net/bridge/bridge-nf-call-ip6tables`
 
 #### step4
 
@@ -122,7 +122,7 @@ vim /etc/yum.repos.d/kubernetes.repo
 
 name=kubernetes repo
 
-baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86\_64/
+baseurl=[https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86\_64/](https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/)
 
 gpgcheck=0
 
