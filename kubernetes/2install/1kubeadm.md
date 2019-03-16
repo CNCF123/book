@@ -150,13 +150,11 @@ systemctl enable kubelet
 
 #### step5
 
+master节点：
+
 kubeadm初始化
 
 备注：解决k8s.gcr.io的镜像问题，请看下篇文章
-
-有二种方法：
-
-方法一：
 
 使用命令行初始化：
 
@@ -169,10 +167,6 @@ kubeadm init --kubernetes-version=v**1.13.2** \
 --apiserver-advertise-address=0.0.0.0 \
 
 --ignore-preflight-errors=Swap
-
-方法二：
-
-使用配置文件kubeadm-config.yaml
 
 #### step6
 
