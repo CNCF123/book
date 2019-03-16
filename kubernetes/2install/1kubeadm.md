@@ -180,6 +180,8 @@ mkdir -p $HOME/.kube
 
 cp -i /etc/kubenetes/admin.conf  $HOEM/.kube/config
 
+chown $\(id -u\):$\(id -g\) $HOME/.kube/config
+
 此时此刻，master节点配置完毕
 
 `kubectl get nodes`
