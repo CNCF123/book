@@ -202,7 +202,7 @@ kubectl apply -f [https://raw.githubusercontent.com/coreos/flannel/master/Docume
 
 注意：node节点需要 kube-proxy、pause 、quay.io/coreos/flannel的镜像，需要拉取，注意重新打标签tag，参考解决k8s.gcr.io的镜像问题
 
-如果 flannel的镜像pull慢的话，可以到github下载 flanneld-v0.11.0-amd64.docker的镜像文件 
+如果 flannel的镜像pull慢的话，可以到github下载 flanneld-版本-amd64.docker的镜像文件
 
 kubeadm join 172.16.0.53:6443 --token d387y7.j5na40ast2iz162h --discovery-token-ca-cert-hash sha256:dab4f81996be52ac17160bff6943fa6eddd73e2cdb8c9343751ea0bde083087f
 
