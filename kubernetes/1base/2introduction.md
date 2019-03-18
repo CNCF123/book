@@ -34,7 +34,7 @@ kubernetes，简称K8s，是用8代替8个字符“ubernete”而成的缩写。
 * 1.docker
 * 2.kubelet
 * 3.kube-proxy
-* 4.fluentd
+* 4.flannel
 
 
 
