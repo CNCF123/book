@@ -198,11 +198,10 @@ kubectl apply -f [https://raw.githubusercontent.com/coreos/flannel/master/Docume
 
 #### step8
 
-注意事项：
+node节点注意事项：
 
 * node节点需要 kube-proxy、pause 、quay.io/coreos/flannel的镜像，需要拉取，注意重新打标签tag，参考解决k8s.gcr.io的镜像问题
-* 如果 flannel的镜像pull慢的话，可以到github下载 flanneld-版本-amd64.docker的镜像文件
-* 然后使用 docker load -i flanneld-版本-amd64.docker
+* 如果 flannel的镜像pull慢的话，可以到github下载 flanneld-版本-amd64.docker的镜像文件，然后使用 docker load -i flanneld-版本-amd64.docker
 
 添加node节点，在node节点上执行，加入集群的命令：
 
