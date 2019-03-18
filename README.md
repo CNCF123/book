@@ -4,7 +4,7 @@
 
 所以，现在是学习它们的好时候。
 
-### Docker
+## Docker
 
 [Docker](http://www.docker.com/) 是个划时代的开源项目，它极大提高了应用的维护效率，降低了云计算应用开发的成本！使用 Docker，可以让应用的部署、测试和分发都变得前所未有的高效和轻松！
 
@@ -14,7 +14,7 @@
 
 同时，书中给出的实践案例，可供在进行实际部署时借鉴。供用户理解 Docker 的基本概念、安装部署、基本使用、网络、数据管理、容器生态中的几个核心项目。
 
-### kubernetes \(k8s\)
+## kubernetes
 
 [Kubernetes](#)是Google 在2015年以开源的方式发布的，是Google 10多年大规模容器管理技术Borg的开源版本。
 
@@ -26,7 +26,7 @@ Kubernetes 特点
 * **可扩展：**模块化, 插件化, 可挂载, 可组合
 * **自动化：**自动部署，自动重启，自动复制，自动伸缩/扩展
 
-### CNCF\(Cloud Native Computing Foundation\)
+## CNCF\(Cloud Native Computing Foundation\)
 
 * 在 2006 年 8 月 9 日，google公司董事长埃里克·施密特（EricSchmidt）在搜索引擎大会上首次提出了“云计算”（Cloud Computing）的概念。一转眼十年过去了，它的发展势如破竹，不断渗透当代的 IT 市场。
 
