@@ -147,6 +147,10 @@ EOF
 # sysctl -p
 ```
 
+### 镜像加速 {#参考文档}
+
+参考：[http://www.dockerk8s.net/docker/3image/2image-add-speed.html](http://www.dockerk8s.net/docker/3image/2image-add-speed.html)
+
 ### 参考文档 {#参考文档}
 
 * [Docker 官方 CentOS 安装文档](https://docs.docker.com/install/linux/docker-ce/centos/)
