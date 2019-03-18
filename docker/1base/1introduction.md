@@ -10,12 +10,10 @@ Docker 可以让开发者可以打包他们的应用以及依赖包到一个可�
 
 一个完整的Docker有以下几个部分组成：
 
-* dockerClient客户端
+* docker Client客户端
 * Docker Daemon守护进程
 * Docker Image镜像
-* DockerContainer容器
-
-百度百科
+* Docker Container容器
 
 
 
