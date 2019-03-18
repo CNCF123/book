@@ -12,7 +12,6 @@
     * [1.Ubuntu](docker/2install/1ubuntu.md)
     * [2.CentOS](docker/2install/2centos.md)
     * [3.MacOS](docker/2install/3macos.md)
-    * [4.docker-info](docker/2install/4docker-info.md)
   * [3.镜像](docker/3image.md)
     * [1.镜像原理](docker/3image/1image-theory.md)
     * [2.镜像加速](docker/3image/2image-add-speed.md)
