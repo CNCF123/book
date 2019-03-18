@@ -101,9 +101,7 @@ $ sudo sh get-docker.sh --mirror Aliyun
 ### 启动 Docker CE {#启动-docker-ce}
 
 ```
-$ sudo systemctl 
-enable
- docker
+$ sudo systemctl enable docker
 $ sudo systemctl start docker
 ```
 
@@ -126,10 +124,7 @@ $ sudo groupadd docker
 将当前用户加入`docker`组：
 
 ```
-$ sudo usermod 
--a
-G docker 
-$USER
+$ sudo usermod -aG docker $USER
 ```
 
 退出当前终端并重新登录，进行如下测试。
@@ -181,27 +176,9 @@ For more examples and ideas, visit:
 
 ### 镜像加速 {#镜像加速}
 
-鉴于国内网络问题，后续拉取 Docker 镜像十分缓慢，强烈建议安装 Docker 之后配置镜像加速。
+参考：http://www.dockerk8s.net/docker/3image/2image-add-speed.html
 
-使用 --registry-mirror 配置 Docker 守护进程
-
-您可以配置 Docker 守护进程默认使用 Docker 官方镜像加速。这样您可以默认通过官方镜像加速拉取镜像，而无需在每次拉取时指定 registry.docker-cn.com。
-
-您可以在 Docker 守护进程启动时传入 --registry-mirror 参数：
-
-$sudo docker --registry-mirror=[https://registry.docker-cn.com](https://registry.docker-cn.com) daemon
-
-为了永久性保留更改，您可以修改 /etc/docker/daemon.json 文件并添加上 registry-mirrors 键值。
-
-{
-
-```
-    #这里添加镜像的加速地址
-```
-
-}
-
-注意：建议使用阿里云镜像加速
+建议使用阿里云镜像加速
 
 ### 参考文档 {#参考文档}
 
