@@ -26,7 +26,11 @@
 
 建议：使用阿里云镜像加速
 
-开源的镜像加速资源：
+镜像加速资源：
 
+网易：http://hub-mirror.c.163.com
 
+阿里云：https://xxx.mirror.aliyuncs.com
+
+中科大：https://docker.mirrors.ustc.edu.cn
 
