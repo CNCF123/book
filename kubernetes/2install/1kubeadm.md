@@ -86,7 +86,7 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 `yum -y install docker-ce`
 
-2.设置[镜像加速](http://www.dockerk8s.net/docker/3image/2image-add-speed.html)
+2.在master和node节点设置[镜像加速](http://www.dockerk8s.net/docker/3image/2image-add-speed.html)
 
 3.从docker1.13开始，iptables的FORWARD的默认规则为DROP，这可能影响k8s的报文转发功能，修改为ACCEPT
 
@@ -112,9 +112,7 @@ echo 1 &gt;`/proc/sys/net/bridge/bridge-nf-call-ip6tables`
 
 #### step4
 
-安装k8s的相关组件
-
-添加 kubernetes的yum源
+1.master节点和node节点添加 kubernetes的yum源
 
 vim /etc/yum.repos.d/kubernetes.repo
 
@@ -128,25 +126,27 @@ gpgcheck=0
 
 enabled=1
 
-master节点：
+2.安装k8s的相关组件
+
+2.1 master节点：
 
 `yum -y install kubelet kubeadm kubectl`
 
-node节点：
+2.2 node节点：
 
 `yum -y install kubelet kubeadm`
 
-配置kubelet配置文件
+3.配置kubelet配置文件
 
-在k8s 1.8版本开始，强制要求关闭系统的swap交换分区，否则kubelet无法安装
+master节点和node节点，在k8s 1.8版本开始，强制要求关闭系统的swap交换分区，否则kubelet无法安装
 
 编辑 vim /etc/sysconfig/kubelet, 用来忽略禁止使用swap的限制
 
 `KUBELET_EXTRA_ARGS="--fail-swap-on=false"`
 
-设置开机自启动
+**注意：先不启动**
 
-systemctl enable kubelet
+先设置开机自启动 `systemctl enable kubelet`
 
 #### step5
 
