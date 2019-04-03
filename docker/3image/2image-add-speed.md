@@ -24,8 +24,6 @@
 }
 ```
 
-建议：使用阿里云镜像加速
-
 镜像加速资源：
 
 网易：[http://hub-mirror.c.163.com](http://hub-mirror.c.163.com)
@@ -33,4 +31,6 @@
 阿里云：[https://xxx.mirror.aliyuncs.com](https://xxx.mirror.aliyuncs.com)
 
 中科大：[https://docker.mirrors.ustc.edu.cn](https://docker.mirrors.ustc.edu.cn)
+
+建议：使用[阿里云镜像加速](https://help.aliyun.com/document_detail/60750.html)
 
