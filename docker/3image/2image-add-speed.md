@@ -19,7 +19,7 @@
 ```
 {
   "registry-mirrors": [
-    "https://https://registry.docker-cn.com"
+    "https://registry.docker-cn.com"
   ]
 }
 ```
@@ -28,9 +28,9 @@
 
 镜像加速资源：
 
-网易：http://hub-mirror.c.163.com
+网易：[http://hub-mirror.c.163.com](http://hub-mirror.c.163.com)
 
-阿里云：https://xxx.mirror.aliyuncs.com
+阿里云：[https://xxx.mirror.aliyuncs.com](https://xxx.mirror.aliyuncs.com)
 
-中科大：https://docker.mirrors.ustc.edu.cn
+中科大：[https://docker.mirrors.ustc.edu.cn](https://docker.mirrors.ustc.edu.cn)
 
