@@ -55,6 +55,12 @@ root@ba267838cc1b:/# ps
 
 可见，容器中仅运行了指定的 bash 应用。这种特点使得 Docker 对资源的利用率极高，是货真价实的轻量级虚拟化。
 
+### 重新启动正在运行的容器 {#启动已终止容器}
+
+`docker container restart`命令会将一个运行态的容器终止，然后再重新启动它。
+
+## 
+
 ## 终止容器
 
 可以使用`docker container stop`来终止一个运行中的容器。
@@ -77,7 +83,5 @@ ba267838cc1b        ubuntu:14.04
         About an hour ago   Exited (0) 34 minutes ago                           backstabbing_pike
 ```
 
-处于终止状态的容器，可以通过`docker container start`命令来重新启动。
 
-此外，`docker container restart`命令会将一个运行态的容器终止，然后再重新启动它。
 
