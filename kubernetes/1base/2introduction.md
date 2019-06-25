@@ -24,7 +24,7 @@ kubernetes，简称K8s，是用8代替8个字符“ubernete”而成的缩写。
 * 4.cloud-controller-manager
 * 5.kube-scheduler
 * 6.插件 addons
-* 6.1.DNS
+* 6.1.CoreDNS
 * 6.2.用户界面
 * 6.3.容器资源监测
 * 6.4.Cluster-level Logging
