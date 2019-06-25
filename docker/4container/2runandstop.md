@@ -4,7 +4,7 @@
 
 因为 Docker 的容器实在太轻量级了，很多时候用户都是随时删除和新创建容器。
 
-#### 新建并启动
+### 新建并启动
 
 所需要的命令主要为`docker run`。
 
@@ -18,7 +18,7 @@ Hello world
 
 这跟在本地直接执行`/bin/echo 'hello world'`几乎感觉不出任何区别。
 
-#### 交互模式
+### 交互模式
 
 下面的命令则启动一个 bash 终端，允许用户进行交互。
 
@@ -51,7 +51,7 @@ bin boot dev etc home lib lib64 media mnt opt proc root run sbin srv sys tmp usr
 
 ### 已终止的容器重新启动 {#启动已终止容器}
 
-可以利用**`docker container start`**命令，直接将一个已经终止的容器重新启动运行。
+可以利用`docker container start`命令，直接将一个已经终止的容器重新启动运行。
 
 容器的核心为所执行的应用程序，所需要的资源都是应用程序运行所必需的。除此之外，并没有其它的资源。可以在伪终端中利用`ps`或`top`来查看进程信息。
 
@@ -65,7 +65,7 @@ root@ba267838cc1b:/# ps
 
 可见，容器中仅运行了指定的 bash 应用。这种特点使得 Docker 对资源的利用率极高，是货真价实的轻量级虚拟化。
 
-## 终止容器 {#终止容器}
+## 终止容器
 
 可以使用`docker container stop`来终止一个运行中的容器。
 
