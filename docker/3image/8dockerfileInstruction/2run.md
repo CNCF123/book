@@ -44,7 +44,9 @@ RUN /bin/bash -c 'source $HOME/.bashrc; echo $HOME'
 
 ### 已知问题（RUN） {#known-issues-run}
 
-* [问题783](https://github.com/docker/docker/issues/783)是关于使用AUFS文件系统时可能发生的文件权限问题。例如，您可能会在尝试`rm`文件时注意到它。
+* [问题783](https://github.com/docker/docker/issues/783)是关于使用AUFS文件系统时可能发生的文件权限问题。
+
+* 例如，您可能会在尝试`rm`文件时注意到它。
 
   对于具有最近aufs版本的系统（即，`dirperm1`可以设置挂载选项），docker将尝试通过使用`dirperm1`选项安装图层来自动修复问题。有关`dirperm1`选项的更多详细信息，请参见[`aufs`手册页](https://github.com/sfjro/aufs3-linux/tree/aufs3.18/Documentation/filesystems/aufs)
 
