@@ -37,7 +37,7 @@
       * [14.ONBUILD](docker/3image/8dockerfileInstruction/14onbuild.md)
       * [15.HEALTHCHECK](docker/3image/8dockerfileInstruction/15healthcheck.md)
       * [16.参考文档](docker/3image/8dockerfileInstruction/16document.md)
-    * [9.导入导出镜像](docker/3image/9dao-ru-dao-chu-jing-xiang.md)
+    * [9.导入导出镜像](docker/3image/9input-output.md)
   * [4.容器](docker/4container.md)
     * [1.基本命令](docker/4container/1basecmd.md)
     * [2.启动与停止](docker/4container/2runandstop.md)
