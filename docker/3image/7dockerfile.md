@@ -29,7 +29,7 @@ RUN echo '<h1>Hello, Docker!</h1>' > /usr/share/nginx/html/index.html
 
 好了，让我们再回到之前定制的 nginx 镜像的 Dockerfile 来。现在我们明白了这个 Dockerfile 的内容，那么让我们来构建这个镜像吧。
 
-在`Dockerfile`文件所在目录执行：
+#### **在Dockerfile文件所在目录执行**：
 
 ```
 $ docker build -t nginx:v3 .
