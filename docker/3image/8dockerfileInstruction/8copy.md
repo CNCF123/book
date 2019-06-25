@@ -20,7 +20,7 @@ COPY hom* /mydir/        # adds all files starting with "hom"
 COPY hom?.txt /mydir/    # ? is replaced with any single character, e.g., "home.txt"
 ```
 
-的`<dest>`是一个绝对路径，或相对于一个路径`WORKDIR`，到其中的源将在目标容器内进行复制。
+`<dest>`是一个绝对路径，或相对于一个路径`WORKDIR`，**必须以斜杠“**/” **结尾** ，到其中的源将在目标容器内进行复制。
 
     COPY test relativeDir/   # adds "test" to `WORKDIR`/relativeDir/
 
@@ -44,7 +44,7 @@ COPY arr[[]0].txt /mydir/    # copy a file named "arr[0].txt" to /mydir/
 
 * 如果`<src>`是任何其他类型的文件，则将其与元数据一起单独复制。在这种情况下，如果`<dest>`以尾部斜杠结尾`/`，则将其视为目录，`<src>`并将写入内容`<dest>/base(<src>)`。
 
-* 如果`<src>`直接或由于使用通配符指定了多个资源，则`<dest>`必须是目录，并且必须以斜杠结尾`/`。
+* 如果`<src>`直接或由于使用通配符指定了多个资源，则`<dest>`必须是目录，并且**必须以斜杠结尾/**。
 
 * 如果`<dest>`不以尾部斜杠结束，则将其视为常规文件，`<src>`并将写入其中的内容`<dest>`。
 
