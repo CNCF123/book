@@ -11,7 +11,7 @@
 例如，下面的命令输出一个 “Hello World”，之后终止容器。
 
 ```
-docker run ubuntu:14.04 /bin/echo 'Hello world'
+docker run ubuntu:16.04 /bin/echo 'Hello world'
 
 Hello world
 ```
@@ -23,7 +23,7 @@ Hello world
 下面的命令则启动一个 bash 终端，允许用户进行交互。
 
 ```
-docker run -t -i ubuntu:14.04 /bin/bash
+docker run -it ubuntu:16.04 /bin/bash
 root@af8bae53bdd3:/#
 ```
 
@@ -39,8 +39,6 @@ root@af8bae53bdd3:/# ls
 bin boot dev etc home lib lib64 media mnt opt proc root run sbin srv sys tmp usr var
 ```
 
-
-
 当利用`docker run`来创建容器时，Docker 在后台运行的标准操作包括：
 
 * 检查本地是否存在指定的镜像，不存在就从公有仓库下载
@@ -51,7 +49,7 @@ bin boot dev etc home lib lib64 media mnt opt proc root run sbin srv sys tmp usr
 * 执行用户指定的应用程序
 * 执行完毕后容器被终止
 
-### 启动已终止容器 {#启动已终止容器}
+### 已终止容器重新启动 {#启动已终止容器}
 
 可以利用`docker container start`命令，直接将一个已经终止的容器启动运行。
 
