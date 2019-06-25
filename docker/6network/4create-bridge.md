@@ -12,7 +12,7 @@ ip link set dev docker0 down
 brctl del br docker0
 ```
 
-然后创建一个网桥`bridge0`。
+然后创建一个网桥**`mybridge`**。
 
 ```
 brctl addbr mybridge
