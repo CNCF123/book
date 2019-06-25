@@ -49,7 +49,7 @@ bin boot dev etc home lib lib64 media mnt opt proc root run sbin srv sys tmp usr
 * 执行用户指定的应用程序
 * 执行完毕后容器被终止
 
-### 已终止容器重新启动 {#启动已终止容器}
+### 已终止的容器重新启动 {#启动已终止容器}
 
 可以利用`docker container start`命令，直接将一个已经终止的容器启动运行。
 
