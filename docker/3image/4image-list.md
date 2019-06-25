@@ -82,7 +82,7 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 
 ### 列出部分镜像 {#列出部分镜像}
 
-不加任何参数的情况下，`docker image ls`会列出所有顶级镜像，但是有时候我们只希望列出部分镜像。`docker image ls`有好几个参数可以帮助做到这个事情。
+不加任何参数的情况下，**`docker image ls` **会列出所有**顶级**镜像，但是有时候我们只希望列出部分镜像。docker image ls有好几个参数可以帮助做到这个事情。
 
 根据仓库名列出镜像
 
@@ -138,6 +138,70 @@ fce289e99eb9
 3a093384ac30
 315798907716
 ```
+
+### 使用tag命令打标签
+
+使用**docker tag**命令来为本地镜像任意添加新的标签，添加 一个新的myubuntu:16.04镜像标签
+
+\#   docker tag ubuntu:16.04  myubuntu:16.04
+
+
+
+### 使用inspect命令查看详细信息
+
+使用**docker inspect**命令可以获取该镜像的详细信息
+
+\# docker inspect nginx
+
+\[
+
+    {
+
+        "Id": "sha256:719cd2e3ed04781b11ed372ec8d712fac66d5b60a6fb6190bf76b7d18cb50105",
+
+        "RepoTags": \[
+
+            "nginx:latest"
+
+        \],
+
+        "RepoDigests": \[
+
+            "nginx@sha256:bdbf36b7f1f77ffe7bd2a32e59235dff6ecf131e3b6b5b96061c652f30685f3a"
+
+        \],
+
+        "Parent": "",
+
+        "Comment": "",
+
+        "Created": "2019-06-11T00:03:10.403803169Z",
+
+        "Container": "7aabd4154bf9c76ba87db80daca50af295c9a49281bb826024776eb8942b0065",
+
+        "ContainerConfig": {
+
+            "Hostname": "7aabd4154bf9",
+
+            "Domainname": "",
+
+            "User": "",
+
+            "AttachStdin": false,
+
+            "AttachStdout": false,
+
+            "AttachStderr": false,
+
+            "ExposedPorts": {
+
+                "80/tcp": {}
+
+            },
+
+          **......**
+
+
 
 ### 其他仓库的镜像获取
 
