@@ -82,7 +82,7 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 
 ### 列出部分镜像 {#列出部分镜像}
 
-不加任何参数的情况下，**`docker image ls` **会列出所有**顶级**镜像，但是有时候我们只希望列出部分镜像。docker image ls有好几个参数可以帮助做到这个事情。
+不加任何参数的情况下，`docker image ls`** **会列出所有**顶级**镜像，但是有时候我们只希望列出部分镜像。docker image ls有好几个参数可以帮助做到这个事情。
 
 根据仓库名列出镜像
 
@@ -145,8 +145,6 @@ fce289e99eb9
 
 \#   docker tag ubuntu:16.04  myubuntu:16.04
 
-
-
 ### 使用inspect命令查看详细信息
 
 使用**docker inspect**命令可以获取该镜像的详细信息
@@ -155,53 +153,87 @@ fce289e99eb9
 
 \[
 
-    {
+```
+{
 
-        "Id": "sha256:719cd2e3ed04781b11ed372ec8d712fac66d5b60a6fb6190bf76b7d18cb50105",
+    "Id": "sha256:719cd2e3ed04781b11ed372ec8d712fac66d5b60a6fb6190bf76b7d18cb50105",
 
-        "RepoTags": \[
+    "RepoTags": \[
 
-            "nginx:latest"
+        "nginx:latest"
 
-        \],
+    \],
 
-        "RepoDigests": \[
+    "RepoDigests": \[
 
-            "nginx@sha256:bdbf36b7f1f77ffe7bd2a32e59235dff6ecf131e3b6b5b96061c652f30685f3a"
+        "nginx@sha256:bdbf36b7f1f77ffe7bd2a32e59235dff6ecf131e3b6b5b96061c652f30685f3a"
 
-        \],
+    \],
 
-        "Parent": "",
+    "Parent": "",
 
-        "Comment": "",
+    "Comment": "",
 
-        "Created": "2019-06-11T00:03:10.403803169Z",
+    "Created": "2019-06-11T00:03:10.403803169Z",
 
-        "Container": "7aabd4154bf9c76ba87db80daca50af295c9a49281bb826024776eb8942b0065",
+    "Container": "7aabd4154bf9c76ba87db80daca50af295c9a49281bb826024776eb8942b0065",
 
-        "ContainerConfig": {
+    "ContainerConfig": {
 
-            "Hostname": "7aabd4154bf9",
+        "Hostname": "7aabd4154bf9",
 
-            "Domainname": "",
+        "Domainname": "",
 
-            "User": "",
+        "User": "",
 
-            "AttachStdin": false,
+        "AttachStdin": false,
 
-            "AttachStdout": false,
+        "AttachStdout": false,
 
-            "AttachStderr": false,
+        "AttachStderr": false,
 
-            "ExposedPorts": {
+        "ExposedPorts": {
 
-                "80/tcp": {}
+            "80/tcp": {}
 
-            },
+        },
 
-          **......**
+      **......**
+```
 
+### 
 
+### 使用 hisory 命令查看镜像历史
+
+使 用 history 命令，列出各层的创建信息。
+
+\# docker history nginx
+
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+
+719cd2e3ed04        2 weeks ago         /bin/sh -c \#\(nop\)  CMD \["nginx" "-g" "daemon…   0B
+
+&lt;missing&gt;           2 weeks ago         /bin/sh -c \#\(nop\)  STOPSIGNAL SIGTERM           0B
+
+&lt;missing&gt;           2 weeks ago         /bin/sh -c \#\(nop\)  EXPOSE 80                    0B
+
+&lt;missing&gt;           2 weeks ago         /bin/sh -c ln -sf /dev/stdout /var/log/nginx…   22B
+
+&lt;missing&gt;           2 weeks ago         /bin/sh -c set -x     && addgroup --system -…   54MB
+
+&lt;missing&gt;           2 weeks ago         /bin/sh -c \#\(nop\)  ENV PKG\_RELEASE=1~stretch    0B
+
+&lt;missing&gt;           2 weeks ago         /bin/sh -c \#\(nop\)  ENV NJS\_VERSION=0.3.2        0B
+
+&lt;missing&gt;           2 weeks ago         /bin/sh -c \#\(nop\)  ENV NGINX\_VERSION=1.17.0     0B
+
+&lt;missing&gt;           2 weeks ago         /bin/sh -c \#\(nop\)  LABEL maintainer=NGINX Do…   0B
+
+&lt;missing&gt;           2 weeks ago         /bin/sh -c \#\(nop\)  CMD \["bash"\]                 0B
+
+&lt;missing&gt;           2 weeks ago         /bin/sh -c \#\(nop\) ADD file:5ffb798d64089418e…   55.3MB
+
+### 
 
 ### 其他仓库的镜像获取
 
