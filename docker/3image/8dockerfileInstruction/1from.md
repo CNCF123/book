@@ -1,5 +1,7 @@
 ## FROM
 
+指定基础镜像
+
 3种形式：
 
 * `FROM <image> [AS <name>]`
@@ -8,7 +10,7 @@
 
 * `FROM <image>[@<digest>] [AS <name>]`
 
-该`FROM`指令初始化新的构建阶段并为后续指令设置[_基本映像_](https://docs.docker.com/engine/reference/glossary/#base-image)。因此，有效`Dockerfile`必须以`FROM`指令开始。图像可以是任何有效图像 - 通过从[_公共存储库中_](https://docs.docker.com/engine/tutorials/dockerrepos/)**提取图像**来启动它尤其容易。
+`Dockerfile`必须以`FROM`指令开始。
 
 * `ARG`是先于仅指示`FROM`在`Dockerfile`。请参阅[了解ARG和FROM如何交互](https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact)。
 
