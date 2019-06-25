@@ -6,16 +6,16 @@
 
 ### `exec`命令 {#exec-命令}
 
-#### -i -t 参数，结合使用 -it {#i--t-参数}
+##### 结合使用 -it
 
-`docker exec`后边可以跟多个参数，这里主要说明`-i-t`参数。
+`docker exec`后边可以跟多个参数，这里主要说明`-it`参数。
 
 只用`-i`参数时，由于没有分配伪终端，界面没有我们熟悉的 Linux 命令提示符，但命令执行结果仍然可以返回。
 
 当`-it`参数一起使用时，则可以看到我们熟悉的 Linux 命令提示符。
 
 ```
-$ docker run -dit ubuntu
+$ docker run -d -it ubuntu
 bb7d14c27fe9c094717715f4f8a69d554b6ffa0127ada690f4523fe319cd7760
 
 $ docker container ls
