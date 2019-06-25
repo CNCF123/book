@@ -39,6 +39,18 @@ root@af8bae53bdd3:/# ls
 bin boot dev etc home lib lib64 media mnt opt proc root run sbin srv sys tmp usr var
 ```
 
+### 日志信息
+
+要获取容器的输出信息，可以通过`docker logs`命令。
+
+```
+$ docker logs [container ID or NAMES]
+hello world
+hello world
+hello world
+. . .
+```
+
 ### 重新启动已终止的容器 {#启动已终止容器}
 
 可以利用`docker container start`命令，直接将一个已经终止的容器重新启动运行。
