@@ -19,8 +19,7 @@ $ touch Dockerfile
 其内容为：
 
 ```
-FROM nginx
-RUN echo '<h1>Hello, Docker nginx!</h1>' > /usr/share/nginx/html/index.html
+ 
 ```
 
 这个 Dockerfile 很简单，一共就两行。涉及到了两条指令，`FROM`和`RUN`。
