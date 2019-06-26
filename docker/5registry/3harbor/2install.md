@@ -44,23 +44,36 @@ db\_password：用于DB身份验证的MySQL数据库的根密码。
 
 ./install.sh
 
-\[Step 0\]: checking installation environment ...Note: docker version: 18.09.6Note: docker-compose version: 1.18.0\[Step 1\]: loading Harbor images ...ba58b7bb3f17: Loading layer \[==================================================&gt;\]  33.32MB/33.32MB1351a2c39b77: Loading layer \[==================================================&gt;\]  8.967MB/8.967MB13b531e88128: Loading layer \[==================================================&gt;\]  46.85MB/46.85MB664abb325748: Loading layer \[==================================================&gt;\]  5.632kB/5.632kB9f20c7a04d55: Loading layer \[==================================================&gt;\]  27.14kB/27.14kB594e8fcaaae3: Loading layer \[==================================================&gt;\]  46.85MB/46.85MB
+\[Step 0\]: checking installation environment ...
+
+Note: docker version: 18.09.6
+
+Note: docker-compose version: 1.18.0
+
+\[Step 1\]: loading Harbor images ...  
+ba58b7bb3f17: Loading layer \[==================================================&gt;\]  33.32MB/33.32MB  
+1351a2c39b77: Loading layer \[==================================================&gt;\]  8.967MB/8.967MB  
+13b531e88128: Loading layer \[==================================================&gt;\]  46.85MB/46.85MB  
+664abb325748: Loading layer \[==================================================&gt;\]  5.632kB/5.632kB  
+9f20c7a04d55: Loading layer \[==================================================&gt;\]  27.14kB/27.14kB  
+594e8fcaaae3: Loading layer \[==================================================&gt;\]  46.85MB/46.85MB
 
 等待一会
 
-✔ ----Harbor has been installed and started successfully.----
+✔ ----Harbor has been installed and started successfully.----
 
-Now you should be able to visit the admin portal at http://harbor.chenkaidi.com. For more details, please visit https://github.com/goharbor/harbor .
+Now you should be able to visit the admin portal at [http://harbor.chenkaidi.com](http://harbor.chenkaidi.com).   
+For more details, please visit [https://github.com/goharbor/harbor](https://github.com/goharbor/harbor) .
 
 successfully显示成功
 
 #### 6.登录
 
-https://harbor.chenkaidi.com
+http://harbor.chenkaidi.com
 
 #### 7.添加信任
 
 在其他docker主机的/etc/docker/daemon.json文件，添加对这台主机的信任
 
-"insecure-registries": \["192.168.1.1"\]
+"insecure-registries": \["harbor.chenkaidi.com","192.168.1.1"\]
 
