@@ -22,15 +22,13 @@ tar -xvf harbor-offline-installer-v1.8.1.tgz
 
 hostname：目标主机的主机名，用于访问UI和注册服务。不能使用localhost和127.0.0.1，因为harbor需要被外部客户端访问，我这里修改成了IP地址。
 
-ui\_url\_protocol：用于访问UI和令牌/通知服务的协议，默认为http，如果在Nginx上启用了SSL认证可以设置成**https**，我这里用的默认的http。
-
-max\_job\_workers：作业服务中的最大复制worker数，这里默认写的50，考虑到我的服务器的性能，我这里修改成了5。
+max\_job\_workers：作业服务中的最大复制worker数，这里默认写的10，我修改成了2。
 
 customize\_crt：设置为on，prepare脚本创建用于生成/验证注册表令牌的私钥和根证书。如果设置成off，密钥和根证书将由外部源提供，我设置的是on。
 
-ssl\_cert：SSL证书的位置，只有协议设置成**https**的时候，这个属性才会生效。
+certificate：SSL证书的位置，只有协议设置成**https**的时候，这个属性才会生效。
 
-ssl\_cert\_key：SSL秘钥的位置，只有协议设置成**https**的时候，这个属性才会生效。
+private\_key：SSL秘钥的位置，只有协议设置成**https**的时候，这个属性才会生效。
 
 secretkey\_path：密码存放的路径，这里最好别修改，否则后面会报错，我修改成了【/data/admin/】。
 
@@ -62,14 +60,14 @@ ba58b7bb3f17: Loading layer \[==================================================
 
 ✔ ----Harbor has been installed and started successfully.----
 
-Now you should be able to visit the admin portal at [http://harbor.chenkaidi.com](http://harbor.chenkaidi.com).   
+Now you should be able to visit the admin portal at [http://harbor.chenkaidi.com](http://harbor.chenkaidi.com).  
 For more details, please visit [https://github.com/goharbor/harbor](https://github.com/goharbor/harbor) .
 
 successfully显示成功
 
 #### 6.登录
 
-http://harbor.chenkaidi.com
+[http://harbor.chenkaidi.com](http://harbor.chenkaidi.com)
 
 #### 7.添加信任
 
