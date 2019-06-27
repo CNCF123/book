@@ -1,8 +1,8 @@
-常用子命令
+## 常用子命令
 
-kubectl是 Kubemetes 系统的命令行客户端工具，是管理员最常用的 集群管理工具 。 
+kubectl是 Kubemetes 系统的命令行客户端工具，是管理员最常用的 集群管理工具 。
 
-语法格式为:**` kubectl [command] [TYPE] [NAME] [flags]`**
+语法格式为:`kubectl [command] [TYPE] [NAME] [flags]`
 
 说明如下:
 
