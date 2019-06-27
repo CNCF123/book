@@ -8,7 +8,7 @@
 
 OS: CentOS7.6
 
-Container: Docekr CE 1809
+Container: Docekr CE 1806
 
 Kubernetes: 1.13.2
 
