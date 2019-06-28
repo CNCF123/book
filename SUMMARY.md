@@ -3,6 +3,7 @@
 * [简介](README.md)
   * [1.为什么容器是未来](1container-is-future.md)
   * [2.关于本人](2about.md)
+  * [3.CKA认证](3cka.md)
 * [docker](docker.md)
   * [1.入门](docker/1base.md)
     * [1.简介](docker/1base/1introduction.md)
@@ -86,7 +87,7 @@
       * [1.获取格式](kubernetes/3resource-manage/2resource-format/1get.md)
     * [3.kubectl管理资源](kubernetes/3resource-manage/3kubectl-manager-resource.md)
       * [1.常用子命令](kubernetes/3resource-manage/3kubectl-manager-resource/1common-command.md)
-  * [4.Pod对象管理](kubernetes/4pod-object-manage.md)
+  * [4.Pod管理](kubernetes/4pod-object-manage.md)
   * [5.控制器](kubernetes/5controller.md)
   * [6.Service服务](kubernetes/6service.md)
   * [7.Ingress代理](kubernetes/7ingress-proxy.md)
@@ -102,6 +103,4 @@
 * [Istio](istio.md)
   * [1.入门](istio/1base.md)
   * [2.安装](istio/2install.md)
-* [DevOps](devops.md)
-  * [1.入门](cicd/1base.md)
 
