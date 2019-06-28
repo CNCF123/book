@@ -1,22 +1,8 @@
 ## worker节点
 
-说明：kubelet和docker使用systemd服务运行，其他组件都是以Pod资源的形式运行。
-
 #### step1
 
-准备一个master节点，二个node节点
-
-OS: CentOS7.6
-
-Container: Docekr CE 1806
-
-Kubernetes: 1.13.2
-
-#### step2
-
 1.主机名解析
-
-在master和node节点添加解析信息
 
 `172.16.0.53 master01`
 
@@ -78,7 +64,7 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 #### step3
 
-1.在master和node节点安装docker-ce
+1.安装docker-ce
 
 `cd /etc/yum.repos.d/`
 
