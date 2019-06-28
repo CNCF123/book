@@ -72,7 +72,15 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 [http://www.dockerk8s.net/docker/3image/2image-add-speed.html](http://www.dockerk8s.net/docker/3image/2image-add-speed.html)
 
-3.从docker1.13开始，iptables的FORWARD的默认规则为DROP，这可能影响k8s的报文转发功能，修改为ACCEPT
+3.设置这两个参数为1，开启网桥
+
+`echo "net.bridge.bridge-nf-call-iptables=1" >> /etc/sysctl.conf`
+
+`echo "net.bridge.bridge-nf-call-ip6tables=1" >> /etc/sysctl.conf`
+
+`systctl -p`
+
+4.从docker1.13开始，iptables的FORWARD的默认规则为DROP，这可能影响k8s的报文转发功能，修改为ACCEPT
 
 方法：
 
@@ -80,19 +88,13 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 `ExecStartPost=/usr/sbin/iptables -P FORWARD ACCEPT`
 
-4.docker启动，开机自启动
+5.docker启动，开机自启动
 
 `systemctl daemon-reload`
 
 `systemctl start docker`
 
 `systemctl enable docker`
-
-5.设置这两个参数为1
-
-echo 1 &gt;`/proc/sys/net/bridge/bridge-nf-call-iptables`
-
-echo 1 &gt;`/proc/sys/net/bridge/bridge-nf-call-ip6tables`
 
 #### step4
 
