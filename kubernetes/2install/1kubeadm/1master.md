@@ -68,7 +68,9 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 [http://www.dockerk8s.net/docker/2install/2centos.html](http://www.dockerk8s.net/docker/2install/2centos.html)
 
-2.设置[镜像加速](http://www.dockerk8s.net/docker/3image/2image-add-speed.html)
+2.设置镜像加速
+
+[http://www.dockerk8s.net/docker/3image/2image-add-speed.html](http://www.dockerk8s.net/docker/3image/2image-add-speed.html)
 
 3.从docker1.13开始，iptables的FORWARD的默认规则为DROP，这可能影响k8s的报文转发功能，修改为ACCEPT
 
