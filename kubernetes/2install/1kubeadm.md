@@ -12,7 +12,9 @@ Container: Docekr CE 1806
 
 Kubernetes: 1.13.2
 
+`172.16.0.53 master01`
 
+`172.16.0.54 node01`
 
-
+`172.16.0.55 node02`
 
