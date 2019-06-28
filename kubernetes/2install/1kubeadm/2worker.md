@@ -74,7 +74,7 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 `yum -y install docker-ce`
 
-2.在master和node节点设置[镜像加速](http://www.dockerk8s.net/docker/3image/2image-add-speed.html)
+2.设置[镜像加速](http://www.dockerk8s.net/docker/3image/2image-add-speed.html)
 
 3.设置这两个参数为1，开启网桥
 
