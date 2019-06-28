@@ -130,8 +130,6 @@ enabled=1
 
 kubeadm初始化
 
-备注：解决k8s.gcr.io的镜像问题，请看下篇文章
-
 使用命令行初始化：
 
 kubeadm init --kubernetes-version=v**1.13.2** \
@@ -143,6 +141,8 @@ kubeadm init --kubernetes-version=v**1.13.2** \
 --apiserver-advertise-address=0.0.0.0 \
 
 --ignore-preflight-errors=Swap
+
+备注：解决k8s.gcr.io的镜像问题，请看
 
 #### step6
 
