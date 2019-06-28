@@ -2,6 +2,8 @@
 
 CKA认证全称Certified Kubernetes Administrator，系项目管理社区Cloud Native Computing Foundation\(CNCF\)顺应项目在全球快速发展的趋势，为推动Kubernetes人才发展，制定的全球标准化Kubernetes管理员认证。认证考试使用Kubernetes原生版本，范围覆盖Kubernetes的原理、框架、部署、使用以及排错等核心内容。
 
+#### 证书：![](/assets/CKA证书.jpg)
+
 ## 学习考试的心路历程：
 
 #### 前提
@@ -26,7 +28,5 @@ CKA认证全称Certified Kubernetes Administrator，系项目管理社区Cloud N
 
 摄像头必须摄入完整的脸部图像，如果稍微有偏离，考官会立刻要求你调整姿势。
 
-#### 证书：![](/assets/CKA证书.jpg)
-
-最后祝愿大家能顺利通过CKA考试
+最后祝大家顺利通过CKA考试。
 
