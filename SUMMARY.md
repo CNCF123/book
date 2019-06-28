@@ -88,6 +88,7 @@
     * [3.kubectl管理资源](kubernetes/3resource-manage/3kubectl-manager-resource.md)
       * [1.常用子命令](kubernetes/3resource-manage/3kubectl-manager-resource/1common-command.md)
   * [4.Pod管理](kubernetes/4pod-object-manage.md)
+    * [1.Pod与容器](kubernetes/4pod-object-manage/1pod-yaml.md)
   * [5.控制器](kubernetes/5controller.md)
   * [6.Service服务](kubernetes/6service.md)
   * [7.Ingress代理](kubernetes/7ingress-proxy.md)
