@@ -98,7 +98,7 @@ echo 1 &gt;`/proc/sys/net/bridge/bridge-nf-call-ip6tables`
 
 #### step4
 
-1.master节点和node节点添加 kubernetes的yum源
+1.添加 kubernetes的yum源
 
 vim /etc/yum.repos.d/kubernetes.repo
 
