@@ -180,3 +180,11 @@ chown $\(id -u\):$\(id -g\) $HOME/.kube/config
 
 kubectl apply -f [https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml](https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml)
 
+fannel镜像下载速度较慢，可以先从github上下载dokcer镜像
+
+[https://github.com/coreos/flannel/releases/](https://github.com/coreos/flannel/releases/)
+
+以 **.docker**结尾的文件
+
+https://github.com/coreos/flannel/releases/download/v0.11.0/flanneld-v0.11.0-amd64.docker
+
