@@ -104,7 +104,7 @@ vim /etc/yum.repos.d/kubernetes.repo
 
 name=kubernetes repo
 
-baseurl=[https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86\_64/](https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/)
+baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86\_64/
 
 gpgcheck=0
 
@@ -114,7 +114,7 @@ enabled=1
 
 `yum -y install kubelet kubeadm kubectl`
 
-3.配置kubelet配置文件
+3.配置kubelet配置文件，关闭swap
 
 在k8s 1.8版本开始，强制要求关闭系统的swap交换分区，否则kubelet无法安装
 
@@ -142,7 +142,7 @@ kubeadm init --kubernetes-version=v**1.13.2** \
 
 --ignore-preflight-errors=Swap
 
-备注：解决k8s.gcr.io的镜像问题，请看
+备注：解决k8s.gcr.io的镜像问题，请看[http://www.dockerk8s.net/kubernetes/2install/1kubeadm/0k8s-gcr-io.html](http://www.dockerk8s.net/kubernetes/2install/1kubeadm/0k8s-gcr-io.html)
 
 #### step6
 
