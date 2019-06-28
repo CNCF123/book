@@ -56,9 +56,11 @@
 
 `done`
 
-执行
+添加执行权限
 
 chmod +x /etc/sysconfig/modules/ipvs.modules
+
+执行
 
 /etc/sysconfig/modules/ipvs.modules
 
