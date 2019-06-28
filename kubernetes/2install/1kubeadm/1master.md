@@ -66,13 +66,9 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 1.安装docker-ce
 
-`cd /etc/yum.repos.d/`
+[http://www.dockerk8s.net/docker/2install/2centos.html](http://www.dockerk8s.net/docker/2install/2centos.html)
 
-`wget https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo`
-
-`yum -y install docker-ce`
-
-2.在master和node节点设置[镜像加速](http://www.dockerk8s.net/docker/3image/2image-add-speed.html)
+2.设置[镜像加速](http://www.dockerk8s.net/docker/3image/2image-add-speed.html)
 
 3.从docker1.13开始，iptables的FORWARD的默认规则为DROP，这可能影响k8s的报文转发功能，修改为ACCEPT
 
