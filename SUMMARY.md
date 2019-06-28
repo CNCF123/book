@@ -75,7 +75,9 @@
     * [3.架构](kubernetes/1base/3arch.md)
   * [2.安装](kubernetes/2install.md)
     * [1.kubeadm](kubernetes/2install/1kubeadm.md)
-      * [1.解决k8s.gcr.io问题](kubernetes/2install/1kubeadm/1k8s-gcr-io.md)
+      * [0.解决k8s.gcr.io问题](kubernetes/2install/1kubeadm/1k8s-gcr-io.md)
+      * [1.master](kubernetes/2install/1kubeadm/1master.md)
+      * 2.worker
     * [2.二进制包](kubernetes/2install/2bin-tar.md)
   * [3.资源管理](kubernetes/3resource-manage.md)
     * [1.资源类型](kubernetes/3resource-manage/1resource-type.md)
