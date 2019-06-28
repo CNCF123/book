@@ -80,7 +80,7 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 `echo "net.bridge.bridge-nf-call-ip6tables=1" >> /etc/sysctl.conf`
 
-`systctl -p`
+`sysctl -p`
 
 4.从docker1.13开始，iptables的FORWARD的默认规则为DROP，这可能影响k8s的报文转发功能，修改为ACCEPT
 
