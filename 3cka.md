@@ -2,11 +2,13 @@
 
 CKA认证全称Certified Kubernetes Administrator，系项目管理社区Cloud Native Computing Foundation\(CNCF\)顺应项目在全球快速发展的趋势，为推动Kubernetes人才发展，制定的全球标准化Kubernetes管理员认证。认证考试使用Kubernetes原生版本，范围覆盖Kubernetes的原理、框架、部署、使用以及排错等核心内容。
 
-#### 学习考试的心路历程：
+## 学习考试的心路历程：
+
+#### 前提
 
 首先在学习Kubernetes之前，你必须熟悉Linux系统，无论是实际使用Kubernetes还是CKA考试，都是直接跟Linux系统打交道。
 
-其次，必须熟悉Kubernetes编排对象的YAML文件格式，唯一的方法就是多练习，如POD对象、Deployment对象、DaemonSet对象、StatefulSet对象、Job、CronJob对象，Service对象，Volume对象、ConfigMap、Secret对象。
+其次，必须熟悉Kubernetes编排对象的YAML文件格式，唯一的方法就是多练习，多练习，多练习，如POD对象、Deployment对象、DaemonSet对象、StatefulSet对象、Job、CronJob对象，Service对象，Volume对象、ConfigMap、Secret对象。
 
 再次，也是最重要的一点，CKA考试完全是在线操作的，使用的是Chrome浏览器的插件。考试环境在美国，由于GFW，建议使用科学上网软件\(ss\)
 
