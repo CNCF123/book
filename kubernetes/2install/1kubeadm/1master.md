@@ -1,18 +1,6 @@
-## kubeadm安装k8s
-
-说明：kubelet和docker使用systemd服务运行，其他组件都是以Pod资源的形式运行。
+## master节点
 
 #### step1
-
-准备一个master节点，二个worker节点
-
-OS: CentOS7.6
-
-Container: Docekr CE 1806
-
-Kubernetes: 1.13.2
-
-#### step2
 
 1.主机名解析
 
@@ -185,6 +173,4 @@ chown $\(id -u\):$\(id -g\) $HOME/.kube/config
 部署网络插件CNI，这里使用的是fannel
 
 kubectl apply -f [https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml](https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml)
-
-
 
