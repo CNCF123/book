@@ -104,7 +104,7 @@ vim /etc/yum.repos.d/kubernetes.repo
 
 name=kubernetes repo
 
-baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86\_64/
+baseurl=[https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86\_64/](https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/)
 
 gpgcheck=0
 
@@ -146,7 +146,7 @@ kubeadm init --kubernetes-version=v**1.13.2** \
 
 #### step6
 
-配置kubectl的配置文件
+1.配置kubectl的配置文件
 
 默认情况下，kubectl会从当前用户的.kube目录下读取名称为config的配置文件，该文件包括集群、用户认证的证书和令牌等信息
 
@@ -157,6 +157,10 @@ mkdir -p $HOME/.kube
 cp -i /etc/kubenetes/admin.conf  $HOEM/.kube/config
 
 chown $\(id -u\):$\(id -g\) $HOME/.kube/config
+
+2.保存加入集群的命令
+
+`kubeadm join 172.16.0.53:6443 --token d387y7.j5na40ast2iz162h --discovery-token-ca-cert-hash sha256:dab4f81996be52ac17160bff6943fa6eddd73e2cdb8c9343751ea0bde083087f`
 
 此时此刻，master节点配置完毕
 
