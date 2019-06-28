@@ -12,7 +12,7 @@ CKA认证全称Certified Kubernetes Administrator，系项目管理社区Cloud N
 
 其次，必须熟悉Kubernetes编排对象的YAML文件格式，唯一的方法就是多练习，多练习，多练习，如POD对象、Deployment对象、DaemonSet对象、StatefulSet对象、Job、CronJob对象，Service对象，Volume对象、ConfigMap、Secret对象。
 
-再次，也是最重要的一点，CKA考试完全是在线操作的，使用的是Chrome浏览器的插件。考试环境在美国，由于GFW，建议使用科学上网软件\(ss\)
+再次，也是最重要的一点，CKA考试完全是在线操作的，使用的是Chrome浏览器的插件。考试环境在美国，由于GFW，建议使用科学上网软件\(ss\)。
 
 安装方法：[https://github.com/chenkaidi/ss-install](https://github.com/chenkaidi/ss-install)
 
