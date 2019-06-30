@@ -98,6 +98,7 @@
     * [6.容器探测](kubernetes/4pod-object-manage/6probe.md)
       * [1.存活性探测](kubernetes/4pod-object-manage/6probe/1livenessProbe.md)
       * [2.就绪性探测](kubernetes/4pod-object-manage/6probe/2readinessProbe.md)
+    * [7.资源限制](kubernetes/4pod-object-manage/7resource-limit.md)
   * [5.控制器](kubernetes/5controller.md)
   * [6.Service服务](kubernetes/6service.md)
   * [7.Ingress代理](kubernetes/7ingress-proxy.md)
