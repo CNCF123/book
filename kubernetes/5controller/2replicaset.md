@@ -6,5 +6,5 @@ ReplicaSet 控制器资源启动后会查找集群中匹配其标签选择器的
 
 但是，ReplicaSet缺少必要的其他功能，如Pod版本跟新迭代、回滚。我们不应该直接使用底层的ReplicaSet来控制Pod副本，而是
 
-使用管理ReplicaSet的Deployment控制器来控制Pod副本，这是官方的讲义。
+使用管理ReplicaSet的Deployment控制器来控制Pod副本，这是官方的建议。
 
