@@ -52,7 +52,11 @@ spec:
       timeoutSeconds: 0 
       periodSeconds: 0 
       successThreshold: 0
-      failureThreshold: 0 
+      failureThreshold: 0
+    readinessProbe: 
+      exec:
+      httpGet:
+      tcpSocket:
     securityContext:
       privileged: false
   restartPolicy: [Always | Never | OnFailure] 
@@ -77,8 +81,6 @@ spec:
       - key: string
         path: string
 ```
-
-
 
 
 
