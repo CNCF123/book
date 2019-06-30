@@ -74,13 +74,11 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 1.安装docker-ce
 
-`cd /etc/yum.repos.d/`
+[http://www.dockerk8s.net/docker/2install/2centos.html](#)
 
-`wget https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo`
+2.设置镜像加速
 
-`yum -y install docker-ce`
-
-2.设置[镜像加速](http://www.dockerk8s.net/docker/3image/2image-add-speed.html)
+[http://www.dockerk8s.net/docker/3image/2image-add-speed.html](#)
 
 3.设置这两个参数为1，开启网桥
 
