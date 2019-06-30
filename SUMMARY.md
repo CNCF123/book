@@ -101,6 +101,7 @@
     * [7.资源限制](kubernetes/4pod-object-manage/7resource-limit.md)
   * [5.控制器](kubernetes/5controller.md)
     * [1.ReplicationController](kubernetes/5controller/1replicationcontroller.md)
+    * [2.ReplicaSet](kubernetes/5controller/2replicaset.md)
   * [6.Service服务](kubernetes/6service.md)
   * [7.Ingress代理](kubernetes/7ingress-proxy.md)
   * [8.ConfigMap](kubernetes/8configmap.md)
