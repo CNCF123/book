@@ -1,4 +1,4 @@
-## ReplicationController
+## 
 
-在Kubernetes较早期的版本中仅有ReplicationController一种类型的Pod控制器，后来的版本中陆续引人了更多的控制器，这其中就包括用来取代 ReplicationController的新一代实现 ReplicaSet。目前的ReplicaSet的其余功能基本上与ReplicationController相同。考虑到Kubernetes强烈推荐使用ReplicaSet控制器，而且ReplicationController不久后即将废弃，这里不再介绍。
+
 

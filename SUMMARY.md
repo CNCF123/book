@@ -100,7 +100,7 @@
       * [2.就绪性探测](kubernetes/4pod-object-manage/6probe/2readinessProbe.md)
     * [7.资源限制](kubernetes/4pod-object-manage/7resource-limit.md)
   * [5.控制器](kubernetes/5controller.md)
-    * [1.replicationcontrollers](kubernetes/5controller/1replicationcontrollers.md)
+    * [1.ReplicationController](kubernetes/5controller/1replicationcontroller.md)
   * [6.Service服务](kubernetes/6service.md)
   * [7.Ingress代理](kubernetes/7ingress-proxy.md)
   * [8.ConfigMap](kubernetes/8configmap.md)
