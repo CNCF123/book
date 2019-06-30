@@ -34,9 +34,15 @@
 
 5.禁止使用 swap
 
-`swapoff  -a`
+vim etc/sysctl.conf
+
+添加 vm.swappiness=0
+
+sysctl -p
 
 6.开启ipvs模块
+
+yum install -y ipvsadm conntrack  ipset jq sysstat libseccomp
 
 编辑 vim /etc/sysconfig/modules/ipvs.modules
 

@@ -34,9 +34,15 @@
 
 5.禁止使用 swap
 
-`swapoff  -a`
+vim etc/sysctl.conf
+
+添加 vm.swappiness=0
+
+sysctl -p
 
 6.开启ipvs模块
+
+yum install -y ipvsadm conntrack  ipset jq sysstat libseccomp
 
 编辑 vim /etc/sysconfig/modules/ipvs.modules
 
@@ -186,5 +192,5 @@ fannel镜像下载速度较慢，可以先从github上下载dokcer镜像
 
 以 **.docker**结尾的文件
 
-https://github.com/coreos/flannel/releases/download/v0.11.0/flanneld-v0.11.0-amd64.docker
+[https://github.com/coreos/flannel/releases/download/v0.11.0/flanneld-v0.11.0-amd64.docker](https://github.com/coreos/flannel/releases/download/v0.11.0/flanneld-v0.11.0-amd64.docker)
 
