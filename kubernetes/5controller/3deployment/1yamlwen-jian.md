@@ -21,11 +21,6 @@ spec:
         ports:
         - name: http
           containerPort: 80
-  strategy:
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
-  minReadySeconds: 5
 ```
 
 

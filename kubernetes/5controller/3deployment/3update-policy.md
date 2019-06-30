@@ -10,7 +10,7 @@ spec.strategy.rollingUpdate.maxSurge：
 
 指定升级期间存在的总 Pod 对象数量最多可超出期望值的个数，其值可以是 0 或正整数，也可以是一个期望值的百分比
 
- spec.strategy.rollingUpdate.maxUnavailable：
+spec.strategy.rollingUpdate.maxUnavailable：
 
 升级期间正常可用的Pod副本数\(包括新旧版本\)最多不能低于期望数值 的个数 ，其值可以是 0 或正整数，也可以是 一个期望值的百分比，默认值为 1
 
@@ -19,4 +19,19 @@ spec.strategy.rollingUpdate.maxSurge：
 #### 重新创建（recreate）
 
 重新创建更新类似于前文中ReplicaSet的更新方式，即首先删除现有的Pod对象，而后由控制器基于新模板重新创建出新版本。通常情况下，只应该在应 用的新旧版本不兼容\(如依赖的后端数据库的 schema不同且无法兼容\)时运行时才会使用 recreate策略 。
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-myapp 
+spec:
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 5
+```
+
+
 
