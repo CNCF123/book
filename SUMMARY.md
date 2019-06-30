@@ -105,6 +105,7 @@
     * [3.Deployment](kubernetes/5controller/3deployment.md)
       * [1.Yaml文件](kubernetes/5controller/3deployment/1yamlwen-jian.md)
       * [3.更新策略](kubernetes/5controller/3deployment/3update-policy.md)
+      * [3.镜像升级](kubernetes/5controller/3deployment/3image-update.md)
   * [6.Service服务](kubernetes/6service.md)
   * [7.Ingress代理](kubernetes/7ingress-proxy.md)
   * [8.ConfigMap](kubernetes/8configmap.md)
