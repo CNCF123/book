@@ -102,6 +102,8 @@
   * [5.控制器](kubernetes/5controller.md)
     * [1.ReplicationController](kubernetes/5controller/1replicationcontroller.md)
     * [2.ReplicaSet](kubernetes/5controller/2replicaset.md)
+    * [3.Deployment](kubernetes/5controller/3deployment.md)
+      * [1.Yaml文件](kubernetes/5controller/3deployment/1yamlwen-jian.md)
   * [6.Service服务](kubernetes/6service.md)
   * [7.Ingress代理](kubernetes/7ingress-proxy.md)
   * [8.ConfigMap](kubernetes/8configmap.md)
