@@ -40,25 +40,19 @@ Pod对象的 spec.nodeSelector可用于定义节点标签选择器，用户 事�
 
 kubectl label nodes node01.k8s.io disktype=ssd
 
-apiVersion: v1
+`apiVersion: v1`
 
-kind :Pod
+`kind :Pod`
 
-metadata :
+`metadata :`
 
-  name: pod-nodeselect
+`  name: pod-nodeselect`
 
-spec:
+`spec:`
 
-  containers:
+`  nodeSelector:`
 
-  - name : myapp
-
-    image: nginx
-
-    nodeSelector:
-
-    disktype: ssd
+`    disktype: ssd`
 
 
 
