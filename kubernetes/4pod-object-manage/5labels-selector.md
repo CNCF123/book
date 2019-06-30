@@ -12,7 +12,7 @@ pods.metadata.labels
 
 `kubectl get pods`命令中使用`--show-labels`选项，以额外显示对象的标签信息。
 
-标签较多时，在“kubectlgetpods”命令上使用 -L Key1,key2......选项可指定显示有着特定键的标签信息。 
+标签较多时，在“kubectlgetpods”命令上使用 -L Key1,key2......选项可指定显示有着特定键的标签信息。
 
 例如，仅显示各 pods 之上的以 env 和 release 为键名的标签:
 
@@ -20,7 +20,7 @@ pods.metadata.labels
 
 kubectl label，命令可以直接管理活动对象的标签，以按需进行添加或修改等操作。 例如，为 pod-example 添加env=prod标签:
 
-`kubectl label pods/pod-example env=prod `
+`kubectl label pods/pod-example env=prod`
 
 使用“ kubectl label，，为其设定新的键值时需 要为命令同时使用`--overwrite`命令以强制覆盖原有的键值。
 
@@ -36,14 +36,13 @@ kubectl label，命令可以直接管理活动对象的标签，以按需进行�
 
 `kubectl get pods -l "env in (prod , dev)"  -L env`
 
-  
 Pod对象的 spec.nodeSelector可用于定义节点标签选择器，用户 事先为特定部分的 Node资源对象设定好标签，而后配置Pod对象通过节点标签选择器进行匹配检测，从而成节点亲和性调度 。
 
 kubectl label nodes node01.k8s.io disktype=ssd
 
-apiVersion: v1 
+apiVersion: v1
 
-kind :Pod 
+kind :Pod
 
 metadata :
 
@@ -55,9 +54,11 @@ spec:
 
   - name : myapp
 
-    image: nginx 
+    image: nginx
 
-  nodeSelector:
+    nodeSelector:
 
-      disktype: ssd
+    disktype: ssd
+
+
 
