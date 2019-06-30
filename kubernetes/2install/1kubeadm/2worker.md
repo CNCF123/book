@@ -92,6 +92,8 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 方法：
 
+yum install -y iptables
+
 修改 vim /usr/lib/systemd/system/docker.service，在“ExecStart=/usr/bin/dockerd”的**下面**，添加一行
 
 `ExecStartPost=/usr/sbin/iptables -P FORWARD ACCEPT`
