@@ -92,6 +92,7 @@
   * [4.Pod管理](kubernetes/4pod-object-manage.md)
     * [1.Pod与容器](kubernetes/4pod-object-manage/1pod-yaml.md)
     * [2.Yaml文件](kubernetes/4pod-object-manage/2yaml-doc.md)
+    * [3.镜像](kubernetes/4pod-object-manage/3image.md)
   * [5.控制器](kubernetes/5controller.md)
   * [6.Service服务](kubernetes/6service.md)
   * [7.Ingress代理](kubernetes/7ingress-proxy.md)
