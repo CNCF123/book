@@ -81,7 +81,7 @@
         * [1.master](kubernetes/2install/1an-zhuang/2kubeadm/1master.md)
         * [2.worker](kubernetes/2install/1an-zhuang/2kubeadm/2worker.md)
       * [3.kubeadm-HA](kubernetes/2install/1an-zhuang/3kubeadm-ha.md)
-      * 4.二进制
+      * [4.二进制](kubernetes/2install/1an-zhuang/4er-jin-zhi.md)
     * [2.升级](kubernetes/2install/2sheng-ji.md)
   * [3.资源管理](kubernetes/3resource-manage.md)
     * [1.资源类型](kubernetes/3resource-manage/1resource-type.md)
