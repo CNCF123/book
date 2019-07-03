@@ -75,11 +75,12 @@
     * [3.架构](kubernetes/1base/3arch.md)
   * [2.安装与升级](kubernetes/2install-upgrade.md)
     * [1.安装](kubernetes/2install/1an-zhuang.md)
-      * 1.minikube
+      * [1.minikube](kubernetes/2install/1an-zhuang/1minikube.md)
       * [2.kubeadm](kubernetes/2install/1an-zhuang/2kubeadm.md)
         * [0.解决k8s.grc.io](kubernetes/2install/1an-zhuang/2kubeadm/0jie-jue-k8s-grc-io.md)
         * [1.master](kubernetes/2install/1an-zhuang/2kubeadm/1master.md)
         * [2.worker](kubernetes/2install/1an-zhuang/2kubeadm/2worker.md)
+      * 3.kubeadm-HA
     * [2.升级](kubernetes/2install/2sheng-ji.md)
   * [3.资源管理](kubernetes/3resource-manage.md)
     * [1.资源类型](kubernetes/3resource-manage/1resource-type.md)
