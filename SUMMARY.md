@@ -80,7 +80,8 @@
         * [0.解决k8s.grc.io](kubernetes/2install/1an-zhuang/2kubeadm/0jie-jue-k8s-grc-io.md)
         * [1.master](kubernetes/2install/1an-zhuang/2kubeadm/1master.md)
         * [2.worker](kubernetes/2install/1an-zhuang/2kubeadm/2worker.md)
-      * 3.kubeadm-HA
+      * [3.kubeadm-HA](kubernetes/2install/1an-zhuang/3kubeadm-ha.md)
+      * 4.二进制
     * [2.升级](kubernetes/2install/2sheng-ji.md)
   * [3.资源管理](kubernetes/3resource-manage.md)
     * [1.资源类型](kubernetes/3resource-manage/1resource-type.md)
