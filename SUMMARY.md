@@ -78,6 +78,8 @@
       * 1.minikube
       * [2.kubeadm](kubernetes/2install/1an-zhuang/2kubeadm.md)
         * [0.解决k8s.grc.io](kubernetes/2install/1an-zhuang/2kubeadm/0jie-jue-k8s-grc-io.md)
+        * [1.master](kubernetes/2install/1an-zhuang/2kubeadm/1master.md)
+        * 2.worker
     * [1.kubeadm](kubernetes/2install/1kubeadm.md)
       * [0.解决k8s.gcr.io问题](kubernetes/2install/1kubeadm/0k8s-gcr-io.md)
       * [1.master](kubernetes/2install/1kubeadm/1master.md)
