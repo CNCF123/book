@@ -5,13 +5,13 @@ metadata:
   name: fluentd-cloud-logging
   namespace: kube-system
   labels:
-    k8s-app: fluentd-cloud-logging
+    k8s-app: fluentd
 spec:
   template:
     metadata:
       namespace: kube-system
       labels:
-        k8s-app: fluentd-cloud-logging
+        k8s-app: fluentd
     spec:
       containers:
       - name: fluentd-cloud-logging
