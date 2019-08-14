@@ -112,6 +112,7 @@
       * [3.镜像升级](kubernetes/5controller/3deployment/3image-update.md)
     * [4.DaemonSet](kubernetes/5controller/4daemonset.md)
     * 5.Job-CronJob
+    * [6.StatefulSet](kubernetes/5controller/6statefulset.md)
   * [6.Service服务](kubernetes/6service.md)
   * [7.Ingress代理](kubernetes/7ingress-proxy.md)
   * [8.ConfigMap](kubernetes/8configmap.md)
