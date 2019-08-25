@@ -40,6 +40,8 @@
 
 `sysctl -p`
 
+编辑 /etc/fatab ，注释swap分区
+
 6.开启ipvs模块
 
 yum install -y ipvsadm conntrack  ipset jq sysstat libseccomp
