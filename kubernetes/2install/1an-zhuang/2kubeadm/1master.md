@@ -82,11 +82,11 @@
 
 3.设置这两个参数为1，开启网桥, 并且开启ip\_forward
 
-`echo "net.bridge.bridge-nf-call-iptables=1" >> `/etc/sysctl.d/k8s.conf
+`echo "net.bridge.bridge-nf-call-iptables=1" >>`/etc/sysctl.d/k8s.conf
 
-`echo "net.bridge.bridge-nf-call-ip6tables=1" >> `/etc/sysctl.d/k8s.conf
+`echo "net.bridge.bridge-nf-call-ip6tables=1" >>`/etc/sysctl.d/k8s.conf
 
-`echo "net.ipv4.ip_forward=1" >> `/etc/sysctl.d/k8s.conf
+`echo "net.ipv4.ip_forward=1" >>`/etc/sysctl.d/k8s.conf
 
 `sysctl -p`
 
@@ -146,15 +146,7 @@ kubeadm初始化
 
 使用命令行初始化：
 
-kubeadm init --kubernetes-version=v**1.13.2** \
-
---pod-network-cidr=10.244.0.0/16 \
-
---service-cidr=10.96.0.0/12 \
-
---apiserver-advertise-address=0.0.0.0 \
-
---ignore-preflight-errors=Swap
+kubeadm init --kubernetes-version=v**1.13.2** --pod-network-cidr=10.244.0.0/16 --service-cidr=10.96.0.0/12 --apiserver-advertise-address=0.0.0.0 --ignore-preflight-errors=Swap
 
 备注：解决k8s.gcr.io的镜像问题，请看[http://www.dockerk8s.net/kubernetes/2install/1kubeadm/0k8s-gcr-io.html](http://www.dockerk8s.net/kubernetes/2install/1kubeadm/0k8s-gcr-io.html)
 
