@@ -32,13 +32,13 @@
 
 编辑 vim /etc/sysconfig/selinux 设置为 disabled
 
+`sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config`
+
 5.禁止使用 swap
 
-vim etc/sysctl.conf
+`echo "vm.swappiness=0" >> /etc/sysctl.d/k8s.conf`
 
-添加 vm.swappiness=0
-
-sysctl -p
+`sysctl -p`
 
 6.开启ipvs模块
 
@@ -82,9 +82,11 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 3.设置这两个参数为1，开启网桥
 
-`echo "net.bridge.bridge-nf-call-iptables=1" >> /etc/sysctl.conf`
+`echo "net.bridge.bridge-nf-call-iptables=1" >>`/etc/sysctl.d/k8s.conf
 
-`echo "net.bridge.bridge-nf-call-ip6tables=1" >> /etc/sysctl.conf`
+`echo "net.bridge.bridge-nf-call-ip6tables=1" >>`/etc/sysctl.d/k8s.conf
+
+`echo "net.ipv4.ip_forward=1" >>`/etc/sysctl.d/k8s.conf
 
 `sysctl -p`
 
