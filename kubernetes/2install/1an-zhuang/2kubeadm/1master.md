@@ -36,9 +36,7 @@ sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 
 5.禁止使用 swap
 
-vim etc/sysctl.conf
-
-添加 vm.swappiness=0
+echo "vm.swappiness=0" &gt;&gt; /etc/sysctl.d/k8s.conf
 
 sysctl -p
 
