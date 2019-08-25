@@ -32,6 +32,8 @@
 
 编辑 vim /etc/sysconfig/selinux 设置为 disabled
 
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
+
 5.禁止使用 swap
 
 vim etc/sysctl.conf
