@@ -32,17 +32,17 @@
 
 编辑 vim /etc/sysconfig/selinux 设置为 disabled
 
-sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
+`sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config`
 
 5.禁止使用 swap
 
-echo "vm.swappiness=0" &gt;&gt; /etc/sysctl.d/k8s.conf
+`echo "vm.swappiness=0" >> /etc/sysctl.d/k8s.conf`
 
-sysctl -p
+`sysctl -p`
 
 6.开启ipvs模块
 
-yum install -y ipvsadm conntrack  ipset jq sysstat libseccomp
+`yum install -y ipvsadm conntrack  ipset jq sysstat libseccomp`
 
 编辑 vim /etc/sysconfig/modules/ipvs.modules
 
@@ -64,11 +64,11 @@ yum install -y ipvsadm conntrack  ipset jq sysstat libseccomp
 
 添加执行权限
 
-chmod +x /etc/sysconfig/modules/ipvs.modules
+`chmod +x /etc/sysconfig/modules/ipvs.modules`
 
 执行
 
-/etc/sysconfig/modules/ipvs.modules
+`/etc/sysconfig/modules/ipvs.modules`
 
 #### step3
 
@@ -80,11 +80,13 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 [http://www.dockerk8s.net/docker/3image/2image-add-speed.html](http://www.dockerk8s.net/docker/3image/2image-add-speed.html)
 
-3.设置这两个参数为1，开启网桥
+3.设置这两个参数为1，开启网桥, 并且开启ip\_forward
 
-`echo "net.bridge.bridge-nf-call-iptables=1" >> /etc/sysctl.conf`
+`echo "net.bridge.bridge-nf-call-iptables=1" >> `/etc/sysctl.d/k8s.conf
 
-`echo "net.bridge.bridge-nf-call-ip6tables=1" >> /etc/sysctl.conf`
+`echo "net.bridge.bridge-nf-call-ip6tables=1" >> `/etc/sysctl.d/k8s.conf
+
+`echo "net.ipv4.ip_forward=1" >> `/etc/sysctl.d/k8s.conf
 
 `sysctl -p`
 
@@ -92,7 +94,7 @@ chmod +x /etc/sysconfig/modules/ipvs.modules
 
 方法：
 
-yum install -y iptables
+`yum install -y iptables`
 
 修改 vim /usr/lib/systemd/system/docker.service，在“ExecStart=/usr/bin/dockerd”的**下面**，添加一行
 
