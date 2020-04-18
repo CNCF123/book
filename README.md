@@ -1,8 +1,3 @@
-# 简介
-
-随着容器技术的不断发展，越来越的企业开始在生产环境中使用它们，其中以**docker**和**kubernetes**为核心，而**CNCF**的出现，使其周边的生态系统越来越完善。
-
-所以，现在是学习它们的好时候。
 
 ## CNCF\(Cloud Native Computing Foundation\)
 
