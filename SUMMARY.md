@@ -107,7 +107,7 @@
     * [1.ReplicationController](kubernetes/5controller/1replicationcontroller.md)
     * [2.ReplicaSet](kubernetes/5controller/2replicaset.md)
     * [3.Deployment](kubernetes/5controller/3deployment.md)
-      * [1.Yaml文件](kubernetes/5controller/3deployment/1yamlwen-jian.md)
+      * [1.Yaml](kubernetes/5controller/3deployment/1yaml.md)
       * [3.更新策略](kubernetes/5controller/3deployment/3update-policy.md)
       * [3.镜像升级](kubernetes/5controller/3deployment/3image-update.md)
     * [4.DaemonSet](kubernetes/5controller/4daemonset.md)
